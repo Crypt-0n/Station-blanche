@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Antivirscan
+GenericName=Antivirscan
+Comment=Antivirscan
+Exec=gnome-terminal --full-screen -e antivirscan
+Type=Application

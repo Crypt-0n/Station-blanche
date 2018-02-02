@@ -1,0 +1,8 @@
+Package: antivirscan
+Version: 1.0
+Section: base
+Priority: optional
+Architecture: all
+Depends: bash,gnome-terminal,clamav
+Maintainer: JPW
+Description: Antivirus scan of USB drives

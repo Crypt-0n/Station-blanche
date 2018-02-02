@@ -1,0 +1,4 @@
+#!/bin/bash
+rm -rf /var/log/antivirscan
+rm -rf /var/lib/antivirscan
+

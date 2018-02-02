@@ -1,0 +1,13 @@
+# Desktop
+dbus-user-session
+lightdm
+cinnamon
+xbase-clients
+xorg
+xserver-xorg-input-all
+xserver-xorg-video-all
+
+# antivirscan
+gnome-terminal
+clamav
+antivirscan

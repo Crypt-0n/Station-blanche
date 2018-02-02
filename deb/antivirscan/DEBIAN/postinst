@@ -1,0 +1,4 @@
+#!/bin/bash
+mkdir /var/log/antivirscan && chmod 777 /var/log/antivirscan
+mkdir -p /var/lib/antivirscan/quarantine && chmod 777 /var/lib/antivirscan/quarantine
+

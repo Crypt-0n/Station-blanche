@@ -1,0 +1,81 @@
+#!/bin/bash
+
+function iscle()
+{
+	dir_cle=`grep "sdb" /etc/mtab | awk -F " " '{print $2}'`
+	echo ${dir_cle}
+}
+
+function invite()
+{
+	echo "***************************************"
+	echo " Insérer une clé USB pour commencer..."
+	echo "***************************************"
+}
+
+invite
+
+while true
+do
+	sleep 1 
+	if [[ ! -z $(iscle) ]]
+	then
+		echo "******************************"
+		echo " Début de l'analyse..."
+		echo "******************************"
+	
+		datetime=`date +%Y%m%d-%H%M%S`
+	
+		fileout="/var/log/antivirscan/scan-"$datetime".log"
+
+		echo "Analyse de "$(iscle)" ..." > ${fileout}
+		echo "**************************" >> ${fileout}
+
+		/usr/bin/clamscan -r --move=/var/lib/antivirscan/quarantine --bell $(iscle) 2>&1 | tee -a ${fileout} 
+		result=${PIPESTATUS[0]}
+		error=$(grep "LibClamAV Error" ${fileout} | wc -l)
+		if [ "$error" -gt 0 ]
+		then
+			result=2		
+		fi
+
+
+		echo "*******************************"
+		echo " Analyse terminée !"
+		echo " "
+
+		case "$result" in
+			1)
+				cat /usr/lib/antivirscan/virus.txt
+				echo " CETTE CLE EST INFECTEE !!!"
+				echo " "
+				echo " Merci d'insérer de nouveau la clé "
+				echo " pour valider la désinfection "
+				;;
+			2)
+				cat /usr/lib/antivirscan/error.txt
+				echo " Une erreur est intervenue pendant l'analyse."
+				echo " Merci d'insérer de nouveau la clé "
+				;;
+			0)
+				cat /usr/lib/antivirscan/ok.txt
+				echo " Aucune infection détectée. "
+				echo " Cette clé est saine. "
+				;;
+		esac
+
+		echo "*******************************"
+
+		echo "*******************************"
+		echo " Veuillez retirer la clé..."
+		echo "*******************************"
+
+		while [ ! -z $(iscle) ]
+		do
+	        	sleep 1
+        	done
+
+		invite
+	fi
+done
+

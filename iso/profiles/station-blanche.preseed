@@ -1,0 +1,76 @@
+# Localisation
+d-i debian-installer/language string fr
+d-i debian-installer/country string FR
+d-i debian-installer/locale string fr_FR.UTF-8
+
+# Choix du clavier
+# keymap est un alias de keyboard-configuration/xkb-keymap
+d-i keymap select fr(latin9)
+# On désactive la sélection fine de la configuration du clavier
+d-i keyboard-configuration/toggle select No toggling
+
+# Selection automatique d'une interface connecté
+d-i netcfg/choose_interface select auto
+
+# Configuration du nom de machine
+d-i netcfg/get_hostname string station-blanche
+# Configuration du domaine
+d-i netcfg/get_domain string diplomatie.gouv.fr
+# Nom local de la machine
+d-i netcfg/hostname string station-blanche
+
+# Mirroir
+d-i mirror/country string manual
+d-i mirror/http/hostname string ftp.fr.debian.org
+d-i mirror/http/directory string /debian
+d-i mirror/http/proxy string
+
+# Mot de passe root
+d-i passwd/root-password password Bl@nch3
+d-i passwd/root-password-again password Bl@nch3
+# Compte analyse
+d-i passwd/user-fullname string analyse
+d-i passwd/username string analyse
+d-i passwd/user-password password analyse
+d-i passwd/user-password-again password analyse
+
+# L'horloge matérielle fonctionne sur la zone UTC
+d-i clock-setup/utc boolean true
+# La zone utilisée par l'OS sera celle de Paris
+d-i time/zone string Europe/Paris
+
+# Seul le premier disque est partionné
+d-i partman-auto/disk string /dev/sda
+# On partionne en "normal": pas de RAID ni de LVM
+d-i partman-auto/method string regular
+d-i partman-lvm/device_remove_lvm boolean true
+d-i partman-md/device_remove_md boolean true
+d-i partman-lvm/confirm boolean true
+d-i partman-lvm/confirm_nooverwrite boolean true
+# L'installation sera simple: tout dans une seule partition
+d-i partman-auto/choose_recipe select atomic
+# On valide sans confirmation la configuration de partman
+d-i partman-md/confirm boolean true
+d-i partman-partitioning/confirm_write_new_label boolean true
+d-i partman/choose_partition select finish
+d-i partman/confirm boolean true
+d-i partman/confirm_nooverwrite boolean true
+
+# Choix paquets
+apt-cdrom-setup apt-setup/cdrom/set-first boolean false
+d-i pkgsel/include string lightdm,cinnamon,gnome-terminal,clamav,antivirscan
+d-i pkgsel/upgrade select none
+popularity-contest popularity-contest/participate boolean false
+
+# Grub
+d-i grub-installer/only_debian boolean true
+d-i grub-installer/bootdev  string /dev/sda
+
+### Fin de l'installation
+# Désactivation du message indiquant que l'installation est terminée.
+d-i finish-install/reboot_in_progress note
+# Pas d'éjection du média d'installation (bien pour faire des tests sur une VM)
+d-i cdrom-detect/eject boolean true
+# Une fois l'installation terminée, on éteint la machine
+d-i debian-installer/exit/poweroff boolean true
+
