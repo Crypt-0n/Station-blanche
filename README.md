@@ -1,9 +1,11 @@
 # station-blanche
 
-Utilisation sur Debian 9 Stretch
+* Utilisation sur Debian 9 Stretch
 
-Paquet requis : simple-cdd xorriso
+* Paquet requis : 
 
-Construction de l'image : 
+`simple-cdd xorriso`
 
-./build.sh
+* Construction de l'image : 
+
+`./build.sh`
