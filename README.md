@@ -18,10 +18,10 @@
   * Deux comptes : 
     * root / Bl@nch3
     * analyse / analyse
-  * Logs des analyse : /var/log/antivirscan
+  * Logs des analyses : /var/log/antivirscan
   * Fichiers en quarantaine : /var/lib/antivirscan/quarantine
   
-* Inspiré du travail de Laurent Grison
+*Inspiré du travail de Laurent Grison*
   
 
 
