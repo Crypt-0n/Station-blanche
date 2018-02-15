@@ -1,81 +1,129 @@
 #!/bin/bash
 
-function iscle()
+function isdev()
 {
-	dir_cle=`grep "sdb" /etc/mtab | awk -F " " '{print $2}'`
-	echo ${dir_cle}
+	#lister les devices, de sdb à sdz
+	nb_dev=`lsblk | grep -e "^sd[b-z]" | wc -l`
+
+	echo $nb_dev
+}
+
+function ejectdev()
+{
+	#demande d'ejection de la clé
+	echo "*******************************"
+	echo " Veuillez retirer la clé..."
+	echo "*******************************"
+
+	d=$(isdev)
+
+	while [[ $d -ne 0 ]]
+	do
+        	sleep 1
+		d=$(isdev)
+       	done
+}
+
+function analyze()
+{
+	#analyse antiviral des chemins passés en paramètres
+	echo "******************************"
+	echo " Début de l'analyse..."
+	echo "******************************"
+
+	datetime=`date +%Y%m%d-%H%M%S`
+						
+	fileout="/var/log/antivirscan/scan-"$datetime".log"
+
+	echo "Analyse de $@ ..." > ${fileout}
+	echo "**************************" >> ${fileout}
+							
+	echo $@ | xargs /usr/bin/clamscan -r --move=/var/lib/antivirscan/quarantine --bell  2>&1 | tee -a ${fileout} 
+	result=${PIPESTATUS[0]}
+	error=$(grep "LibClamAV Error" ${fileout} | wc -l)
+	if [ "$error" -gt 0 ]
+	then
+		result=2		
+	fi
+
+	echo "*******************************"
+	echo " Analyse terminée !"
+	echo " "
+																																			
+	case "$result" in
+		1)
+			cat /usr/lib/antivirscan/virus.txt
+			echo " CETTE CLE EST INFECTEE !!!"
+			echo " "
+			echo " Merci d'insérer de nouveau la clé "
+			echo " pour valider la désinfection "
+			;;
+		2)
+			cat /usr/lib/antivirscan/error.txt
+			echo " Une erreur est intervenue pendant l'analyse."
+			echo " Merci d'insérer de nouveau la clé "
+			;;
+		0)
+			cat /usr/lib/antivirscan/ok.txt
+			echo " Aucune infection détectée. "
+			echo " Cette clé est saine. "
+			;;
+	esac
+
+	echo "*******************************"
+
 }
 
 function invite()
 {
+	#invitation à insérer une clé
 	echo "***************************************"
 	echo " Insérer une clé USB pour commencer..."
 	echo "***************************************"
+
 }
+
+
+#
+#Antivirscan
+#
 
 invite
 
 while true
 do
-	sleep 1 
-	if [[ ! -z $(iscle) ]]
-	then
-		echo "******************************"
-		echo " Début de l'analyse..."
-		echo "******************************"
+	sleep 1
 	
-		datetime=`date +%Y%m%d-%H%M%S`
-	
-		fileout="/var/log/antivirscan/scan-"$datetime".log"
+	case $(isdev) in
+		0)
+			#rien à faire
+			;;
+		1)
+			#liste des partitions
+			echo "******************************"
+			echo " Clé USB détectée"
+			echo "******************************"
 
-		echo "Analyse de "$(iscle)" ..." > ${fileout}
-		echo "**************************" >> ${fileout}
+			dev_name=`lsblk | grep -e "^sd[b-z]" | awk '{ print $1 }'`
+			sleep 5 #laisser au partitions le temps de se monter
+			parts=`lsblk | grep $dev_name[1-9] | awk -F'[[:space:]]*' '{$1=$2=$3=$4=$5=$6=""; print "\""substr($0,7)"\""}'`
+			echo $parts
+			analyze $parts
 
-		/usr/bin/clamscan -r --move=/var/lib/antivirscan/quarantine --bell $(iscle) 2>&1 | tee -a ${fileout} 
-		result=${PIPESTATUS[0]}
-		error=$(grep "LibClamAV Error" ${fileout} | wc -l)
-		if [ "$error" -gt 0 ]
-		then
-			result=2		
-		fi
+			ejectdev
 
+			invite
+			;;
+		*)
+			#si plusieurs lignes -> message indiquant de les retirer et d'en mettre une seule
+			echo "************************************************"
+			echo " Plusieurs clés USB ont été détectées. "
+			echo " Merci de n'en brancher qu'une seule à la fois."
+			echo "************************************************"
 
-		echo "*******************************"
-		echo " Analyse terminée !"
-		echo " "
+			ejectdev
 
-		case "$result" in
-			1)
-				cat /usr/lib/antivirscan/virus.txt
-				echo " CETTE CLE EST INFECTEE !!!"
-				echo " "
-				echo " Merci d'insérer de nouveau la clé "
-				echo " pour valider la désinfection "
-				;;
-			2)
-				cat /usr/lib/antivirscan/error.txt
-				echo " Une erreur est intervenue pendant l'analyse."
-				echo " Merci d'insérer de nouveau la clé "
-				;;
-			0)
-				cat /usr/lib/antivirscan/ok.txt
-				echo " Aucune infection détectée. "
-				echo " Cette clé est saine. "
-				;;
-		esac
-
-		echo "*******************************"
-
-		echo "*******************************"
-		echo " Veuillez retirer la clé..."
-		echo "*******************************"
-
-		while [ ! -z $(iscle) ]
-		do
-	        	sleep 1
-        	done
-
-		invite
-	fi
+			invite
+			;;
+	esac
 done
-
