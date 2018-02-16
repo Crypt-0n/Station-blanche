@@ -1,5 +1,7 @@
 #!/bin/bash
 
+chmod -R 755 deb iso
+
 echo "## Construction du paquet antivirscan"
 cd deb
 rm antivirscan.deb 2> /dev/null
