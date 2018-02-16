@@ -107,7 +107,7 @@ do
 			dev_name=`lsblk | grep -e "^sd[b-z]" | awk '{ print $1 }'`
 			sleep 5 #laisser au partitions le temps de se monter
 			parts=`lsblk | grep $dev_name[1-9] | awk -F'[[:space:]]*' '{$1=$2=$3=$4=$5=$6=""; print "\""substr($0,7)"\""}'`
-			echo $parts
+			
 			analyze $parts
 
 			ejectdev
