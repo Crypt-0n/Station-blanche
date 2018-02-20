@@ -58,7 +58,7 @@ d-i partman/confirm_nooverwrite boolean true
 
 # Choix paquets
 apt-cdrom-setup apt-setup/cdrom/set-first boolean false
-d-i pkgsel/include string lightdm,cinnamon,gnome-terminal,clamav,antivirscan
+d-i pkgsel/include string lightdm,cinnamon,gnome-terminal,clamav,antivirscan,ntfs-3g
 d-i pkgsel/upgrade select none
 popularity-contest popularity-contest/participate boolean false
 
