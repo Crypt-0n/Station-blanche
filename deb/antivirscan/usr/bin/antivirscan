@@ -98,6 +98,7 @@ def scan(parts):
 	
 	print("************************************************")
 	print(" Analyse terminée !")
+	print(" Log disponible dans /var/log/antivirscan/scan-"+dt+".log")
 	print(" ")
 	
 	if "LibClamAV Error" in output:
