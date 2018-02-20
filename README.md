@@ -39,7 +39,10 @@
     
 * Logs des analyses : /var/log/antivirscan
 * Fichiers en quarantaine : /var/lib/antivirscan/quarantine
+
+![Virus](https://raw.githubusercontent.com/jpwilsch/station-blanche/master/doc/virus.png "Virus")
   
+![OK](https://raw.githubusercontent.com/jpwilsch/station-blanche/master/doc/ok.png "OK")
 
   
 *Inspiré du travail de Laurent Grison*
