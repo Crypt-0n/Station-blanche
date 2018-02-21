@@ -3,6 +3,6 @@ Version: 2.0
 Section: base
 Priority: optional
 Architecture: all
-Depends: bash,gnome-terminal,clamav,python3,python3-pyudev,python-psutil
+Depends: bash,gnome-terminal,clamav,python3,python3-pyudev,python3-psutil
 Maintainer: JPW
 Description: Antivirus scan of USB drives
