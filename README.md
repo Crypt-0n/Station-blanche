@@ -1,4 +1,4 @@
-# station-blanche
+# Station blanche
 
 ## Construction de l'image
 
@@ -43,8 +43,8 @@ L'installation est automatique à condition que la machine soit connectée à in
     * root / $T@t!0nBl@nch3
     * analyse / analyse
     
-* Logs des analyses : /var/log/antivirscan
-* Fichiers en quarantaine : /var/lib/antivirscan/quarantine
+* Logs des analyses : `/var/log/antivirscan`
+* Fichiers en quarantaine : `/var/lib/antivirscan/quarantine`
 
 ![Virus](https://raw.githubusercontent.com/Crypt-0n/Station-blanche/master/doc/virus.png "Virus")
   
