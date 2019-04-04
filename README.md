@@ -2,7 +2,9 @@
 
 ## Construction de l'image
 
-* Construction sur Debian 9 Stretch
+* Construction de l'IOS d'installation depuis une Debian 9 Stretch
+
+* Une connexion internet est indispensable
 
 * Paquet requis : 
 
@@ -25,6 +27,10 @@
 
 * Pour Windows : Utiliser Rufus (https://rufus.akeo.ie/)
 
+## Installation
+
+L'installation est automatique à condition que la machine soit connectée à internet via le réseau filaire
+
 ## Utilisation de la station blanche
 
 * Au boot sur la clé USB d'installation, celle ci sera entièrement automatique jusqu'à l'extinction de la machine. L'installation doit se faire sur une machine connectée à Internet.
@@ -40,11 +46,13 @@
 * Logs des analyses : /var/log/antivirscan
 * Fichiers en quarantaine : /var/lib/antivirscan/quarantine
 
-![Virus](https://raw.githubusercontent.com/jpwilsch/station-blanche/master/doc/virus.png "Virus")
+![Virus](https://raw.githubusercontent.com/Crypt-0n/Station-blanche/master/doc/virus.png "Virus")
   
-![OK](https://raw.githubusercontent.com/jpwilsch/station-blanche/master/doc/ok.png "OK")
+![OK](https://raw.githubusercontent.com/Crypt-0n/Station-blanche/master/doc/ok.png "OK")
 
-  
+
+*Fork de https://github.com/jpwilsch/station-blanche* 
+
 *Inspiré du travail de Laurent Grison*
   
 
