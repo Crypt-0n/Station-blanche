@@ -4,7 +4,7 @@
 
 * Construction de l'IOS d'installation depuis une Debian 9 Stretch
 
-* Une connexion internet est indispensable
+* Une connexion internet est indispensable pour la construction de l'image
 
 * Paquet requis : 
 
@@ -29,7 +29,7 @@
 
 ## Installation
 
-L'installation est automatique à condition que la machine soit connectée à internet via le réseau filaire
+L'installation est automatique à condition que la machine soit connectée à internet via le réseau filaire.
 
 ## Utilisation de la station blanche
 
