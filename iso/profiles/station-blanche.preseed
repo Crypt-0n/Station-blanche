@@ -26,8 +26,8 @@ d-i mirror/http/directory string /debian
 d-i mirror/http/proxy string
 
 # Mot de passe root
-d-i passwd/root-password password Bl@nch3
-d-i passwd/root-password-again password Bl@nch3
+d-i passwd/root-password password $T@t!0nBl@nch3
+d-i passwd/root-password-again password $T@t!0nBl@nch3
 # Compte analyse
 d-i passwd/user-fullname string analyse
 d-i passwd/username string analyse

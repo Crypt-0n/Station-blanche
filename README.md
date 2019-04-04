@@ -34,7 +34,7 @@
     * utilisation de l'antivirus Clamav, mise à jour des définitions de virus toutes les heures
 
 * Deux comptes : 
-    * root / Bl@nch3
+    * root / $T@t!0nBl@nch3
     * analyse / analyse
     
 * Logs des analyses : /var/log/antivirscan
