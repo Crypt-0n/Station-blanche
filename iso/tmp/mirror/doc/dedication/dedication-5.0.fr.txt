@@ -1,0 +1,23 @@
+Lenny dédiée à Thiemo Seufer
+----------------------------
+
+Le projet Debian a perdu un membre actif de sa communauté. Thiemo Seufer est
+décédé le 26 décembre 2008 dans un tragique accident automobile.
+
+Thiemo contribuait à Debian dans de nombreux domaines. Il maintenait plusieurs
+paquets et était l'artisan principal du portage de Debian sur l'architecture
+MIPS. Il était également un membre de l'équipe de maintenance du noyau et de
+l'équipe de développement de l'installateur. Ses contributions ont dépassé le
+projet Debian ; il a également travaillé sur le portage MIPS du noyau Linux,
+l'émulation MIPS dans qemu et des projets trop nombreux pour être tous cités
+ici.
+
+Le travail de Thiemo, sa persévérance, ses vastes connaissances techniques et
+sa capacité à partager avec les autres manqueront fortement. Ses contributions
+ne seront pas oubliées. La qualité élevée de son travail sera difficile à
+retrouver.
+
+Pour rendre hommage à ses contributions à Debian, le projet dédie la version
+Debian GNU/Linux 5.0 « Lenny » à Thiemo.
+
+-- The Debian Developers

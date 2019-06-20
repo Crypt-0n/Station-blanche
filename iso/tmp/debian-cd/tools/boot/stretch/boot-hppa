@@ -1,0 +1,66 @@
+#!/bin/bash
+#
+# boot-hppa
+#
+# $1 is the CD number
+# $2 is the temporary CD build dir
+
+# palo is used to make ISOs bootable on HPPA.
+
+. $BASEDIR/tools/boot/$DI_CODENAME/common.sh
+
+set -e
+
+N=$1
+CDDIR=$2
+
+# Exit if this is not CD#1/DVD#1
+if [ $N != "1" ]; then
+    exit 0
+fi
+
+if [ "$DI_WWW_HOME" = "default" ]; then
+    DI_WWW_HOME="https://d-i.debian.org/daily-images/hppa/daily/cdrom/2.6"
+    try_di_image_cache
+else
+    DI_WWW_HOME=$(echo $DI_WWW_HOME | sed "s,%ARCH%,$ARCH,")
+fi
+
+PALODEB=$(find_pkg_file palo)
+if [ -z "$PALODEB" ] ; then 
+    echo "ERROR:  the palo package is required." >&2
+    exit 1
+fi
+(dpkg --fsys-tarfile "$MIRROR/$PALODEB" | \
+    tar xf - -C . ./usr/share/palo/iplboot)
+mv usr/share/palo/iplboot $CDDIR/install/iplboot
+
+if [ -n "$ARCHIVE_EXTRACTED_SOURCES" ]; then
+    echo $PALODEB >> $CDDIR/../$N.pkgs_extracted
+    find_pkg_file palo source >> $CDDIR/../$N.pkgs_extracted
+fi
+
+if [ ! "$DI_WWW_HOME" ];then
+        if [ ! "$DI_DIR" ];then
+           DI_DIR="$MIRROR/dists/$DI_DIST/main/installer-$ARCH/current/images/cdrom/2.6"
+        fi
+else
+	DI_DIR="di_stuff"
+	mkdir "$DI_DIR"
+	$WGET -r -nd --no-parent -P "$DI_DIR" "$DI_WWW_HOME"
+fi
+	
+K32=$(basename "$DI_DIR"/vmlinux-*-parisc)
+K64=$(basename "$DI_DIR"/vmlinux-*-parisc64*)
+
+cp "$DI_DIR"/$K32  "$CDDIR/install"/$K32
+cp "$DI_DIR"/$K64  "$CDDIR/install"/$K64
+cp "$DI_DIR"/initrd.gz "$CDDIR/install"
+
+add_mkisofs_opt $CDDIR/../$1.mkisofs_opts "-hppa-cmdline '0/vmlinux initrd=0/ramdisk${KERNEL_PARAMS:+ $KERNEL_PARAMS}'"
+add_mkisofs_opt $CDDIR/../$1.mkisofs_opts "-hppa-kernel-32 install/$K32"
+add_mkisofs_opt $CDDIR/../$1.mkisofs_opts "-hppa-kernel-64 install/$K64"
+add_mkisofs_opt $CDDIR/../$1.mkisofs_opts "-hppa-bootloader install/iplboot"
+add_mkisofs_opt $CDDIR/../$1.mkisofs_opts "-hppa-ramdisk install/initrd.gz"
+
+exit 0

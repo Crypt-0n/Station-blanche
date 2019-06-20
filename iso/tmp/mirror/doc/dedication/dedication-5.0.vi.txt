@@ -1,0 +1,21 @@
+Lenny để tưởng nhớ tới Thiemo Seufer
+------------------------------------
+
+Thiemo Seufer mất đi là một tổn thất lớn cho Dự án Debian. Thiemo chết vào ngày
+26 tháng 12, năm 2008, do một tai nạn xe bi thảm.
+
+Thiemo đã đóng góp cho Debian bằng nhiều cách khác nhau. Anh ấy đã duy trì vài
+gói phần mềm, và hỗ trợ chính các bản chuyển Debian sang kiến trúc MIPS. Anh ấy
+cũng đã tham gia nhóm hạt nhân Debian, cũng như nhóm Bản Cài Đặt Debian. Sự
+đóng góp của anh ấy cũng có tác động ở phía bên kia Dự án Debian: anh ấy đã
+giúp tạo bản chuyển MIPS của hạt nhân Linux, bản mô phỏng MIPS của QEMU, và quá
+nhiều dự án khác để liệt kê ở đây.
+
+Chúng tôi nhớ sự cố gắng, sự miệt mài, kiến thức kỹ thuật rộng rãi và khả năng
+chia sẻ với người khác của Thiemo. Các sự đóng góp của anh ấy sẽ không bị quên.
+Thiemo đã đặt tiêu chuẩn làm việc cao cho các người tiếp sau.
+
+Để kính trọng các sự đóng góp cho Debian của anh ấy, Dự án đề tặng bản phát
+hành Debian GNU/Linux 5.0 “Lenny” cho Thiemo Seufer.
+
+-- The Debian Developers

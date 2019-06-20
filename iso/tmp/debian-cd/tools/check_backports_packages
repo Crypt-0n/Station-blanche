@@ -1,0 +1,68 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+# Now check to see if we've been told to use backports versions of any
+# of the packages in our list of packages.
+
+my $listin = shift;
+my $listout = shift;
+my $backports_list = read_env('BACKPORTS', "");
+my $codename = read_env('CODENAME', "");
+my %backports;
+
+sub read_env {
+    my $env_var = shift;
+    my $default = shift;
+
+    if (exists($ENV{$env_var})) {
+        return $ENV{$env_var};
+    }
+    # else
+    return $default;
+}
+
+# If not configured to use backports, bail
+if ($backports_list =~ /^$/) {
+    exit 0;
+}
+
+# Read in the backports list
+open (BACKPORTS, "< $backports_list") or die "ERROR: Can't read configured backports list file $backports_list: $!\n";
+while (defined($_=<BACKPORTS>)) {
+    chomp;
+    # Define to 1 here to say it needs to be included
+    $backports{$_} = 1;
+}
+close BACKPORTS;
+
+print "Checking for desired backports in $backports_list\n";
+
+open (LISTIN, "< $listin") or die "ERROR: Can't read the current list file $listin: $!\n";
+open (LISTOUT, "> $listout") or die "ERROR: Can't write to $listout: $!\n";
+
+# For any packages in out input list that are listed in the backports
+# file, switch to $pkg/backports
+while (defined($_=<LISTIN>)) {
+    chomp;
+    if (exists $backports{$_}) {
+	delete $backports{$_};
+	print LISTOUT "$_/$codename-backports\n";
+	print "  Replaced $_ with $_/$codename-backports in $listout\n";
+    } else {
+	print LISTOUT "$_\n";	
+    }
+}
+close LISTIN;
+
+# Finally, any further packages in our backports list are explicitly
+# requested even if they weren't in the original list. Append to the
+# output file to force inclusion. This is before sort_deps will get
+# run, so dependencies will get resolved later
+foreach my $p (keys %backports) {
+    print LISTOUT "$p/$codename-backports\n";
+    print "  Appended $p/$codename-backports\n";
+}
+close LISTOUT;
+
+exit 0;

@@ -1,0 +1,24 @@
+Suite: stable
+Codename: stretch
+Date: Thu, 20 Jun 2019 10:57:16 UTC
+Architectures: amd64
+Components: main
+Description: mirror for stretch
+MD5Sum:
+ 61b8f116ed819cb75a5fb2de9d55eda8 948466 main/binary-amd64/Packages
+ db5f73368c5908ce6241c0fdcfe3a963 280229 main/binary-amd64/Packages.gz
+ 19eb8687aca1dd071971c5f317333907 84 main/binary-amd64/Release
+ 61f364623828bfd3de27cfb769298321 278402 main/debian-installer/binary-amd64/Packages
+ 96569e4219edea958e721d69c8c30755 79891 main/debian-installer/binary-amd64/Packages.gz
+SHA1:
+ 7c0939e33f535599f03145239df9622485e9c5d0 948466 main/binary-amd64/Packages
+ 19447d50ebc9415222f191b3e14f40ea296d3499 280229 main/binary-amd64/Packages.gz
+ 8ef0289b8e173462a4f84da0a42b272a3e75fb2f 84 main/binary-amd64/Release
+ a47fbee4bf8b6c1e5ae02e704f0d398af34fdd74 278402 main/debian-installer/binary-amd64/Packages
+ af085c14d4bcb796dacb3482c285c89832d65ff2 79891 main/debian-installer/binary-amd64/Packages.gz
+SHA256:
+ 2a972939ae0e9b66032fe6cf02cbbd091d2ca27513cc27df6033df2035b4d351 948466 main/binary-amd64/Packages
+ 0baedb2c2101976619dc3226893165ae1ce130855af55301fdeda5b701b9bd2e 280229 main/binary-amd64/Packages.gz
+ ab33668e493d31b66a5711aaa21bc541b7020db0aeb51ceb4474cc9bf5333038 84 main/binary-amd64/Release
+ 5ebc8d543270f1de2f96b24e734853c3f0b924b06868a1faf43fc6d8abe47b3d 278402 main/debian-installer/binary-amd64/Packages
+ 6658809a08b351e7863f3c18fa9536adf06d609fb4d0bfec766dd5a35b056ff5 79891 main/debian-installer/binary-amd64/Packages.gz

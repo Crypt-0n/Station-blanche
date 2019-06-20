@@ -1,0 +1,21 @@
+Lenny dedikuotas Thiemo Seufer
+------------------------------
+
+Debian'o projektas prarado aktyvų savo bendruomenės narį. Thiemo Seufer žuvo
+2008 m. gruodžio 26 d. tragiškoje automobilio avarijoje.
+
+Thiemo dalyvavo Debian'o veikloje daugeliu būdų. Jis prižiūrėjo keletą paketų
+ir buvo pagrindinis MIPS architektūros Debian'e rėmėjas. Jis taip pat buvo mūsų
+branduolio komandos nariu, taip pat Debian įdiegiklio komandos narys. Jo įnašas
+siekė toli už Debian'o projekto ribų: jis taip pat dirbo prie Linux branduolio
+pernešimo MIPS architektūrai, MIPS emuliavimo qemu pagalba, ir daugelyje
+mažesnių projektų, kuriuos čia sunku visus išvardyti.
+
+Thiemo darbo, pasišventimo, plačių techninių žinių ir gebėjimą jomis dalintis
+su kitais mums labai trūks. Jo įnašas nebus užmirštas. Aukštų standartų Thiemo
+darbą bus sunku perimti.
+
+Pagerbdamas jo įnašą Debian'ui, projektas skiria Debian GNU/Linux 5.0 „Lenny“
+laidą Thiemo atminti.
+
+-- The Debian Developers

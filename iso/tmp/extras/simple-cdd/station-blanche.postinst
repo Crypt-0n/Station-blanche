@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#autologin
+sed -i 's/#autologin-user=/autologin-user=analyse/' /etc/lightdm/lightdm.conf
+sed -i 's/#autologin-user-timeout=/autologin-user-timeout=/' /etc/lightdm/lightdm.conf
+
+#autostart antivirscan
+mkdir -p /home/analyse/.config/autostart
+cp /usr/share/applications/antivirscan.desktop /home/analyse/.config/autostart
+chown -R analyse. /home/analyse/.config
+

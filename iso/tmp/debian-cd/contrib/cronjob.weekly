@@ -1,0 +1,444 @@
+#!/bin/bash
+
+TOPDIR=$(dirname $0)
+if [ "$TOPDIR" = "." ] ; then
+    TOPDIR=`pwd`
+fi
+export TOPDIR
+
+. $TOPDIR/settings.sh
+
+BUILDLOCK=$HOME/.debian-cd.lock
+
+export PUBDIRJIG=$PUBDIR/weekly-builds
+export PUBDIROSTRACE=/mnt/nfs-cdimage/.live/trace-os
+export PUBDIRLIVETRACE=/mnt/nfs-cdimage/.live/trace-live
+export DATE_BUILD="$DATE-$BUILDNUM"
+export CD_I_F="/mnt/nfs-cdimage/unofficial/non-free/cd-including-firmware"
+
+. $TOPDIR/common.sh
+
+# Make sure the machine isn't rebooted while we're busy
+reboot_lock
+
+# Uncomment the following to use daily d-i builds for these images
+# rather than what's in the archive
+USE_DAILY_DI=Y
+
+if [ "$RELEASE_BUILD"x = ""x ] ; then
+    export RSYNC_TARGET=/mnt/nfs-cdimage/weekly-builds
+    export RSYNC_TARGET_FIRMWARE=${CD_I_F}/weekly-builds
+else
+    export RSYNC_TARGET=/mnt/nfs-cdimage/.${RELEASE_BUILD}/debian-cd
+    export RSYNC_TARGET_FIRMWARE=${CD_I_F}/.${RELEASE_BUILD}/debian-cd
+    export CONF=~/build.stretch/CONF.sh.${RELEASE_BUILD}
+    export RELEASE_BUILD=$RELEASE_BUILD
+    # If we're doing a normal set of daily/weekly builds, leave the
+    # checksum filenames alone. Otherwise, make life easier for people
+    # combining things later and append a suitable name as we build.
+    export EXTENSION=".large"
+    USE_DAILY_DI=N
+fi
+
+. images4testing_d-i
+
+if [ "$USE_DAILY_DI"x = "Y"x ] ; then
+    export DI=sid
+    export DI_WWW_HOME=default
+    export DI_DIR="$ARCH_DI_DIR"
+else
+    unset DI_WWW_HOME
+fi
+
+export DI_DIST
+export DI_CODENAME
+export OUT_FREE_SID=$PUBDIRJIG
+export OUT_FREE_TST=$PUBDIRJIG
+export OUT_FW_SID=${PUBDIRJIG}-firmware
+export OUT_FW_TST=${PUBDIRJIG}-firmware
+
+BUILDS_RUNNING=""
+
+export NOEDU=1
+#export NOOPENSTACK=1
+#export NOLIVE=1
+rm -f $PUBDIRLIVETRACE $PUBDIROSTRACE
+~/build.stretch/cronjob.weekly-live &
+
+if lockfile -r0 $BUILDLOCK ; then
+#    echo "NOT checking for git updates"
+    echo "git update debian-cd"
+    cd debian-cd && git pull ; cd ..
+
+    # Keep track of the serial for the archive we're building against,
+    # for later archive diffing for release announce preparation:
+    serial=$(get_archive_serial)
+    echo "$serial" > $PUBDIRJIG/trace/archive-serial
+
+    # Work out the default desktop, and do *not* build a CD1 for that
+    # desktop - it'll be done in the full set anyway
+    TASKSEL_DEB=$(ARCHES=amd64 ./debian-cd/tools/which_deb ${MIRROR} ${DI_CODENAME} task-desktop binary)
+    DEFAULT_DESKTOP=$(dpkg --info ${MIRROR}/${TASKSEL_DEB} |
+	awk '/Recommends: task-.*-desktop/ {split($2,a,"-"); print toupper(a[2])}')
+    echo default desktop is $DEFAULT_DESKTOP, drop CD1 for that desktop
+    export NO${DEFAULT_DESKTOP}CD=1
+
+#    echo "NOT checking for popcon updates"
+    if [ "$NOPOPCON"x = ""x ] ; then
+	cd debian-cd && ./tools/update_popcon tasks/stretch/popularity-contest ; cd ..
+    fi
+
+    cd $TOPDIR
+    mkdir -p $PUBDIRJIG/trace
+    mkdir -p $RSYNC_TARGET $RSYNC_TARGET_FIRMWARE
+
+    for arch in $ARCHES; do
+        # Reset envvars for next iteration
+        arch_error=""
+        arch_start=`now`
+
+        if [ "$arch" != multi-arch ] ; then
+            rm -rf $PUBDIRJIG/$arch $PUBDIRJIG-firmware/$arch
+            mkdir -p $PUBDIRJIG/$arch
+	    if $(arch_has_firmware $arch) ; then
+		mkdir -p $PUBDIRJIG-firmware/$arch
+	    fi
+
+#            export DI_DIR="$ARCH_DI_DIR" 
+	    export VARIANTS=""
+
+            # Full DVD set
+            if [ "$NODVD"x = ""x ] ; then
+                export MAX_PKG_SIZE=999999999999
+                case $arch in
+                    i386|amd64)
+                        export MAXISOS=3
+			export MAXJIGDOS=ALL
+			export VARIANTS=xen
+                        # Special case: make DVD1 fit on a 4GB USB
+                        # stick (#612074)
+			export FORCE_CD_SIZE1=STICK4GB
+			;;
+                    source)
+                        export MAXISOS=ALL; export MAXJIGDOS=ALL ;;
+                    powerpc|arm64)
+                        # Special cases: make DVD1 fit on a 4GB USB
+                        # stick
+			export FORCE_CD_SIZE1=STICK4GB
+                        export MAXISOS=1; export MAXJIGDOS=ALL ;;
+                    *)
+                        export MAXISOS=1; export MAXJIGDOS=ALL ;;
+                esac
+                export DESKTOP=all
+		build_started DVD
+                INSTALLER_CD=3 TASK=Debian-all \
+                    KERNEL_PARAMS='desktop=all' \
+                    ./testingcds "$arch" &
+
+		# Single DVD with firmware
+		if $(arch_has_firmware $arch) ; then
+                    case $arch in
+			i386|amd64)
+			    export VARIANTS=xen
+			    ;;
+		    esac
+                    build_started DVDFIRMWARE
+                    COMPLETE=0 INSTALLER_CD=I \
+                            FORCE_FIRMWARE=1 CDNAME=firmware \
+                            KERNEL_PARAMS="desktop=all" \
+                            DESKTOP=all \
+                            TASK=Debian-all \
+			    MAXISOS=1 MAXJIGDOS=1 \
+                            DI=${DI} DI_DIST=${DI} \
+                            ./testingcds "$arch" &
+                fi
+		unset FORCE_CD_SIZE1
+            fi
+
+	    # Full BD set
+            if [ "$NOBD"x = ""x ] ; then
+		unset DESKTOP
+                export MAX_PKG_SIZE=999999999999
+                case $arch in
+                    i386|amd64|source)
+                        export MAXISOS=0
+                        export MAXJIGDOS=ALL
+                        export DESKTOP=all
+			export VARIANTS=xen
+			build_started BD
+                        INSTALLER_CD=9 TASK=Debian-all \
+                            KERNEL_PARAMS='desktop=all' \
+                            ./testingcds "$arch" &
+                        ;;
+                    *)
+                        echo "  Not running BD build for $arch"
+                        ;;
+                esac
+            fi
+
+            # Full DLBD set
+            if [ "$NOBD"x = ""x ] && [ "$NODLBD"x = ""x ] ; then
+		unset DESKTOP
+                export MAX_PKG_SIZE=999999999999
+                case $arch in
+                    i386|amd64|source)
+                        export MAXISOS=0
+                        export MAXJIGDOS=ALL
+                        export DESKTOP=all
+			export VARIANTS=xen
+			build_started DLBD
+                        INSTALLER_CD=D TASK=Debian-all \
+                            KERNEL_PARAMS='desktop=all' \
+                            ./testingcds "$arch" &
+                        ;;
+                    *)
+                        echo "  Not running DLBD build for $arch"
+                        ;;
+                esac
+            fi
+
+            # individual desktop cds: gnome, kde, xfce. lxde
+            if [ "$arch"x != "source"x ] && [ "$NOCD"x = ""x ] ; then
+                if [ "$NOXFCECD"x = ""x ] ; then
+                    export MAX_PKG_SIZE=300000000
+                    export DESKTOP=xfce
+                    export MAXISOS=1; export MAXJIGDOS=1
+                    export VARIANTS=""
+                    build_started XFCECD
+                    INSTALLER_CD=5 TASK=Debian-xfce \
+                        KERNEL_PARAMS='desktop=xfce' \
+                        MAXCDS=1 MAXISOS=ALL MAXJIGDOS=ALL \
+                        ./testingcds "$arch" &
+                fi
+            fi
+
+            # netinst CD
+            if [ "$arch"x != "source"x ] && [ "$NOCD"x = ""x ] && [ "$NONI"x = ""x ] ; then
+                export MAX_PKG_SIZE=300000000
+                export DESKTOP=all
+                export MAXISOS=1; export MAXJIGDOS=1
+                export VARIANTS=""
+
+                build_started NI
+                OMIT_RELEASE_NOTES=1 OMIT_MANUAL=1 NORECOMMENDS=1 \
+                    NOSUGGESTS=1 COMPLETE=0 INSTALLER_CD=2 \
+                    KERNEL_PARAMS="desktop=all" \
+                    DESKTOP=all VARIANTS=xen \
+                    TASK=debian-installer+kernel MAXISOS=ALL MAXJIGDOS=ALL \
+                    DI=${DI} DI_DIST=${DI} \
+                    ./testingcds "$arch" &		
+
+		if $(arch_has_firmware $arch) ; then
+                    build_started NIFIRMWARE
+                    OMIT_RELEASE_NOTES=1 OMIT_MANUAL=1 NORECOMMENDS=1 \
+                        NOSUGGESTS=1 COMPLETE=0 INSTALLER_CD=C \
+                        FORCE_FIRMWARE=1 CDNAME=firmware \
+                        KERNEL_PARAMS="desktop=all" \
+                        DESKTOP=all VARIANTS=xen \
+                        TASK=debian-installer+kernel MAXISOS=ALL MAXJIGDOS=ALL \
+                        DI=${DI} DI_DIST=${DI} \
+                        ./testingcds "$arch" &
+                fi
+
+		# Special Mac-only builds
+		if [ "$arch" = "i386" ] || [ "$arch" = "amd64" ] ; then
+                    build_started MACNI
+                    OMIT_RELEASE_NOTES=1 OMIT_MANUAL=1 NORECOMMENDS=1 \
+                        NOSUGGESTS=1 COMPLETE=0 INSTALLER_CD=F \
+                        BOOT_METHODS=BIOS CDNAME="debian-mac" \
+                        KERNEL_PARAMS="desktop=all" \
+                        DESKTOP=all VARIANTS=xen \
+                        TASK=debian-installer+kernel MAXISOS=ALL MAXJIGDOS=ALL \
+                        DI=${DI} DI_DIST=${DI} \
+                        ./testingcds "$arch" &
+                fi
+            fi
+
+	    catch_parallel_builds
+
+            for dir in $PUBDIRJIG/$arch/jigdo-*; do
+                generate_checksums_for_arch $arch $dir
+            done
+            if [ -d $PUBDIRJIG-firmware/$arch ] ; then
+                for dir in ${PUBDIRJIG}-firmware/$arch/jigdo-*; do
+                    generate_checksums_for_arch $arch $dir
+                done
+            fi
+
+            if [ "$NOSYNC"x = ""x ] ; then
+                if [ "$arch_error"x = "none"x ] ; then
+                    if [ "$RELEASE_BUILD"x = ""x ] ; then
+                        echo "Signing checksums files using the automatic key"
+                        ~/build.stretch/sign-images $PUBDIRJIG $arch
+                    fi
+                    echo "  Running ~/build.stretch/iso_run $PUBDIRJIG/ $RSYNC_TARGET/ $arch &"
+                    ~/build.stretch/iso_run $PUBDIRJIG/ $RSYNC_TARGET/ $arch &
+                    if [ -d $PUBDIRJIG-firmware/$arch ] ; then
+                        if [ "$RELEASE_BUILD"x = ""x ] ; then
+                            echo "Signing checksums files using the automatic key"
+                            ~/build.stretch/sign-images $PUBDIRJIG-firmware $ARCH
+                        fi
+                        echo "  Running ~/build.stretch/iso_run ${PUBDIRJIG}-firmware/ $RSYNC_TARGET_FIRMWARE/ $arch &"
+                        ~/build.stretch/iso_run ${PUBDIRJIG}-firmware/ $RSYNC_TARGET_FIRMWARE/ $arch &
+                    fi
+                else
+                    ~/build.stretch/report_build_error $PUBDIRJIG $RSYNC_TARGET $arch "$arch_error"
+                    if [ -d ${PUBDIRJIG}-firmware/$arch ] ; then
+			~/build.stretch/report_build_error ${PUBDIRJIG}-firmware $RSYNC_TARGET_FIRMWARE/ $arch "$arch_error"
+		    fi
+                fi
+            fi
+        else # multi-arch
+            rm -rf $PUBDIRJIG/multi-arch $PUBDIRJIG-firmware/multi-arch
+            for i in iso-dvd jigdo-dvd iso-cd jigdo-cd; do
+                mkdir -p $PUBDIRJIG/multi-arch/$i
+                if $(arch_has_firmware multi-arch) ; then
+		    mkdir -p $PUBDIRJIG-firmware/multi-arch/$i
+		fi
+            done
+
+            if [ "$NODVD"x = ""x ] ; then
+                export MAX_PKG_SIZE=999999999999
+                export DESKTOP=all
+                # Special case: make DVD1 fit on a 4GB USB
+                # stick (#612074)
+		build_started DVD
+		export FORCE_CD_SIZE1=STICK4GB
+                INSTALLER_CD=6 TASK=Debian-all \
+                    KERNEL_PARAMS='desktop=all' \
+                    MAXCDS=1 MAXISOS=ALL MAXJIGDOS=ALL \
+		    VARIANTS=xen \
+                    ./testingcds "i386 amd64 source" &
+		# DVD with firmware
+		if $(arch_has_firmware $arch) ; then
+                    build_started DVDFIRMWARE
+                        INSTALLER_CD=J TASK=Debian-all \
+                        FORCE_FIRMWARE=1 CDNAME=firmware \
+                        KERNEL_PARAMS="desktop=all" \
+			MAXCDS=1 MAXISOS=ALL MAXJIGDOS=ALL \
+                        VARIANTS=xen \
+                        DI=${DI} DI_DIST=${DI} \
+                        ./testingcds "i386 amd64 source" &
+                fi
+		unset FORCE_CD_SIZE1
+            fi
+
+	    if [ "$NOEDU"x = ""x ] && [ "$NOUSB"x = ""x ] ; then
+		if $(arch_has_firmware $arch) ; then
+		    build_started FIRMWAREEDUUSB
+		    OMIT_RELEASE_NOTES=1 OMIT_MANUAL=1 NORECOMMENDS=1 \
+				      NOSUGGESTS=1 COMPLETE=0 INSTALLER_CD=H \
+				      FORCE_FIRMWARE=1 CDNAME=debian-edu-firmware \
+				      DEBIAN_EDU=1 \
+				      KERNEL_PARAMS="desktop=kde" \
+				      DESKTOP=kde VARIANTS=xen \
+				      EXCLUDE=debian-edu-exclude \
+				      UDEB_EXCLUDE="$BASEDIR"/data/$CODENAME/udeb_exclude \
+				      TASK=Debian-edu-full \
+				      MAXISOS=1 MAXJIGDOS=1 \
+				      DI=${DI} DI_DIST=${DI} \
+				      ./testingcds "amd64 i386" &
+                fi
+	    fi
+
+	    if [ "$NOCD"x = ""x ] && [ "$NONI"x = ""x ] ; then
+                export DESKTOP=all
+                build_started NI
+                OMIT_RELEASE_NOTES=1 OMIT_MANUAL=1 NORECOMMENDS=1 \
+                    NOSUGGESTS=1 COMPLETE=0 INSTALLER_CD=2 \
+                    KERNEL_PARAMS="desktop=all" \
+                    DESKTOP=all VARIANTS=xen \
+                    TASK=debian-installer+kernel \
+                    MAXISOS=ALL MAXJIGDOS=ALL \
+                    DI=${DI} DI_DIST=${DI} \
+                    ./testingcds "amd64 i386" &
+
+		if $(arch_has_firmware $arch) ; then
+                    build_started NIFIRMWARE
+                    OMIT_RELEASE_NOTES=1 OMIT_MANUAL=1 NORECOMMENDS=1 \
+                        NOSUGGESTS=1 COMPLETE=0 INSTALLER_CD=C \
+                        FORCE_FIRMWARE=1 CDNAME=firmware \
+                        KERNEL_PARAMS="desktop=all" \
+                        DESKTOP=all VARIANTS=xen \
+                        TASK=debian-installer+kernel \
+                        MAXISOS=ALL MAXJIGDOS=ALL \
+                        DI=${DI} DI_DIST=${DI} \
+                        ./testingcds "amd64 i386" &
+                fi
+
+		if [ "$NOEDU"x = ""x ] ; then
+		    if $(arch_has_firmware $arch) ; then
+			build_started NIFIRMWAREEDU
+			OMIT_RELEASE_NOTES=1 OMIT_MANUAL=1 NORECOMMENDS=1 \
+					  NOSUGGESTS=1 COMPLETE=0 INSTALLER_CD=G \
+					  FORCE_FIRMWARE=1 CDNAME=debian-edu-firmware \
+					  DEBIAN_EDU=1 \
+					  KERNEL_PARAMS="desktop=kde" \
+					  DESKTOP=kde VARIANTS=xen \
+					  EXCLUDE=debian-edu-exclude \
+					  UDEB_EXCLUDE="$BASEDIR"/data/$CODENAME/udeb_exclude \
+					  TASK=Debian-edu-netinst \
+					  MAXISOS=1 MAXJIGDOS=1 \
+					  DI=${DI} DI_DIST=${DI} \
+					  ./testingcds "amd64 i386" &
+                    fi
+		fi
+	    fi
+
+	    catch_parallel_builds
+
+            for dir in $PUBDIRJIG/multi-arch/jigdo-*; do
+                generate_checksums_for_arch multi-arch $dir
+            done
+            if [ -d $PUBDIRJIG-firmware/multi-arch ] ; then
+                for dir in ${PUBDIRJIG}-firmware/multi-arch/jigdo-*; do
+                    generate_checksums_for_arch multi-arch $dir
+                done
+	    fi
+
+            if [ "$NOSYNC"x = ""x ] ; then
+                if [ "$arch_error"x = "none"x ] || [ "$arch_error"x = ""x ] ; then
+                    if [ "$RELEASE_BUILD"x = ""x ] ; then
+                        echo "Signing checksums files using the automatic key"
+                        ~/build.stretch/sign-images $PUBDIRJIG multi-arch
+                    fi
+                    echo "  Running ~/build.stretch/iso_run $PUBDIRJIG/ $RSYNC_TARGET/ multi-arch &"
+                    ~/build.stretch/iso_run $PUBDIRJIG/ $RSYNC_TARGET/ multi-arch &
+                    if [ -d $PUBDIRJIG-firmware/multi-arch ] ; then
+                        if [ "$RELEASE_BUILD"x = ""x ] ; then
+                            echo "Signing checksums files using the automatic key"
+		            ~/build.stretch/sign-images $PUBDIRJIG-firmware multi-arch
+                        fi
+                        echo "  Running ~/build.stretch/iso_run ${PUBDIRJIG}-firmware/ $RSYNC_TARGET_FIRMWARE/ multi-arch &"
+                        ~/build.stretch/iso_run ${PUBDIRJIG}-firmware/ $RSYNC_TARGET_FIRMWARE/ multi-arch &
+                    fi
+                else
+                    ~/build.stretch/report_build_error ${PUBDIRJIG} $RSYNC_TARGET multi-arch "$arch_error"
+                    if [ -d ${PUBDIRJIG}-firmware/multi-arch ] ; then
+			~/build.stretch/report_build_error ${PUBDIRJIG}-firmware $RSYNC_TARGET_FIRMWARE/ $multi-arch "$arch_error"
+		    fi
+                fi
+            fi
+        fi # end of multi-arch
+
+    done
+
+    # Generate HEADER.html files
+    ~/build.stretch/generate_headers $RSYNC_TARGET ""
+    ~/build.stretch/generate_headers $RSYNC_TARGET_FIRMWARE firmware
+
+    if [ "$NOFW"x = ""x ] ; then
+	~/build.stretch/generate_firmware_images stretch
+	~/build.stretch/generate_firmware_images sid
+    fi
+    
+    if [ "$NOSNAP"x = ""x ] ; then
+        ~/bin/weekly-snapshots
+    fi
+
+    catch_live_builds
+
+    date -u > $PUBDIRJIG/trace/cdimage.debian.org
+
+    rm -f $BUILDLOCK
+fi

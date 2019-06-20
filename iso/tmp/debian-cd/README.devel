@@ -1,0 +1,51 @@
+README for those who want to hack on debian-cd
+----------------------------------------------
+
+Organisation :
+--------------
+
+The main source is in the Debian git server. If you want to hack on
+debian-cd and if you want to send me patches, please work on the
+latest version available in git.
+
+auth: ssh://$user@git.debian.org/git/debian-cd/debian-cd.git
+anon: git://anonscm.debian.org/debian-cd/debian-cd.git
+web:  http://anonscm.debian.org/cgit/debian-cd/debian-cd.git
+
+If you want to discuss anything related to the debian-cd development,
+mail the debian-cd@lists.debian.org mailing list where all people
+interested in the debian-cd development are subscribed.
+
+Technical details :
+-------------------
+
+The Makefile which is the main directory will be used to launch
+each step of the install process. Try to comment each target of
+the makefile so that other can know why it's here. If you need
+specific programs (perl or shell scripts), please put them
+in the tools directory.
+
+The tasks directory will contain files listing packages (the
+order in which package are listed is important, each package
+added will be added to the current CD until it's full).
+
+The data dir will contains useful data (not directly task 
+related) like the master file from boot-floppies and so on.
+
+Each tool is self-documented, if you want to know what it
+does read the sources (they are scripts).
+
+Debugging debian-cd :
+---------------------
+
+If you want to read more about what debian-cd is doing you can set the
+VERBOSE environment variable to 1, 2 or 3 depending on the level of
+noise that you want.
+
+Some scripts generates their own log files in the temp dir. You 
+can take a look at them if you want to check for warnings 
+and so on.
+Log files :
+- $TDIR/$CODENAME/sort_deps.log
+- $TDIR/$CODENAME/make_disc_trees.log
+

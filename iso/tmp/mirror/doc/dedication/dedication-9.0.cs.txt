@@ -1,0 +1,22 @@
+Věnováno Ianu Murdockovi
+------------------------
+
+Ian Murdock, zakladatel projektu Debian, nás opustil 28. prosince 2015 ve svém
+domě v San Franciscu. Bylo mu 42 let.
+
+O Ianově přínosu svobodnému softwaru se nedá přehánět. Vedl projekt Debian od
+jeho vzniku v roce 1993 do roku 1996, v lednu 1994 napsal manifest Debianu a
+pečoval o dospívající projekt během svých studií na Purdue University.
+
+Ian se stal zakládajícím ředitelem Linux International, technologickým
+ředitelem Free Standards Group a následně Linux Foundation. Dále byl vedoucím
+projektu Indiana v Sun Microsystems, což popsal jako: „Vzali jsme to, co Linux
+přinesl do světa operačních systémů a nabídli to Solarisu.“
+
+Úspěch Debianu je dokladem Ianovy vize. Inspiroval nespočet lidí po celém
+světě, aby přispěli svým volným časem a dovednostmi. Z Debianu je odvozeno více
+než 350 distribucí.
+
+Debian 9 „stretch“ tedy věnujeme Ianovi.
+
+ -- Vývojáři Debianu

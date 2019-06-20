@@ -1,0 +1,55 @@
+Name: default
+Suite: *
+Architectures: amd64
+UDebComponents: 
+Method: http://deb.debian.org/debian/
+FilterList: deinstall package-list
+VerifyRelease: 8B48AD6246925553|CBF8D6FD518E17E1|7638D0442B90D010|9D6D8F6BC857C906|EF0F382A1A7B6500|E0B11894F66AEC98|04EE7237B7D453EC|EDA0D2388AE22BA9|AA8E81B4331F7F50
+
+Name: default-base
+Suite: *
+Architectures: amd64
+UDebComponents: 
+Method: http://deb.debian.org/debian/
+FilterFormula: priority (== required) | priority (== important) | priority (== standard)
+VerifyRelease: 8B48AD6246925553|CBF8D6FD518E17E1|7638D0442B90D010|9D6D8F6BC857C906|EF0F382A1A7B6500|E0B11894F66AEC98|04EE7237B7D453EC|EDA0D2388AE22BA9|AA8E81B4331F7F50
+
+Name: default-udebs
+Suite: *
+Architectures: amd64
+Components: 
+Method: http://deb.debian.org/debian/
+VerifyRelease: 8B48AD6246925553|CBF8D6FD518E17E1|7638D0442B90D010|9D6D8F6BC857C906|EF0F382A1A7B6500|E0B11894F66AEC98|04EE7237B7D453EC|EDA0D2388AE22BA9|AA8E81B4331F7F50
+
+Name: default-base-security
+Suite: */updates
+Architectures: amd64
+UDebComponents: 
+Method: http://security.debian.org/
+FilterFormula: priority (== required) | priority (== important) | priority (== standard)
+VerifyRelease: 8B48AD6246925553|CBF8D6FD518E17E1|7638D0442B90D010|9D6D8F6BC857C906|EF0F382A1A7B6500|E0B11894F66AEC98|04EE7237B7D453EC|EDA0D2388AE22BA9|AA8E81B4331F7F50
+
+Name: default-security
+Suite: */updates
+Architectures: amd64
+UDebComponents: 
+Method: http://security.debian.org/
+FilterList: deinstall package-list
+VerifyRelease: 8B48AD6246925553|CBF8D6FD518E17E1|7638D0442B90D010|9D6D8F6BC857C906|EF0F382A1A7B6500|E0B11894F66AEC98|04EE7237B7D453EC|EDA0D2388AE22BA9|AA8E81B4331F7F50
+
+Name: default-base-updates
+Suite: stretch-updates
+Architectures: amd64
+UDebComponents: main
+Method: http://deb.debian.org/debian/
+FilterFormula: priority (== required) | priority (== important) | priority (== standard)
+VerifyRelease: 8B48AD6246925553|CBF8D6FD518E17E1|7638D0442B90D010|9D6D8F6BC857C906|EF0F382A1A7B6500|E0B11894F66AEC98|04EE7237B7D453EC|EDA0D2388AE22BA9|AA8E81B4331F7F50
+
+Name: default-updates
+Suite: stretch-updates
+Architectures: amd64
+UDebComponents: main
+Method: http://deb.debian.org/debian/
+FilterList: deinstall package-list
+VerifyRelease: 8B48AD6246925553|CBF8D6FD518E17E1|7638D0442B90D010|9D6D8F6BC857C906|EF0F382A1A7B6500|E0B11894F66AEC98|04EE7237B7D453EC|EDA0D2388AE22BA9|AA8E81B4331F7F50
+

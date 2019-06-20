@@ -1,0 +1,9 @@
+[autorun]
+open=setup.exe
+icon=setup.exe,0
+label=Install Debian GNU/Linux
+
+[Content]
+MusicFiles=false
+PictureFiles=false
+VideoFiles=false

@@ -1,0 +1,78 @@
+#!/bin/bash
+
+now () {
+    date -u +%F:%H:%M:%S
+}
+
+START=`now`
+ERROR=0
+if [ "$NOLIVE"x = ""x ] ; then
+    echo "  Running debian live build"
+    ~/live/bin/run-live
+    ERROR=$?
+    if [ $ERROR -eq 0 ] ; then
+	if [ "$RELEASE_BUILD"x = ""x ] ; then
+	    ~/build.stretch/sign-images /mnt/nfs-cdimage/.live/new/free ""
+	    mv -f /mnt/nfs-cdimage/weekly-live-builds /mnt/nfs-cdimage/weekly-live-builds.old
+	    mv /mnt/nfs-cdimage/.live/new/free/ /mnt/nfs-cdimage/weekly-live-builds
+	    rm -rf /mnt/nfs-cdimage/weekly-live-builds.old
+
+	    ~/build.stretch/sign-images /mnt/nfs-cdimage/.live/new/non-free ""
+	    mv -f ${CD_I_F}/weekly-live-builds ${CD_I_F}/weekly-live-builds.old
+	    mv /mnt/nfs-cdimage/.live/new/non-free ${CD_I_F}/weekly-live-builds
+	    rm -rf ${CD_I_F}/weekly-live-builds.old
+	else
+	    mkdir -p /mnt/nfs-cdimage/.${RELEASE_BUILD}/
+	    rm -rf /mnt/nfs-cdimage/.${RELEASE_BUILD}/live-*
+	    mv /mnt/nfs-cdimage/.live/new/free/ /mnt/nfs-cdimage/.${RELEASE_BUILD}/live-free
+	    mv /mnt/nfs-cdimage/.live/new/non-free /mnt/nfs-cdimage/.${RELEASE_BUILD}/live-non-free
+	fi
+    fi
+    # Wait for the KVM to shut down cleanly
+    sleep 30
+fi
+END=`now`
+if [ "$PUBDIRLIVETRACE"x != ""x ] ; then
+    echo -e "start=$START\nend=$END\nerror=$ERROR\nlogfile=\n" > $PUBDIRLIVETRACE
+fi
+
+START=`now`
+ERROR=0
+if [ "$NOOPENSTACK"x = ""x ] ; then
+    echo "  Running openstack builds"
+    if [ "$NOOPENSTACKamd64"x = ""x ] ; then
+	~/live/bin/run-openstack amd64
+	ERROR=$(($ERROR + $?))
+	# Wait for the VM to shut down cleanly
+	sleep 30
+    fi
+    if [ "$NOOPENSTACKarm64"x = ""x ] ; then
+	~/live/bin/run-openstack arm64
+	ERROR=$(($ERROR + $?))
+	# Wait for the VM to shut down cleanly
+	sleep 30
+    fi
+    if [ $ERROR -eq 0 ] ; then
+	mkdir -p /mnt/nfs-cdimage/.live/new/openstack-stretch
+	mv -v /mnt/nfs-cdimage/.live/new/openstack-stretch-*/*.* /mnt/nfs-cdimage/.live/new/openstack-stretch
+	for SUM in MD5 SHA1 SHA256 SHA512; do
+	    cat /mnt/nfs-cdimage/.live/new/openstack-stretch-*/${SUM}SUMS > /mnt/nfs-cdimage/.live/new/openstack-stretch/${SUM}SUMS
+	done
+	if [ "$RELEASE_BUILD"x = ""x ] ; then
+	    ~/build.stretch/sign-images /mnt/nfs-cdimage/.live/new/openstack-stretch ""
+	    mv /mnt/nfs-cdimage/.live/new/openstack-stretch/* /mnt/nfs-cdimage/openstack/testing
+	    cp ~/build.stretch/openstack-header.html /mnt/nfs-cdimage/openstack/testing/HEADER.html
+	else
+	    mkdir -p /mnt/nfs-cdimage/.${RELEASE_BUILD}
+	    rm -rf /mnt/nfs-cdimage/.${RELEASE_BUILD}/openstack
+	    mv /mnt/nfs-cdimage/.live/new/openstack-stretch /mnt/nfs-cdimage/.${RELEASE_BUILD}/openstack
+	    cp ~/build.stretch/openstack-header.html /mnt/nfs-cdimage/.${RELEASE_BUILD}/openstack/HEADER.html
+	fi
+    fi
+fi
+END=`now`
+if [ "$PUBDIROSTRACE"x != ""x ] ; then
+    echo -e "start=$START\nend=$END\nerror=$ERROR\nlogfile=\n" > $PUBDIROSTRACE
+fi
+
+exit 0

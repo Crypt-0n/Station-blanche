@@ -1,0 +1,23 @@
+Didedikasikan untuk Ian Murdock
+-------------------------------
+
+Ian Murdock, pendiri proyek Debian, meninggal pada tanggal 28 Desember 2015 di
+rumahnya di San Francisco. Umurnya 42 tahun.
+
+Sulit untuk membesar-besarkan kontribusi Ian terhadap Perangkat Lunak Bebas.
+Dia memimpin Proyek Debian dari awal tahun 1993 sampai 1996, menulis manifesto
+Debian pada bulan Januari 1994 dan memupuk proyek yang masih baru selama masa
+studinya di Universitas Purdue.
+
+Ian kemudian menjadi direktur pendiri Linux International, CTO dari Free
+Standards Group dan kemudian Linux Foundation, dan pemimpin Project Indiana di
+Sun Microsystems, yang ia gambarkan sebagai "mengambil pelajaran bahwa Linux
+telah dibawa ke sistem operasi dan menyediakannya untuk Solaris ".
+
+Keberhasilan Debian adalah bukti visi Ian. Dia mengilhami banyak orang di
+seluruh dunia untuk menyumbangkan waktu luang dan keterampilan mereka sendiri.
+Lebih dari 350 distribusi diketahui berasal dari Debian.
+
+Oleh karena itu kami mempersembahkan Debian 9 "stretch" kepada Ian.
+
+ -- Pengembang Debian

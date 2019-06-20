@@ -1,0 +1,30 @@
+Suite: stable
+Codename: stretch
+Date: Thu, 20 Jun 2019 10:57:16 UTC
+Architectures: amd64
+Components: main
+Description: mirror for stretch
+MD5Sum:
+ da8c195c98f6c806e02928f6bf035e24    58719 main/debian-installer/binary-amd64/Packages.gz
+ 741b53629c740f7ba18ded4d9fd3a512   192941 main/debian-installer/binary-amd64/Packages
+ 57cea517b66539170938ab001df61f4d   254369 main/binary-amd64/Packages.gz
+ 6c12ad8af15890f4094548d3a0b98a0e   849689 main/binary-amd64/Packages
+ 19eb8687aca1dd071971c5f317333907       84 main/binary-amd64/Release
+SHA1:
+ e7e99ee874cc689682350428b9ea0fea72aa2446    58719 main/debian-installer/binary-amd64/Packages.gz
+ 21fdbabe4f30caaacd071f95d5a6a8843681a943   192941 main/debian-installer/binary-amd64/Packages
+ f7a02bbf626c242135c242db40b885aba03819e5   254369 main/binary-amd64/Packages.gz
+ 64da8d3093e6593cd8abb4609e5af56edd96ea95   849689 main/binary-amd64/Packages
+ 8ef0289b8e173462a4f84da0a42b272a3e75fb2f       84 main/binary-amd64/Release
+SHA256:
+ 854d23a0bcf2f1a8ef6d9efc83e1f7d8b6c18645b0d7a5e0c71162247e4da537    58719 main/debian-installer/binary-amd64/Packages.gz
+ 59264162423f61e59d5ca39363a6a8a916aa94e4292beb58606afe1874e4acd5   192941 main/debian-installer/binary-amd64/Packages
+ d2bc99bca72173a777f3df9d1318a78176c02333c75cb9f33e14e11727881117   254369 main/binary-amd64/Packages.gz
+ e76bf0d68a276112aff595bc61dc2551c580691858a355037558a2fa735c8c64   849689 main/binary-amd64/Packages
+ ab33668e493d31b66a5711aaa21bc541b7020db0aeb51ceb4474cc9bf5333038       84 main/binary-amd64/Release
+SHA512:
+ 55245374aa15886b3ec2b6cb336d1cf9b6244c22214d6b7c4e7870f9c00a996a4615c29e1d7bd47961efdf5c309a2948b98657c87cc01255226c1f2afc7f7d4d    58719 main/debian-installer/binary-amd64/Packages.gz
+ 69950ad6e3bd8d639f813ca7692dd5c0f582b4a283796cd3a6dd33479686cc6f3972f5bfa38f178c76f22bbb42041cfee67a9b9edbad8bd4c633a536b4e7686f   192941 main/debian-installer/binary-amd64/Packages
+ e486110a90be9388458b9dfc24966bafd9019be4838930decb13b3c19842e98e8b977b00b4820fad7b37f0a12d12cdcd8b55c1b4b3a386ade5e3dd5656114425   254369 main/binary-amd64/Packages.gz
+ 38b4a88ddab448e39a87aab73079b408d2a166874607d32a46ec72d06da5bec14ab82d7e872b942ab069d5c43e651dc3b18fd513256d22ef36d43a1c92d6cb79   849689 main/binary-amd64/Packages
+ 03417237b74a260408aa8616349cb7663788d34062fdef62a153479d77df929321405c6cefb4a94c1a155f7eb673c38b4829cb782ea870ea14b5332f8169b0cb       84 main/binary-amd64/Release

@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+# Helper for signing images
+#
+DIR=$1
+ARCH=$2
+
+KEYID=42468F4009EA8AC3
+
+cd $DIR/$ARCH
+
+# Sigh. GPG2 needs a different command line :-(
+# Try to detect what we have
+gpg --help | grep -q "server mode"
+if [ $? -eq 0 ] ; then
+    GPG2_OPTS="	--pinentry-mode=loopback"
+fi
+
+for file in $(find . -name '*SUMS' \
+    -o -name *SUMS.small \
+    -o -name *SUMS.large); do
+    gpg -q -a --detach-sign \
+	$GPG2_OPTS \
+	--batch --no-tty \
+        --passphrase-file ~/.testing-pass \
+        -u $KEYID \
+        $file 2>&1 > gpg.log
+    error=$?
+    if [ $error -ne 0 ] ; then  
+        echo "  FAIL:"
+        cat gpg.log
+        exit 1
+    fi
+    mv $file.asc $file.sign > gpg.log 2>&1
+    if [ $error -ne 0 ] ; then  
+        echo "  FAIL:"
+        cat gpg.log
+        exit 1
+    fi
+done
+
+rm -f gpg.log

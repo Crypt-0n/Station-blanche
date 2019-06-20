@@ -1,0 +1,23 @@
+Tilegnet Ian Murdock
+--------------------
+
+Ian Murdock, Debianprojektets grundlægger, afgik ved døden 28. december 2015 i
+sit hjem i San Francisco. Han blev 42.
+
+Ians bidrag til fri software kan næppe overvurderes. Han ledte Debianprojektet
+fra dets begyndelse i 1993 til 1996, skrev Debians manifest i januar 1994 og
+plejede det spirende projekt gennem sine studier på Purdue University.
+
+Ian blev senere grundlæggende direktør for Linux International, CTO for Free
+Standards Group og senere Linux Foundation, samt leder for Project Indiana hos
+Sun Microsystems, hvilket han beskrev som at "videregive de indhøstede
+erfaringer fra Linux-styresystemet til Solaris".
+
+Debians succes er vidnesbyrd om Ians fremsynethed: Han inspirerede utallige
+mennesker rundt omkring i verden til at bidrage med deres egen tid og formåen.
+Mere end 350 distributioner er afledt af Debian.
+
+Vi tilegner derfor Debian 9 "stretch" til Ian.
+
+ -- Debians udviklere
+

@@ -1,0 +1,26 @@
+Dedicado a Ian Murdock
+------------------------
+
+Ian Murdock, el fundador del proyecto Debian, falleció el pasado 28 de
+diciembre de 2015 en su casa de San Francisco. Tenía 42 años.
+
+Es difícil exagerar las contribuciones de Ian al software libre. Dirigió
+el Proyecto Debian desde su nacimiento en 1993 a 1996, escribió el manifiesto
+de Debian en enero de 1994 y cuidó de un proyecto en su infancia mientras
+estudiaba en la Universidad de Purdue.
+
+Ian continuó y fue director fundador de Linux Internacional, Director Técnico
+del Grupo de Estándares Libres y posteriormente la Fundación Linux, y líder
+del Proyecto Indiana en Sun Microsystems. Proyecto que él describía como
+«obteniendo las lecciones que Linux ha traído al mundo de los sistemas
+operativos y aplicándolas a Solaris».
+
+El éxito de Debian es un testamento a la visión de Ian. Inspiró a infinidad de
+personas alrededor del mundo a contribuir su tiempo libre y sus habilidades. A
+día de hoy se conocen más de 350 distribuciones derivadas de Debian.
+
+Por todo ello queremos dedicar Debian 9 «stretch» a Ian.
+
+ -- Los desarrolladores de Debian
+
+

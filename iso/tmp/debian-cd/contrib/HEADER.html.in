@@ -1,0 +1,226 @@
+#if 0
+Input file for docs in multiple different directories. Process with
+cpp.
+#endif
+
+<h1>What's in this directory?</h1>
+
+#ifdef STYLElist
+
+   <p>These are list files.</p>
+
+   <h2>How do I use these files?</h2>
+
+   <p>
+   The list files here simply describe what files are contained in
+   each Debian ISO image, in order to help users find which images
+   they might want to download. They are simply text files, compressed
+   to save space and download time.</p>
+
+#else
+#  ifdef ARCHsource
+
+     <p>These are files containing source code for the Debian
+     operating system.</p>
+
+#  else
+
+     <p>These are files containing the installer and other software
+     for the Debian GNU/KERNEL operating system.
+
+#    ifdef ARCHmulti
+
+       The files in this directory are designed to work on both 32-bit
+       and 64-bit PCs (<code>i386</code> and <code>amd64</code>).
+
+#    else
+
+       The files in this directory are specifically for
+       the <code>ARCH</code> architecture.
+
+#    endif
+
+</p>
+
+#  endif
+
+   <h2>How do I use these files?</h2>
+
+#  ifdef STYLEjigdo
+
+     <p>The files here are in "jigdo"
+     format. Use <a href="https://www.debian.org/CD/jigdo-cd/">jigdo</a>
+     tools to download the contents of the complete ISO image files
+     from what's here and a normal Debian mirror. You should end up
+     with an exact copy of each ISO image as though you'd downloaded
+     it directly via HTTP or FTP.</p>
+
+#  elif defined(STYLEbt)
+
+     <p>The files here are bittorrent files. Use
+     a <a href="https://www.debian.org/CD/torrent-cd/">bittorrent</a>
+     client program to download the contents of the complete ISO image
+     files in a peer-to-peer manner. You should end up with an exact
+     copy of each ISO image as though you'd downloaded it directly via
+     HTTP or FTP.</p>
+
+#  elif defined(STYLEiso)
+
+     <p>The files here are complete ISO images, ready to use.</p>
+
+#  endif
+
+   <p> Once you have downloaded all the ISO images you want, you will
+   typically need to write them to installation media.</p>
+
+   <h2>What size and type of media will I need?</h2>
+
+   <p>The images described here are sized to be written to
+
+#  ifdef TYPEcd
+     writeable CD media
+#  elif TYPEdvd
+     writeable DVD media
+#  elif TYPEbd
+     writeable Blu-Ray media
+#  elif TYPEdlbd
+     writeable dual-layer Blu-Ray media
+#  endif
+
+   at a minimum, but may be written to larger media if needed.
+
+#  ifdef ISOHYBRID
+
+     For <strong>extra</strong> convenience, these images may also be
+     written directly to a USB stick. So long as your computer will
+     boot directly from that USB stick, it should start the Debian
+     installer that way.
+
+#    if defined(TYPEdvd)
+
+       The first DVD in this set is also deliberately limited in size
+       so it should fit on a standard-sized 4GB USB stick.
+
+#    endif
+#  endif
+   </p>
+
+#  if !defined(ONEonly) && !defined(ARCHsource)
+
+     <h2>There are lots of files here! Do I need all of them?</h2>
+
+     <p>In most cases it is not necessary to download and
+     use <strong>all</strong> of these images to be able to install
+     Debian on your computer. Debian comes with a massive set of
+     software packages, hence why it takes so many disks for a
+     complete set. Most typical users only need a small subset of
+     those software packages.</p>
+
+     <p>Initially, you will only need to download and use
+     the <strong>first</strong> image of a set (labelled as
+     <code>debian-<i>something</i>-1</code> to be able to start the
+     Debian installer and set up Debian on your computer. If there are
+     more images available here
+     (labelled <code>debian-<i>something</i>-2</code>,
+     <code>debian-<i>something</i>-3</code>, etc.), they contain the
+     extra packages that can be installed on a Debian system (as
+     mentioned previously). They will <strong>not</strong> be bootable
+     and are entirely optional. If you have a fast Internet
+     connection, you're most likely better off installing any desired
+     extra packages directly from the Debian mirrors on the Internet
+     instead of by using these extra images.</p>
+
+#  endif
+
+#  if defined(TYPEcd) && !defined(ARCHsource) && !defined(STYLElist)
+
+     <p>The <code>netinst</code> CD here is a small CD image that
+     contains just the core Debian installer code and a small core set
+     of text-mode programs (known as "standard" in Debian). To install
+     a desktop or other common software, you'll also need either an
+     Internet connection or some other Debian CD/DVD images.</p>
+
+#    if defined(ARCHi386)
+
+       <p>The <code>mac netinst</code> CD here is a special version of
+       the netinst CD image that is targeted specifically at 32-bit
+       Intel Macintosh machines. It will likely work on most other
+       i386 machines too, but it does not contain UEFI boot files that
+       some people need.</p>
+
+#    endif
+
+#    if defined(ARCHamd64)
+
+       <p>The <code>mac netinst</code> CD here is a special version of
+       the netinst CD image that is targeted specifically at older 64-bit
+       Intel Macintosh machines. It will likely work on most other
+       amd64 machines too, but it does not contain UEFI boot files that
+       some people need.</p>
+
+#    endif
+
+#  endif
+      
+#  ifdef UPDATES
+
+     <p>The <code>update</code> files here are extra convenience files
+     for people updating from previous versions of Debian. If you are
+     installing fresh, you may safely ignore
+     them. <a href="https://www.debian.org/CD/faq/#update-cd">More
+     details...</a></p>
+
+#  endif
+
+   <h2>How can I verify my download is correct and exactly what has
+   been created by Debian?</h2>
+
+   <p>There are files here (SHA1SUMS, SHA256SUMS, etc.) which contain
+   checksums of the images. These checksum files are also signed - see
+   SHA1SUMS.sign, SHA256SUMS.sign, etc. Once you've downloaded an image,
+   you can check:</p>
+
+   <ul>
+      <li>that its checksum matches that expected from the checksum file; and
+      <li>that the checksum file has not been tampered with.
+   </ul>
+
+   <p>For more information about how to do these steps, read
+   the <a href="https://www.debian.org/CD/verify">verification guide</a>.
+
+#endif
+
+#ifdef FIRMWARE
+
+  <h2>Non-free Firmware</h2>
+
+  <p>For convenience for some users, this <strong>unofficial</strong>
+  alternative build
+  includes <a href="https://wiki.debian.org/Firmware">non-free
+  firmware</a> for extra support for some awkward hardware.</p>
+
+#endif
+
+#ifdef ARCH_HAS_FIRMWARE
+
+  <h2>Non-free Firmware</h2>
+
+  <p>This is an <strong>official</strong> Debian image build and so
+  only includes Free Software.</p>
+
+  <p>For convenience for some users, there is an
+  alternative <strong>unofficial</strong> netinst CD build which
+  includes <a href="https://wiki.debian.org/Firmware">non-free
+  firmware</a> for extra support for some awkward hardware. Look under
+  <a href="/cdimage/unofficial/non-free/cd-including-firmware/">/cdimage/unofficial/non-free/cd-including-firmware/</a>
+  if you need that CD image instead.</p>
+#endif
+
+<h2>Other questions?</h2>
+
+<p>See the Debian CD <a href="https://www.debian.org/CD/faq/">FAQ</a>
+for lots more information about Debian CDs and installation.</p>
+
+<p>The images here were put together by
+the <a href="https://wiki.debian.org/Teams/DebianCd">Debian CD team</a>
+, using debian-cd and other software.</p>

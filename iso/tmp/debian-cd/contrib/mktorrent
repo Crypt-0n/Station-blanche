@@ -1,0 +1,30 @@
+#!/bin/sh
+
+HTTPBASE="http://cdimage.debian.org/cdimage"
+
+for FILE in $@; do
+    MKTORRENT=btmakemetafile.bittornado
+    ISODIR=`dirname $FILE`
+    BTDIR=`echo $ISODIR | sed 's/iso-/bt-/;s/usb-/bt-/'`
+    if [ ! -d $BTDIR ] ; then
+        mkdir -p $BTDIR
+    fi
+
+    # Add 2 http seeds: the release path *and* the archive path -
+    # hopefully clients will use whichever is available!
+    case ${FILE} in
+	*live*)
+            VER=$(echo ${FILE} | sed 's,^.*/debian-\(live-\)*,,;s,-.*$,,')"-live"
+            ;;
+	*)
+            VER=$(echo ${FILE} | sed 's,^.*/debian-*,,;s,-.*$,,')
+            ;;
+    esac
+    HTTP1="${HTTPBASE}/release/${VER}/${FILE}"
+    HTTP2="${HTTPBASE}/archive/${VER}/${FILE}"
+    $MKTORRENT http://bttracker.debian.org:6969/announce \
+        --comment '"Debian CD from cdimage.debian.org"' \
+	--httpseeds ${HTTP1}\|${HTTP2} \
+        $FILE | grep -v complete
+    mv $FILE.torrent $BTDIR
+done

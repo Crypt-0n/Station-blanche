@@ -1,0 +1,18 @@
+/*
+ *
+ * This file will be used to build an official installation CD for Wheezy
+ * that can be used to install the Mate desktop environment.
+ *
+ */
+
+/* Packages that should really be on CD1 */
+#include <debian-installer+kernel>
+#include <forcd1>
+#include <task-essential-mate>
+
+/* Other interesting packages */
+#include <task-full-mate>
+#include <interesting-fromcd23>
+
+/* The rest ordered by popularity */
+#include <popularity-contest>

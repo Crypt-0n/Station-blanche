@@ -1,0 +1,270 @@
+#!/bin/sh
+# Execute tool mirror/reprepro
+
+# Export environment
+export APTTMP=/home/jlequen/git/Station-blanche/iso/tmp/cd-build/apt
+# Architecture of the target distribution
+export ARCH=amd64
+# all the architectures that will be present in the built ISO
+export ARCHES=amd64
+# working directory for debian-cd
+export BASEDIR=/home/jlequen/git/Station-blanche/iso/tmp/debian-cd
+export BASE_INCLUDE=''
+export BOOT_TIMEOUT=1
+# distribution name (etch, lenny, wheezy, jessie, ..., sid)
+export CODENAME=stretch
+# Preexisting environment variable COLORTERM
+export COLORTERM=truecolor
+export CONTRIB=''
+# Preexisting environment variable DBUS_SESSION_BUS_ADDRESS
+export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+# Numeric version of Debian release.
+export DEBVERSION=9.9
+# Preexisting environment variable DESKTOP_SESSION
+export DESKTOP_SESSION=lightdm-xsession
+export DISKINFO=station-blanche
+# ISO image type ('CD' or 'DVD')
+export DISKTYPE=CD
+# Preexisting environment variable DISPLAY
+export DISPLAY=:0
+# distribution name for debian-installer
+export DI_CODENAME=stretch
+# TODO: passed as is to debian-cd
+export DOJIGDO=0
+export EXCLUDE=/home/jlequen/git/Station-blanche/iso/tmp/simple-cdd.excludes
+# Preexisting environment variable GDMSESSION
+export GDMSESSION=lightdm-xsession
+# Preexisting environment variable GDM_LANG
+export GDM_LANG=fr_FR.utf8
+# location of the gnupg keyring to use to verify distrbutions (overridden to point to a local copy if user_gnupghome is unset)
+export GNUPGHOME=/home/jlequen/git/Station-blanche/iso/tmp/gpg-keyring
+# Preexisting environment variable GPG_AGENT_INFO
+export GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+# Preexisting environment variable GTK_MODULES
+export GTK_MODULES=gail:atk-bridge
+# Preexisting environment variable GTK_OVERLAY_SCROLLING
+export GTK_OVERLAY_SCROLLING=0
+# Preexisting environment variable HOME
+export HOME=/home/jlequen
+# 0: nothing special, 1: just add debian-installer (use TASK=tasks/debian-installer), 2: add d-i and base (use TASK=tasks/debian-installer+kernel)
+export INSTALLER_CD=2
+# TODO: passed as is to debian-cd
+export ISOLINUX=1
+export KERNEL_PARAMS=''
+# Preexisting environment variable LANG
+export LANG=fr_FR.UTF-8
+# Preexisting environment variable LOGNAME
+export LOGNAME=jlequen
+# Preexisting environment variable LS_COLORS
+export LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+# Preexisting environment variable MAIL
+export MAIL=/var/mail/jlequen
+# Preexisting environment variable MATE_DESKTOP_SESSION_ID
+export MATE_DESKTOP_SESSION_ID=this-is-deprecated
+# TODO: passed as is to debian-cd
+export MAXCDS=1
+# TODO: passed as is to debian-cd
+export MAXISOS=ALL
+# TODO: passed as is to debian-cd
+export MAXJIGDOS=0
+# directory where the local mirror is stored
+export MIRROR=/home/jlequen/git/Station-blanche/iso/tmp/mirror
+export NONFREE=''
+# When set to 1, do not include recommends in the iso image
+export NORECOMMENDS=1
+# TODO: passed as is to debian-cd
+export OFFICIAL=Unofficial
+# TODO: passed as is to debian-cd
+export OFFICIAL_VAL=0
+# Preexisting environment variable OLDPWD
+export OLDPWD=/home/jlequen/git/Station-blanche/deb
+# TODO: passed as is to debian-cd
+export OMIT_RELEASE_NOTES=1
+# Directory where the generated ISO images will be stored
+export OUT=/home/jlequen/git/Station-blanche/iso/images
+# Preexisting environment variable PATH
+export PATH=/home/jlequen/git/Station-blanche/iso:/usr/bin:/usr/share/simple-cdd:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+# Preexisting environment variable PWD
+export PWD=/home/jlequen/git/Station-blanche/iso
+# Preexisting environment variable QT_ACCESSIBILITY
+export QT_ACCESSIBILITY=1
+# Preexisting environment variable QT_LINUX_ACCESSIBILITY_ALWAYS_ON
+export QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1
+export REPREPRO_BASE_DIR=/home/jlequen/git/Station-blanche/iso/tmp/mirror
+# Preexisting environment variable SESSION_MANAGER
+export SESSION_MANAGER=local/debian:@/tmp/.ICE-unix/1030,unix/debian:/tmp/.ICE-unix/1030
+# Preexisting environment variable SHELL
+export SHELL=/bin/bash
+# Preexisting environment variable SHLVL
+export SHLVL=4
+# Preexisting environment variable SSH_AGENT_PID
+export SSH_AGENT_PID=1098
+# Preexisting environment variable SSH_AUTH_SOCK
+export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+# suite used in the target distribution release file (i.e. stable/testing/unstable)
+export SUITE=stable
+# debian-cd task to use
+export TASK=/home/jlequen/git/Station-blanche/iso/tmp/simple-cdd.task
+export TDIR=/home/jlequen/git/Station-blanche/iso/tmp/cd-build
+# Preexisting environment variable TERM
+export TERM=xterm
+# Preexisting environment variable USER
+export USER=jlequen
+# Preexisting environment variable VTE_VERSION
+export VTE_VERSION=4601
+# Preexisting environment variable WINDOWID
+export WINDOWID=8388614
+# Preexisting environment variable XAUTHORITY
+export XAUTHORITY=/home/jlequen/.Xauthority
+# Preexisting environment variable XDG_CURRENT_DESKTOP
+export XDG_CURRENT_DESKTOP=MATE
+# Preexisting environment variable XDG_DATA_DIRS
+export XDG_DATA_DIRS=/usr/share/mate:/usr/local/share/:/usr/share/
+# Preexisting environment variable XDG_GREETER_DATA_DIR
+export XDG_GREETER_DATA_DIR=/var/lib/lightdm/data/jlequen
+# Preexisting environment variable XDG_RUNTIME_DIR
+export XDG_RUNTIME_DIR=/run/user/1000
+# Preexisting environment variable XDG_SEAT
+export XDG_SEAT=seat0
+# Preexisting environment variable XDG_SEAT_PATH
+export XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+# Preexisting environment variable XDG_SESSION_DESKTOP
+export XDG_SESSION_DESKTOP=lightdm-xsession
+# Preexisting environment variable XDG_SESSION_ID
+export XDG_SESSION_ID=2
+# Preexisting environment variable XDG_SESSION_PATH
+export XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+# Preexisting environment variable XDG_SESSION_TYPE
+export XDG_SESSION_TYPE=x11
+# Preexisting environment variable XDG_VTNR
+export XDG_VTNR=7
+# Preexisting environment variable _
+export _=/usr/bin/build-simple-cdd
+# files included on the media in the /simple-cdd dir
+export all_extras=/home/jlequen/git/Station-blanche/iso/profiles/station-blanche.postinst
+export all_packages='less grub-pc grub-efi popularity-contest console-setup usbutils acpi acpid eject lvm2 mdadm cryptsetup reiserfsprogs jfsutils xfsprogs debootstrap busybox syslinux-common syslinux isolinux sudo simple-cdd-profiles dbus-user-session lightdm cinnamon xbase-clients xorg xserver-xorg-input-all xserver-xorg-video-all gnome-terminal clamav antivirscan ntfs-3g wicd gedit exfat-utils exfat-fuse build-essential linux-headers-amd64 linux-image-amd64 linux-image-2.6-amd64'
+# automatically install these profiles
+export auto_profiles=station-blanche
+# use Debian backports
+export backports=''
+export backports_filter_formula=''
+# backports mirror URL
+export backports_mirror=http://deb.debian.org/debian/
+# list of packages to get from backports instead of the normal distribution
+export backports_packages=''
+# profiles only used while building the CD
+export build_profiles=''
+# list the build tools to be used
+export build_tools=debian-cd
+export check_not_requested=''
+# name of checksum files to use to verify downloaded files
+export checksum_file_type=SHA256SUMS
+# files used to verify checksums on parts of the mirror other than packages, such as the installer media
+export checksum_files=dists/stretch/main/installer-amd64/current/images/SHA256SUMS
+export choices=''
+# Remove unused packages from the local mirror
+export clean_mirror=''
+export commandline_opts=''
+# directory where debian-cd has its tools
+export debian_cd_dir=/usr/share/debian-cd
+# if using non-official CODENAME, create links to emulate an existing codename
+export debian_cd_emulate_codename=''
+# official Debian mirror to use to get Debian packages
+export debian_mirror=http://deb.debian.org/debian/
+# if set, also get packages from this mirror
+export debian_mirror_extra=''
+export debian_mirror_extra_dist=''
+export debian_mirror_extra_list_shell_hook=''
+export default_choices=''
+# profiles which default to being selected in profile selection menu at install time
+export default_profiles=''
+export di_match_files=/cdrom
+# debian-installer version to use
+export di_release=current
+export dist=stable
+# when true, build a local mirror
+export do_mirror=true
+# profile specific list of packages to exclude from media
+export exclude_files=/usr/share/simple-cdd/profiles/default.excludes
+# pull in udebs from specified distribution
+export extra_udeb_dist=''
+export extra_udeb_dist_packages=''
+# only issue a warning if a preseeding file is invalid
+export force_preseed=''
+# List of debian-cd include files to add to the current task
+export includes='debian-installer+kernel debian-installer'
+# list of kernel packages to include on the CD
+export kernel_packages='linux-image-amd64 linux-image-2.6-amd64'
+# preselect this keyboard in debian-installer (console-keymaps-at/keymap debconf question)
+export keyboard='fr(latin9)'
+# use specified keyrings (comma-separated) for verifying packages
+export keyring=/usr/share/keyrings/debian-archive-keyring.gpg
+# list of files included on CD's local package repository
+export local_packages=../deb
+# preselect this default locale for the distribution
+export locale=fr_FR
+# components to use to build the distributions
+export mirror_components=main
+# distribution components to use when getting packages from debian_mirror_extra
+export mirror_components_extra=main
+# extra files or directories to copy from the mirrors to the distribution CD
+export mirror_files='README doc/ tools/'
+# list the mirror tools to be used
+export mirror_tools='wget reprepro'
+export mirror_udebcomponents_extra=''
+# profile specific lists of packages to install
+export package_files='/usr/share/simple-cdd/profiles/default.packages /usr/share/simple-cdd/profiles/default.downloads /usr/share/simple-cdd/profiles/default.udebs /home/jlequen/git/Station-blanche/iso/profiles/station-blanche.packages'
+# profile specific preseeding files
+export preseed_files='/usr/share/simple-cdd/profiles/default.preseed /home/jlequen/git/Station-blanche/iso/profiles/station-blanche.preseed'
+# select profiles (examples in profiles/ dir)
+export profiles=station-blanche
+# pull simple-cdd-profiles udeb from specified distribution
+export profiles_udeb_dist=''
+# specify if proposed updates should be used
+export proposed_updates=''
+# options added to all reprepro invocations
+export reprepro_opts=-V
+# number of times reprepro attempts to download new dependencies
+export reprepro_retries=''
+# fail if missing optional packages (*.downloads)
+export require_optional_packages=''
+# official Debian mirror to use to get Debian packages in rsync syntax, used only when using the rsync tool
+export rsync_debian_mirror=deb.debian.org::debian
+# security mirror URL
+export security_mirror=http://security.debian.org/
+# argument passed to the kernel to boot with a serial console
+export serial_console_opts=ttyS0,115200
+# serial console speed used when booting with a serial console
+export serial_console_speed=115200
+# default server used for mirrors
+export server=deb.debian.org
+# working directory for debian-cd
+export simple_cdd_basedir=/home/jlequen/git/Station-blanche/iso/tmp/debian-cd
+# simple-cdd working directory
+export simple_cdd_dir=/home/jlequen/git/Station-blanche/iso
+# directories used to look for simple-cdd support scripts
+export simple_cdd_dirs='/home/jlequen/git/Station-blanche/iso /usr/bin /usr/share/simple-cdd'
+# directory where execution logs are stored
+export simple_cdd_logs=/home/jlequen/git/Station-blanche/iso/tmp/log
+# directory where the local mirror is stored
+export simple_cdd_mirror=/home/jlequen/git/Station-blanche/iso/tmp/mirror
+# kernel command line parameter to enable simple-cdd debconf preseeding
+export simple_cdd_preseed=preseed/file=/cdrom/simple-cdd/default.preseed
+# directory where intermediate build data are stored
+export simple_cdd_temp=/home/jlequen/git/Station-blanche/iso/tmp
+export udebs_filter_formula=''
+# specify mirror for $DIST-updates
+export updates_mirror=http://deb.debian.org/debian/
+export upstream_package_lists=''
+# enable serial console when booting the ISO image
+export use_serial_console=''
+# when true, use the user's gnupg keyring instead of a simple-cdd temporary keyring
+export user_gnupghome=''
+# key IDs used to verify release files
+export verify_release_keys='8B48AD6246925553 CBF8D6FD518E17E1 7638D0442B90D010 9D6D8F6BC857C906 EF0F382A1A7B6500 E0B11894F66AEC98 04EE7237B7D453EC EDA0D2388AE22BA9 AA8E81B4331F7F50'
+export vga_normal=''
+# Debian mirror base URL that will be used when invoking wget
+export wget_debian_mirror=http://deb.debian.org/debian/
+
+# Run the tool
+exec /bin/sh -ue /usr/share/simple-cdd/tools/mirror/reprepro "$@"

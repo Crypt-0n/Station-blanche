@@ -1,0 +1,26 @@
+Dedikasi buat Ian Murdock
+-------------------------
+
+Ian Murdock, pengasas bagi projek Debian, telah meninggal dunia pada 28
+Disember 2015 di kediamannya yang terletak di San Francisco. Ketika itu, beliau
+berusia 42 tahun.
+
+Sumbangan Ian terhadap Perisian Percuma amat besar. Beliau yang telah mengetuai
+Projek Debian sejak penubuhannya dari 1993 hingga 1996, mengarang menifesto
+Debian pada Januari 1994 dan telah memupuk projek yang baharu ditubuhkan itu
+sepanjang pengajian beliau di Purdue University.
+
+Ian kemudiannya mengasas dan menjadi pengarah bagi Linux International, CTO
+kepada Free Standards Group dan kemudiannya Linux Foundation, dan ketua bagi
+Projek Indiana di Sun Microsystems, yang beliau sifatkan sebagai "mengambil
+pengajaran dari apa yang Linux bawa ke sistem operasi dan menyediakannya kepada
+Solaris".
+
+Kejayaan Debian menjadi saksi terhadap visi Ian. Beliau telah memberikan
+inspirasi kepada manusia di seluruh dunia untuk menyumbang masa lapang dan
+kemahiran mereka. Kini, lebih daripada 350 distribusi yang dikenalipasti
+berasal dari Debian.
+
+Justeru, kami dedikasikan Debian 9 "stretch" kepada Ian.
+
+ -- Para Pembangun Debian

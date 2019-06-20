@@ -1,0 +1,15 @@
+task-cinnamon-desktop
+task-gnome-desktop
+task-kde-desktop
+task-lxde-desktop
+task-mate-desktop
+task-xfce-desktop
+task-light-desktop
+task-generic-desktop
+task-all-desktop
+task-desktop
+task-laptop
+task-standard
+task-print-server
+task-ssh-server
+task-web-server

@@ -1,0 +1,30 @@
+Omistettu Joel 'Espy' Kleckerille
+
+Hein‰kuun 11. p‰iv‰n‰ 2000 menetti Debian-projekti, ja koko vapaiden
+ohjelmistojen liike, eritt‰in rakkaan yst‰v‰n ja kehitt‰j‰n.  Joelin
+l‰hes koko el‰m‰ oli kamppailua Duchennen lihasdystrofiana tunnettua
+sairautta vastaan.  Hein‰kuusta 1997 alkaen Joel oli ollut
+Debian-kehitt‰j‰, ja suurimman osan t‰st‰ ajasta h‰n oli ollut
+vuodepotilaana sairautensa vuoksi.  Joel kuoli 21-vuotiaana, hyvin
+kauan ennen ik‰‰, jonka voisimme kuvitella alallamme toimivan ihmisen
+saavuttavan.  H‰nen omistautumisensa projektillemme on innoituksen
+l‰hteen‰ meille kaikille, eik‰ sit‰ koskaan unohdeta.
+
+Useimmat meist‰ tunsivat h‰net nimell‰ "Espy", jota h‰n k‰ytti
+IRC:ss‰, sek‰ suorapuheisena ‰‰nen‰, jonka tunsimme
+postituslistoiltamme; ‰‰nen‰, joka ei koskaan pel‰nnyt ilmaista
+ajatuksiaan juuri sill‰ tavalla, johon vain Joel kykeni: huumorilla ja
+suoruudella.  H‰nen tietojaan ja taitojaan ei ollut koskaan syyt‰
+ep‰ill‰.  Ne meist‰, joilla on kunnia jatkaa h‰nen tyˆt‰‰n Debianissa,
+yritt‰v‰t pit‰‰ yll‰ h‰nen tasoistaan teknist‰ t‰ydellisyytt‰.
+
+Useimmat meist‰ eiv‰t tienneet koettelemuksista, jotka Joel joutui
+kest‰m‰‰n joka p‰iv‰ el‰ess‰‰n.  Vasta vasta h‰nen viimeisin‰
+p‰ivin‰‰n saimme tiet‰‰ h‰nen sairaudestaan.  Vasta nyt ymm‰rr‰mme
+kuinka suuri h‰nen antaumuksensa ja yst‰vyytens‰ meit‰ kohtaan oli.
+Niinp‰ kiitollisuuttamme osoittaaksemme, ja h‰nen inspiroivan el‰m‰ns‰
+muistoksi, omistamme t‰m‰n Debian-version h‰nelle.
+
+ * "Joel 'Espy' Klecker" -julkaisuversio
+
+-- Debian-kehitt‰j‰t

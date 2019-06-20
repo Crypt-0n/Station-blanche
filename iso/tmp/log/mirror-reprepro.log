@@ -1,0 +1,1070 @@
+runcmd: /home/jlequen/git/Station-blanche/iso/tmp/log/mirror-reprepro
+stderr: gzip: /home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/stretch_default_deb_main_amd64.gz: No such file or directory
+stdout: Les fichiers /home/jlequen/git/Station-blanche/iso/tmp/mirror/conf/package-list et /home/jlequen/git/Station-blanche/iso/tmp/mirror/conf/package-list.old sont différents
+stdout: getting missing dependencies... attempt 1
+stdout: Calculating packages to get...
+stdout:   processing updates for 'u|stretch|main|amd64'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-udebs_stretch_main_amd64_uPackages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-updates_stretch-updates_main_amd64_uPackages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-updates_stretch-updates_main_amd64_uPackages'
+stdout:   processing updates for 'stretch|main|amd64'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default_stretch_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base_stretch_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-security_stretch%2Fupdates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-security_stretch%2Fupdates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-updates_stretch-updates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-updates_stretch-updates_main_amd64_Packages'
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/a/acpi"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/a/acpid"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/a/anacron"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/b/build-essential"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/cinnamon"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/clamav"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/f/fuse-exfat"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/e/exfat-utils"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gedit"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gnome-terminal"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/t/texinfo"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/s/syslinux"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/a/apparmor"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/liba/libassuan"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/a/audit"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libc/libcap-ng"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/e/elfutils"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libf/libfastjson"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/geoip"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gmp"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/n/nettle"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/i/icu"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libk"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libk/libksba"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libl/liblocale-gettext-perl"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libl/liblognorm"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/l/lz4"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libm"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libm/libmnl"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libn/libnetfilter-conntrack"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libn/libnfnetlink"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libp/libpsl"
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/acpi/acpi_1.7-1+b1_amd64.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/d/dbus/dbus-user-session_1.10.28-0+deb9u1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/acpid/acpid_2.0.28-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/anacron/anacron_2.3-24_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/b/build-essential/build-essential_12.3_amd64.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/e/exim4/exim4-daemon-heavy_4.89-2+deb9u4_amd64.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/d/dbus/libdbus-1-3_1.10.28-0+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/b/busybox/busybox_1.22.0-19+b3_amd64.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/b/bind9/libdns-export162_9.10.3.dfsg.P4-12.3+deb9u5_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.227_amd64.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/b/bind9/libisc-export160_9.10.3.dfsg.P4-12.3+deb9u5_amd64.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/b/bind9/libisccfg140_9.10.3.dfsg.P4-12.3+deb9u5_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon/cinnamon_3.2.7-4_amd64.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/v/vim/xxd_8.0.0197-4+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/clamav/clamav_0.100.3+dfsg-0+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/console-setup/console-setup_1.164_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cryptsetup/cryptsetup_1.7.3-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/d/debootstrap/debootstrap_1.0.89_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/e/eject/eject_2.1.5+deb1+cvs20081104-13.2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/f/fuse-exfat/exfat-fuse_1.2.5-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/e/exfat-utils/exfat-utils_1.2.5-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gedit/gedit_3.22.0-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gnome-terminal/gnome-terminal_3.22.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg-agent_2.1.18-8~deb9u4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gnupg2/gpgv2_2.1.18-8~deb9u4_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/grub2/grub-efi_2.02~beta3-5+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/grub2/grub-pc_2.02~beta3-5+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/t/texinfo/install-info_6.3.0.dfsg.1-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/s/syslinux/isolinux_6.03+dfsg-14.1+deb9u1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/j/jfsutils/jfsutils_1.1.15-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/apparmor/libapparmor1_2.11.0-3+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/liba/libassuan/libassuan0_2.4.3-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/audit/libaudit1_2.6.7-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libb/libbsd/libbsd0_0.8.3-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libc/libcap-ng/libcap-ng0_0.7.7-3+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cryptsetup/libcryptsetup4_1.7.3-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cdebconf/libdebconfclient0_0.227_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/e/elfutils/libelf1_0.168-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/e/expat/libexpat1_2.2.0-2+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libf/libfastjson/libfastjson4_0.99.4-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libf/libffi/libffi6_3.2.1-6_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/geoip/libgeoip1_1.6.9-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gmp/libgmp10_6.1.2+dfsg-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/nettle/libhogweed4_3.3-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/i/icu/libicu57_57.1-6+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/i/iptables/libip4tc0_1.6.0+snapshot20161117-6_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/i/iptables/libip6tc0_1.6.0+snapshot20161117-6_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/i/iptables/libiptc0_1.6.0+snapshot20161117-6_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libk/libksba/libksba8_1.3.5-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libl/liblocale-gettext-perl/liblocale-gettext-perl_1.07-3+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libl/liblognorm/liblognorm5_2.0.1-1.1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lz4/liblz4-1_0.0~r131-2+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libm/libmnl/libmnl0_1.0.4-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/ncurses/libncurses5_6.0+20161126-1+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libn/libnetfilter-conntrack/libnetfilter-conntrack3_1.0.6-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/nettle/libnettle6_3.3-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libn/libnfnetlink/libnfnetlink0_1.0.1-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/perl/libperl5.24_5.24.1-3+deb9u5_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libp/libpsl/libpsl5_0.17.0-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python-defaults/libpython-stdlib_2.7.13-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python2.7/libpython2.7-stdlib_2.7.13-2+deb9u3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libs/libseccomp/libseccomp2_2.3.1-2.1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libs/libsemanage/libsemanage1_2.6-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/s/systemd/libsystemd0_232-25+deb9u11_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libt/libtext-charwidth-perl/libtext-charwidth-perl_0.04-7+b5_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libt/libtext-iconv-perl/libtext-iconv-perl_1.7-5+b4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libt/libtext-wrapi18n-perl/libtext-wrapi18n-perl_0.06-7.1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libv/libverto/libverto1_0.2.4-2.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/i/iptables/libxtables12_1.6.0+snapshot20161117-6_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lightdm/lightdm_1.18.3-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/linux-latest/linux-headers-amd64_4.9+80+deb9u7_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/linux-latest/linux-image-amd64_4.9+80+deb9u7_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lvm2/lvm2_2.02.168-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mdadm/mdadm_3.4-4+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/ntfs-3g/ntfs-3g_2016.2.22AR.1+dfsg-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/popularity-contest/popularity-contest_1.64_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python2.7/python2.7-minimal_2.7.13-2+deb9u3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3_3.5.3-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python-apt/python3-apt_1.4.0~beta3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python-debian/python3-debian_0.1.30_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python-debianbts/python3-debianbts_2.6.1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python-psutil/python3-psutil_5.0.1-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pyudev/python3-pyudev_0.21.0-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/r/requests/python3-requests_2.12.4-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/r/reiserfsprogs/reiserfsprogs_3.6.25-4+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/s/sudo/sudo_1.8.19p1-2.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/s/syslinux/syslinux_6.03+dfsg-14.1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/s/syslinux/syslinux-common_6.03+dfsg-14.1+deb9u1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/s/systemd-shim/systemd-shim_10-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit-core_2.88dsf-59.9_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/u/usbutils/usbutils_007-4+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/w/wicd/wicd_1.7.4+tb2-5~deb9u1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xorg/xbase-clients_7.7+19_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xfsprogs/xfsprogs_4.9.0+nmu1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xorg/xorg_7.7+19_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xorg/xserver-xorg-input-all_7.7+19_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xorg/xserver-xorg-video-all_7.7+19_amd64.deb'
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libs/libseccomp"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libs/libsemanage"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libt/libtext-charwidth-perl"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libt/libtext-iconv-perl"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libt/libtext-wrapi18n-perl"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libv"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libv/libverto"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/l/lightdm"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/l/linux-latest"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/popularity-contest"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/python3-defaults"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/python-apt"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/python-debian"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/python-debianbts"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/python-psutil"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/pyudev"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/r/requests"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/s/sudo"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/s/systemd-shim"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/w/wicd"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xorg"
+stdout: Getting packages...
+stdout: Shutting down aptmethods...
+stdout: Installing (and possibly deleting) packages...
+stdout: Exporting indices...
+stdout: Les fichiers /home/jlequen/git/Station-blanche/iso/tmp/mirror/conf/package-list et /home/jlequen/git/Station-blanche/iso/tmp/mirror/conf/package-list.old sont différents
+stdout: getting missing dependencies... attempt 2
+stdout: Calculating packages to get...
+stdout:   processing updates for 'u|stretch|main|amd64'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-udebs_stretch_main_amd64_uPackages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-updates_stretch-updates_main_amd64_uPackages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-updates_stretch-updates_main_amd64_uPackages'
+stdout:   processing updates for 'stretch|main|amd64'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default_stretch_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base_stretch_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-security_stretch%2Fupdates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-security_stretch%2Fupdates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-updates_stretch-updates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-updates_stretch-updates_main_amd64_Packages'
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/caribou"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/cgmanager"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/cinnamon-control-center"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/cinnamon-desktop"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/cinnamon-screensaver"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/cinnamon-session"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/cinnamon-settings-daemon"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/cjs"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/consolekit"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/cups-pk-helper"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/d/d-conf"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/d/dh-python"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/f/file-rc"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gcc-defaults"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/a/accountsservice"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/clutter-1.0"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/cinnamon-menus"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/cogl"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libg/libgnomekbd"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gobject-introspection"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gnome-desktop3"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/clutter-gtk"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gtksourceview3"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/w/webkitgtk"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/k/keybinder-3.0"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/m/muffin"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/n/network-manager"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libn/libnotify"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libp/libpeas"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/policykit-1"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libs/libsoup2.4"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/u/upower"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xapp"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gnome-backgrounds"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gnome-themes-standard"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gsettings-desktop-schemas"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/i/iso-codes"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/i/iso-flags-svg"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libc/libcroco"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/curl"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/m/mesa"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libg/libglu"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gspell"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gstreamer1.0"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libi/libidn2-0"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/j/jquery"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/j/json-c"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/m/mariadb-10.1"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/m/mozjs24"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/n/nautilus"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/n/npth"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/postgresql-9.6"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/r/readline5"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/s/startup-notification"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libu/libunistring"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/u/ustr"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/l/lightdm-gtk-greeter"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/m/make-dfsg"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/m/mesa-demos"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/m/mtools"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/n/nemo"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/o/openrc"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/pinentry"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/policykit-1-gnome"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/d/dbus-python"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/pygobject"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/pillow"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/l/lxml"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/python-pam"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/pexpect"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/pyinotify"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/chardet"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/pysimplesoap"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/s/six"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/python-urllib3"
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/b/bind9/libisccc140_9.10.3.dfsg.P4-12.3+deb9u5_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/ca-certificates/ca-certificates_20161130+nmu1+deb9u1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/caribou/caribou_0.4.21-1+b1_amd64.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/p/postgresql-9.6/libpq5_9.6.13-0+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cgmanager/cgmanager_0.41-2_amd64.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/l/linux/linux-headers-4.9.0-9-amd64_4.9.168-1+deb9u3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon/cinnamon-common_3.2.7-4_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon-control-center/cinnamon-control-center_3.2.1-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon-desktop/cinnamon-desktop-data_3.2.4-4_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon-screensaver/cinnamon-screensaver_3.2.13-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon-session/cinnamon-session_3.2.0-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon-settings-daemon/cinnamon-settings-daemon_3.2.1-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cjs/cjs_3.2.0-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/clamav/clamav-freshclam_0.100.3+dfsg-0+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/console-setup/console-setup-freebsd_1.164_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/console-setup/console-setup-linux_1.164_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/consolekit/consolekit_0.4.6-6_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cryptsetup/cryptsetup-bin_1.7.3-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cups-pk-helper/cups-pk-helper_0.2.6-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/d/d-conf/dconf-gsettings-backend_0.26.0-2+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/d/dh-python/dh-python_2.20170125_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lvm2/dmeventd_1.02.137-2_amd64.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/l/linux/linux-image-4.9.0-9-amd64_4.9.168-1+deb9u3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lvm2/dmsetup_1.02.137-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg-dev_1.18.25_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/f/file-rc/file-rc_0.8.18_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/f/fuse/fuse_2.9.7-1+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-defaults/g++_6.3.0-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-defaults/gcc_6.3.0-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gedit/gedit-common_3.22.0-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/accountsservice/gir1.2-accountsservice-1.0_0.6.43-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/caribou/gir1.2-caribou-1.0_0.4.21-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/clutter-1.0/gir1.2-clutter-1.0_1.26.0+dfsg-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon-menus/gir1.2-cmenu-3.0_3.2.0-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cogl/gir1.2-cogl-1.0_1.22.2-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon-desktop/gir1.2-cvc-1.0_3.2.4-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gdk-pixbuf/gir1.2-gdkpixbuf-2.0_2.36.5-2+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libg/libgnomekbd/gir1.2-gkbd-3.0_3.22.0.1-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gir1.2-glib-2.0_1.50.0-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gnome-desktop3/gir1.2-gnomedesktop-3.0_3.22.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gtk+3.0/gir1.2-gtk-3.0_3.22.11-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/clutter-gtk/gir1.2-gtkclutter-1.0_1.8.2-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gtksourceview3/gir1.2-gtksource-3.0_3.22.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/w/webkitgtk/gir1.2-javascriptcoregtk-3.0_2.4.11-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/k/keybinder-3.0/gir1.2-keybinder-3.0_0.3.1-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/muffin/gir1.2-meta-muffin-0.0_3.2.1-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/network-manager/gir1.2-networkmanager-1.0_1.6.2-3+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libn/libnotify/gir1.2-notify-0.7_0.7.7-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pango1.0/gir1.2-pango-1.0_1.40.5-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libp/libpeas/gir1.2-peas-1.0_1.20.0-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/policykit-1/gir1.2-polkit-1.0_0.105-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libs/libsoup2.4/gir1.2-soup-2.4_2.56.0-2+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/u/upower/gir1.2-upowerglib-1.0_0.99.4-4+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xapp/gir1.2-xapp-1.0_1.0.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libg/libgnomekbd/gkbd-capplet_3.22.0.1-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gnome-backgrounds/gnome-backgrounds_3.22.1-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gnome-terminal/gnome-terminal-data_3.22.2-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gnome-themes-standard/gnome-themes-standard_3.22.2-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/grub2/grub-common_2.02~beta3-5+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/grub2/grub-efi-amd64_2.02~beta3-5+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/grub2/grub-pc-bin_2.02~beta3-5+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/grub2/grub2-common_2.02~beta3-5+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gsettings-desktop-schemas/gsettings-desktop-schemas_3.22.0-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/s/sysvinit/initscripts_2.88dsf-59.9_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/i/iso-codes/iso-codes_3.75-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/i/iso-flags-svg/iso-flags-png-320x240_1.0.1-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/console-setup/keyboard-configuration_1.164_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/at-spi2-atk/libatk-bridge2.0-0_2.22.0-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/atk1.0/libatk1.0-0_2.22.0-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/audit/libaudit-common_2.6.7-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/glibc/libc6-dev_2.24-11+deb9u4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cairo/libcairo-gobject2_1.14.8-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cairo/libcairo2_1.14.8-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon-menus/libcinnamon-menu-3-0_3.2.0-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cjs/libcjs0_3.2.0-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/clamav/libclamav7_0.100.3+dfsg-0+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/clutter-1.0/libclutter-1.0-0_1.26.0+dfsg-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cogl/libcogl-pango20_1.22.2-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cogl/libcogl-path20_1.22.2-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cogl/libcogl20_1.22.2-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libc/libcroco/libcroco3_0.6.11-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/curl/libcurl3_7.52.1-5+deb9u9_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/d/d-conf/libdconf1_0.26.0-2+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libd/libdebian-installer/libdebian-installer4_0.110_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lvm2/libdevmapper-event1.02.1_1.02.137-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lvm2/libdevmapper1.02.1_1.02.137-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/f/fuse/libfuse2_2.9.7-1+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gdk-pixbuf/libgdk-pixbuf2.0-0_2.36.5-2+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gobject-introspection/libgirepository-1.0-1_1.50.0-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mesa/libgl1-mesa-dri_13.0.6-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mesa/libgl1-mesa-glx_13.0.6-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/glib2.0/libglib2.0-0_2.50.3-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/glib2.0/libglib2.0-bin_2.50.3-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libg/libglu/libglu1-mesa_9.0.0-2.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gspell/libgspell-1-1_1.2.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gstreamer1.0/libgstreamer1.0-0_1.10.4-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gtk+3.0/libgtk-3-0_3.22.11-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gtksourceview3/libgtksourceview-3.0-1_3.22.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libi/libidn2-0/libidn2-0_0.16-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/j/jquery/libjs-jquery_3.1.1-2+deb9u1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/j/json-c/libjson-c3_0.12.1-1.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lvm2/liblvm2app2.2_2.02.168-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mariadb-10.1/libmariadbclient18_10.1.38-0+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mozjs24/libmozjs-24-0_24.2.0-5.1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/muffin/libmuffin0_3.2.1-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/nautilus/libnautilus-extension1a_3.22.3-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/npth/libnpth0_1.3-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/ntfs-3g/libntfs-3g871_2016.2.22AR.1+dfsg-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pango1.0/libpango-1.0-0_1.40.5-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pango1.0/libpangocairo-1.0-0_1.40.5-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libp/libpeas/libpeas-1.0-0_1.20.0-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python2.7/libpython2.7-minimal_2.7.13-2+deb9u3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python3-defaults/libpython3-stdlib_3.5.3-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/r/readline5/libreadline5_5.2+dfsg-3+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libs/libsemanage/libsemanage-common_2.6-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/s/startup-notification/libstartup-notification0_0.12-4+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libt/libtextwrap/libtextwrap1_0.1-14.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libu/libunistring/libunistring0_0.9.6+really0.9.3-0.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libu/libusb-1.0/libusb-1.0-0_1.0.21-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/u/ustr/libustr-1.0-1_1.0.4-6_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libv/libverto/libverto-glib1_0.2.4-2.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libv/libverto/libverto-libev1_0.2.4-2.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/v/vte2.91/libvte-2.91-0_0.46.1-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libx11/libx11-6_1.6.4-3+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxcb/libxcb1_1.12-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxdmcp/libxdmcp6_1.1.2-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxfixes/libxfixes3_5.0.3-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lightdm-gtk-greeter/lightdm-gtk-greeter_2.0.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/make-dfsg/make_4.1-9.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mesa-demos/mesa-utils_8.3.0-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mtools/mtools_4.0.18-2+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/muffin/muffin_3.2.1-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/nemo/nemo_3.2.2-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/o/openrc/openrc_0.23-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry-curses_1.0.0-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/policykit-1-gnome/policykit-1-gnome_0.105-6_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python-apt/python-apt-common_1.4.0~beta3_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/d/dbus-python/python-dbus_1.2.4-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pygobject/python-gi-cairo_3.22.0-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pillow/python-imaging_4.0.0-4_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lxml/python-lxml_3.7.1-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python-pam/python-pam_0.4.2-13.2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pexpect/python-pexpect_4.2.1-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pyinotify/python-pyinotify_0.9.6-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/chardet/python3-chardet_2.3.0-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/d/dbus-python/python3-dbus_1.2.4-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pygobject/python3-gi_3.22.0-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pygobject/python3-gi-cairo_3.22.0-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-minimal_3.5.3-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pysimplesoap/python3-pysimplesoap_1.16-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/s/six/python3-six_1.10.0-3_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python-urllib3/python3-urllib3_1.19.1-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python3.5/python3.5_3.5.3-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/s/sysvinit/sysv-rc_2.88dsf-59.9_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/w/wicd/wicd-cli_1.7.4+tb2-5~deb9u1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/w/wicd/wicd-curses_1.7.4+tb2-5~deb9u1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/w/wicd/wicd-daemon_1.7.4+tb2-5~deb9u1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/w/wicd/wicd-gtk_1.7.4+tb2-5~deb9u1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/x11-apps/x11-apps_7.7+6+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/x11-session-utils/x11-session-utils_7.7+2+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/x11-utils/x11-utils_7.7+3+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/x11-xkb-utils/x11-xkb-utils_7.7+3+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/x11-xserver-utils/x11-xserver-utils_7.7+7+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xapp/xapps-common_1.0.2-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xauth/xauth_1.0.9-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xfonts-100dpi/xfonts-100dpi_1.0.4+nmu1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xfonts-75dpi/xfonts-75dpi_1.0.4+nmu1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xfonts-base/xfonts-base_1.0.4+nmu1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xfonts-scalable/xfonts-scalable_1.0.3-1.1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xfonts-utils/xfonts-utils_7.7+4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xinit/xinit_1.3.4-3+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xkeyboard-config/xkb-data_2.19-1+deb9u1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xorg-docs/xorg-docs-core_1.7.1-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xorg/xserver-xorg_7.7+19_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xserver-xorg-input-libinput/xserver-xorg-input-libinput_0.23.0-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xserver-xorg-video-amdgpu/xserver-xorg-video-amdgpu_1.2.0-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xserver-xorg-video-ati/xserver-xorg-video-ati_7.8.0-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xserver-xorg-video-fbdev/xserver-xorg-video-fbdev_0.4.4-1+b5_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xserver-xorg-video-nouveau/xserver-xorg-video-nouveau_1.0.13-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xserver-xorg-video-vesa/xserver-xorg-video-vesa_2.3.4-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xserver-xorg-video-vmware/xserver-xorg-video-vmware_13.2.1-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xterm/xterm_327-2_amd64.deb'
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/python3.5"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/x11-apps"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/x11-session-utils"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/x11-utils"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/x11-xserver-utils"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xauth"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xfonts-100dpi"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xfonts-75dpi"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xfonts-base"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xfonts-scalable"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xfonts-utils"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xinit"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xorg-docs"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xserver-xorg-video-amdgpu"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xserver-xorg-video-ati"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xserver-xorg-video-nouveau"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xserver-xorg-video-vesa"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xserver-xorg-video-vmware"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xterm"
+stdout: Getting packages...
+stdout: Shutting down aptmethods...
+stdout: Installing (and possibly deleting) packages...
+stdout: Exporting indices...
+stdout: Les fichiers /home/jlequen/git/Station-blanche/iso/tmp/mirror/conf/package-list et /home/jlequen/git/Station-blanche/iso/tmp/mirror/conf/package-list.old sont différents
+stdout: getting missing dependencies... attempt 3
+stdout: Calculating packages to get...
+stdout:   processing updates for 'u|stretch|main|amd64'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-udebs_stretch_main_amd64_uPackages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-updates_stretch-updates_main_amd64_uPackages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-updates_stretch-updates_main_amd64_uPackages'
+stdout:   processing updates for 'stretch|main|amd64'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default_stretch_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base_stretch_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-security_stretch%2Fupdates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-security_stretch%2Fupdates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-updates_stretch-updates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-updates_stretch-updates_main_amd64_Packages'
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/a/adwaita-icon-theme"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/a/apg"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/b/binutils"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/d/desktop-file-utils"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/d/dhcpcd5"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/j/json-glib"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libx/libxklavier"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gist"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gvfs"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/h/hicolor-icon-theme"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/i/inetutils"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/i/initramfs-tools"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/i/insserv"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/i/inxi"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libc/libcanberra"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/colord"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/c/cups"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/d/dbus-glib"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/e/enchant"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libe/libev"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/e/exempi"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libe/libexif"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/glew"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libg/libgudev"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libi/libice"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libj"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libj/libjpeg-turbo"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/l/lcms2"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/l/llvm-toolchain-3.8"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/l/llvm-toolchain-3.9"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libt/libtool"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/m/modemmanager"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libm/libmspack"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/n/nghttp2"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libn/libnih"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/n/network-manager-applet"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/n/nspr"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/n/nss"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/pcre2"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/pulseaudio"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libr/librest"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/r/rtmpdump"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/l/lm-sensors"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libs/libsm"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libs/libssh2"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/t/tomsfastmath"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/t/tiff"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libu/libutempter"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/w/wayland"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libx/libxaw"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xcb-util"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libx/libxcomposite"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libx/libxdamage"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libx/libxfont1"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libx/libxkbcommon"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libx/libxmu"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libx/libxpm"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libx/libxrandr"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libx/libxslt"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libx/libxt"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libx/libxv"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libx/libxxf86dga"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libx/libxxf86vm"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/l/linux-base"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/m/mysql-defaults"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/patch"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/psmisc"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/pump"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/pycairo"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/pygtk"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/ptyprocess"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/u/urwid"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/py3cairo"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/python-httplib2"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/python-setuptools"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/pyatspi"
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/accountsservice/accountsservice_0.6.43-1_amd64.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/libp/libpng1.6/libpng16-16_1.6.28-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/l/linux/linux-compiler-gcc-6-x86_4.9.168-1+deb9u3_amd64.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/l/linux/linux-headers-4.9.0-9-common_4.9.168-1+deb9u3_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/adwaita-icon-theme/adwaita-icon-theme_3.22.0-1+deb9u1_all.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/l/linux/linux-kbuild-4.9_4.9.168-1+deb9u3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/apg/apg_2.2.3.dfsg.1-4+b1_amd64.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/l/linux/linux-libc-dev_4.9.168-1+deb9u3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.28-5_amd64.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/w/wpa/wpasupplicant_2.4-1+deb9u4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon-control-center/cinnamon-control-center-data_3.2.1-3_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon-session/cinnamon-session-common_3.2.0-4_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/clamav/clamav-base_0.100.3+dfsg-0+deb9u1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-defaults/cpp_6.3.0-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/d/d-conf/dconf-service_0.26.0-2+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/d/desktop-file-utils/desktop-file-utils_0.23-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/d/dhcpcd5/dhcpcd5_6.10.1-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/f/fontconfig/fontconfig_2.11.0-6.7+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/g++-6_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/gcc-6_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/atk1.0/gir1.2-atk-1.0_2.22.0-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon-desktop/gir1.2-cinnamondesktop-3.0_3.2.4-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cogl/gir1.2-coglpango-1.0_1.22.2-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gir1.2-freedesktop_1.50.0-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gsettings-desktop-schemas/gir1.2-gdesktopenums-3.0_3.22.0-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/j/json-glib/gir1.2-json-1.0_1.2.6-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxklavier/gir1.2-xkl-1.0_5.4-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gist/gist_4.5.0-3_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gnome-themes-standard/gnome-themes-standard-data_3.22.2-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/grub2/grub-efi-amd64-bin_2.02~beta3-5+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gvfs/gvfs_1.30.4-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gvfs/gvfs-bin_1.30.4-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/h/hicolor-icon-theme/hicolor-icon-theme_0.15-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/i/inetutils/inetutils-ping_1.9.4-2+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/i/initramfs-tools/initramfs-tools_0.130_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/i/insserv/insserv_1.14.0-5.4+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/i/inxi/inxi_2.3.5-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/k/kbd/kbd_2.0.3-2+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/accountsservice/libaccountsservice0_0.6.43-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/atk1.0/libatk1.0-data_2.22.0-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/at-spi2-core/libatspi2.0-0_2.22.0-6+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/glibc/libc-dev-bin_2.24-11+deb9u4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libc/libcanberra/libcanberra-gtk3-0_0.30-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libc/libcanberra/libcanberra0_0.30-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libc/libcap2/libcap2-bin_2.25-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/caribou/libcaribou0_0.4.21-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cgmanager/libcgmanager0_0.41-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon-control-center/libcinnamon-control-center1_3.2.1-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon-desktop/libcinnamon-desktop4_3.2.4-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/consolekit/libck-connector0_0.4.6-6_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/clutter-gtk/libclutter-gtk-1.0-0_1.8.2-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/colord/libcolord2_1.3.3-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon-screensaver/libcscreensaver0_3.2.13-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cups/libcups2_2.2.1-8+deb9u3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/cinnamon-desktop/libcvc0_3.2.4-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/d/dbus-glib/libdbus-glib-1-2_0.108-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/d/dpkg/libdpkg-perl_1.18.25_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libd/libdrm/libdrm-amdgpu1_2.4.74-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libd/libdrm/libdrm-intel1_2.4.74-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libd/libdrm/libdrm-nouveau2_2.4.74-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libd/libdrm/libdrm-radeon1_2.4.74-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libd/libdrm/libdrm2_2.4.74-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mesa/libegl1-mesa_13.0.6-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/o/openrc/libeinfo1_0.23-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/e/enchant/libenchant1c2a_1.6.0-11+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libe/libepoxy/libepoxy0_1.3.1-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libe/libev/libev4_4.22-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/e/exempi/libexempi3_2.4.1-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libe/libexif/libexif12_0.6.21-2+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/f/fontconfig/libfontconfig1_2.11.0-6.7+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libf/libfontenc/libfontenc1_1.1.3-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/f/freetype/libfreetype6_2.6.3-3.2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gtk+3.0/libgail-3-0_3.22.11-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mesa/libgbm1_13.0.6-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gdk-pixbuf/libgdk-pixbuf2.0-common_2.36.5-2+deb9u2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mesa/libglapi-mesa_13.0.6-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/glew/libglew2.0_2.0.0-3+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/glib2.0/libglib2.0-data_2.50.3-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gnome-desktop3/libgnome-desktop-3-12_3.22.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libg/libgnomekbd/libgnomekbd8_3.22.0.1-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gspell/libgspell-1-common_1.2.2-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gtk+3.0/libgtk-3-common_3.22.11-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gtk+2.0/libgtk2.0-0_2.24.31-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gtksourceview3/libgtksourceview-3.0-common_3.22.2-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libg/libgudev/libgudev-1.0-0_230-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libi/libice/libice6_1.0.9-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libi/libinput/libinput10_1.6.3-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/w/webkitgtk/libjavascriptcoregtk-3.0-0_2.4.11-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libj/libjpeg-turbo/libjpeg62-turbo_1.5.1-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/j/json-glib/libjson-glib-1.0-0_1.2.6-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/k/keybinder-3.0/libkeybinder-3.0-0_0.3.1-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lcms2/liblcms2-2_2.8-4+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lightdm/liblightdm-gobject-1-0_1.18.3-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/llvm-toolchain-3.8/libllvm3.8_3.8.1-24_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/llvm-toolchain-3.9/libllvm3.9_3.9.1-9_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libt/libtool/libltdl7_2.4.6-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lvm2/liblvm2cmd2.02_2.02.168-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/modemmanager/libmm-glib0_1.6.4-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libm/libmspack/libmspack0_0.5-1+deb9u3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/nemo/libnemo-extension1_3.2.2-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/nghttp2/libnghttp2-14_1.18.1-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libn/libnih/libnih-dbus1_1.0.3-8_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libn/libnih/libnih1_1.0.3-8_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/network-manager/libnm-glib-vpn1_1.6.2-3+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/network-manager/libnm-glib4_1.6.2-3+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/network-manager-applet/libnm-gtk0_1.4.4-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/network-manager/libnm-util2_1.6.2-3+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/network-manager/libnm0_1.6.2-3+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libn/libnotify/libnotify4_0.7.7-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/nspr/libnspr4_4.12-6_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/nss/libnss3_3.26.2-1.1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pango1.0/libpangoft2-1.0-0_1.40.5-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pango1.0/libpangoxft-1.0-0_1.40.5-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libp/libpciaccess/libpciaccess0_0.13.4-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pcre2/libpcre2-8-0_10.22-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libp/libpeas/libpeas-common_1.20.0-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pixman/libpixman-1-0_0.34.0-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/policykit-1/libpolkit-agent-1-0_0.105-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/policykit-1/libpolkit-gobject-1-0_0.105-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pulseaudio/libpulse0_10.0-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python3.5/libpython3.5_3.5.3-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python3.5/libpython3.5-stdlib_3.5.3-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/o/openrc/librc1_0.23-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libr/librest/librest-0.7-0_0.8.0-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/r/rtmpdump/librtmp1_2.4+20151223.gitfa8646d.1-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lm-sensors/libsensors4_3.4.0-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libs/libsm/libsm6_1.2.2-1+b3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libs/libsoup2.4/libsoup-gnome2.4-1_2.56.0-2+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libs/libsoup2.4/libsoup2.4-1_2.56.0-2+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libs/libssh2/libssh2-1_1.7.0-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/t/tomsfastmath/libtfm1_0.13-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libt/libthai/libthai0_0.1.26-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/t/tiff/libtiff5_4.0.8-2+deb9u4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/u/upower/libupower-glib3_0.99.4-4+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libu/libutempter/libutempter0_1.1.6-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/v/vte2.91/libvte-2.91-common_0.46.1-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libw/libwacom/libwacom2_0.22-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/w/wayland/libwayland-client0_1.12.0-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/w/wayland/libwayland-cursor0_1.12.0-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mesa/libwayland-egl1-mesa_13.0.6-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/w/wayland/libwayland-server0_1.12.0-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libx11/libx11-data_1.6.4-3+deb9u1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libx11/libx11-xcb1_1.6.4-3+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xapp/libxapp1_1.0.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mesa/libxatracker2_13.0.6-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxau/libxau6_1.0.8-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxaw/libxaw7_1.0.13-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxcb/libxcb-dri2-0_1.12-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxcb/libxcb-dri3-0_1.12-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxcb/libxcb-glx0_1.12-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxcb/libxcb-present0_1.12-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxcb/libxcb-render0_1.12-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxcb/libxcb-shape0_1.12-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxcb/libxcb-shm0_1.12-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxcb/libxcb-sync1_1.12-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xcb-util/libxcb-util0_0.3.8-3+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxcomposite/libxcomposite1_0.4.4-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxcursor/libxcursor1_1.1.14-1+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxdamage/libxdamage1_1.1.4-2+b3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxext/libxext6_1.3.3-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxfont1/libxfont1_1.5.2-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xft/libxft2_2.3.2-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxi/libxi6_1.7.9-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxinerama/libxinerama1_1.1.3-1+b3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxkbcommon/libxkbcommon0_0.7.1-2~deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxkbfile/libxkbfile1_1.0.9-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxklavier/libxklavier16_5.4-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxmu/libxmu6_1.1.2-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxmu/libxmuu1_1.1.2-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxpm/libxpm4_3.5.12-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxrandr/libxrandr2_1.5.1-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxrender/libxrender1_0.9.10-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxshmfence/libxshmfence1_1.2-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxslt/libxslt1.1_1.1.29-2.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxt/libxt6_1.1.5-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxtst/libxtst6_1.2.3-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxv/libxv1_1.0.11-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxxf86dga/libxxf86dga1_1.1.4-1+b3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxxf86vm/libxxf86vm1_1.1.4-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/linux-base/linux-base_4.5_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/muffin/muffin-common_3.2.1-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mysql-defaults/mysql-common_5.8+1.0.2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/nemo/nemo-data_3.2.2-3_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.0j-1~deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/patch/patch_2.7.5-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/policykit-1/policykit-1_0.105-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/psmisc/psmisc_22.21-2.1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pump/pump_0.8.24-7+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pycairo/python-cairo_1.8.8-2.2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pygobject/python-gi_3.22.0-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pygtk/python-glade2_2.24.0-5.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pygobject/python-gobject_3.22.0-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pygtk/python-gtk2_2.24.0-5.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pillow/python-pil_4.0.0-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/ptyprocess/python-ptyprocess_0.5.1-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/u/urwid/python-urwid_1.3.1-2+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/w/wicd/python-wicd_1.7.4+tb2-5~deb9u1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/py3cairo/python3-cairo_1.10.0+dfsg-5+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python-httplib2/python3-httplib2_0.9.2+dfsg-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python-setuptools/python3-pkg-resources_33.1.1-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pyatspi/python3-pyatspi_2.20.3+dfsg-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pycurl/python3-pycurl_7.43.0-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python-setproctitle/python3-setproctitle_1.1.10-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python-xlib/python3-xlib_0.14+20091101-5_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python3.5/python3.5-minimal_3.5.3-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/s/shared-mime-info/shared-mime-info_1.8-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/s/startpar/startpar_0.59-3.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/b/busybox/udhcpc_1.22.0-19+b3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/u/upower/upower_0.99.4-4+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/w/wireless-tools/wireless-tools_30~pre9-12+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xorg/x11-common_7.7+19_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xbitmaps/xbitmaps_1.1.1-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xdg-utils/xdg-utils_1.1.1-1+deb9u1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xfonts-encodings/xfonts-encodings_1.0.4-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xorg-server/xserver-xorg-core_1.19.2-1+deb9u5_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xserver-xorg-video-ati/xserver-xorg-video-radeon_7.8.0-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/z/zenity/zenity_3.22.0-1+b1_amd64.deb'
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/pycurl"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/python-setproctitle"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/python-xlib"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/s/shared-mime-info"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/s/startpar"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xbitmaps"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xdg-utils"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/x/xfonts-encodings"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/z/zenity"
+stdout: Getting packages...
+stdout: Shutting down aptmethods...
+stdout: Installing (and possibly deleting) packages...
+stdout: Exporting indices...
+stdout: Les fichiers /home/jlequen/git/Station-blanche/iso/tmp/mirror/conf/package-list et /home/jlequen/git/Station-blanche/iso/tmp/mirror/conf/package-list.old sont différents
+stdout: getting missing dependencies... attempt 4
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/aspell-en/aspell-en_2016.11.20-0-0.1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/at-spi2-core/at-spi2-core_2.22.0-6+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/b/busybox/busybox-static_1.22.0-19+b3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/cpp-6_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/e/efibootmgr/efibootmgr_14-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/f/fontconfig/fontconfig-config_2.11.0-6.7_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gawk/gawk_4.1.4+dfsg-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/at-spi2-core/gir1.2-atspi-2.0_2.22.0-6+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/glib-networking/glib-networking_2.50.0-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gnome-desktop3/gnome-desktop3-data_3.22.2-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gnome-icon-theme/gnome-icon-theme_3.12.0-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gtk+3.0/gtk-update-icon-cache_3.22.11-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gvfs/gvfs-common_1.30.4-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gvfs/gvfs-daemons_1.30.4-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gvfs/gvfs-libs_1.30.4-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/i/initramfs-tools/initramfs-tools-core_0.130_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/alsa-lib/libasound2_1.1.3-5_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/aspell/libaspell15_0.60.7~20110707-3+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/liba/libasyncns/libasyncns0_0.8-6_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/at-spi2-atk/libatk-adaptor_2.22.0-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/avahi/libavahi-client3_0.6.32-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/avahi/libavahi-common3_0.6.32-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/caribou/libcaribou-common_0.4.21-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/libcc1-0_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/c/curl/libcurl3-gnutls_7.52.1-5+deb9u9_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libd/libdatrie/libdatrie1_0.2.10-4+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libe/libevdev/libevdev2_1.5.6+dfsg-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/libgcc-6-dev_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libg/libgee-0.8/libgee-0.8-2_0.18.1-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libg/libglade2/libglade2-0_2.6.4-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libg/libgnomekbd/libgnomekbd-common_3.22.0.1-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gtk+2.0/libgtk2.0-common_2.24.31-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/h/harfbuzz/libharfbuzz0b_1.4.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/h/hunspell/libhunspell-1.4-0_1.4.1-2+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libi/libimobiledevice/libimobiledevice6_1.2.0+dfsg-3.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libi/libinput/libinput-bin_1.6.3-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/i/isl/libisl15_0.18-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/w/wireless-tools/libiw30_30~pre9-12+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/j/jansson/libjansson4_2.9-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/j/jbigkit/libjbig0_2.1-3.1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/j/json-glib/libjson-glib-1.0-common_1.2.6-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mpclib3/libmpc3_1.0.3-1+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mpdecimal/libmpdec2_2.4.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mpfr4/libmpfr4_3.1.5-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/m/mtdev/libmtdev1_1.1.5-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libn/libnl3/libnl-3-200_3.2.27-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libn/libnl3/libnl-genl-3-200_3.2.27-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pcsc-lite/libpcsclite1_1.8.20-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libp/libplist/libplist3_1.12+git+1+e37ca00-0.3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/policykit-1/libpolkit-backend-1-0_0.105-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pulseaudio/libpulse-mainloop-glib0_10.0-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python3.5/libpython3.5-minimal_3.5.3-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libr/librsvg/librsvg2-common_2.40.16-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libs/libsndfile/libsndfile1_1.0.27-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/libstdc++-6-dev_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/t/tdb/libtdb1_1.3.11-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libt/libthai/libthai-data_0.1.26-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libv/libvorbis/libvorbisfile3_1.3.5-4+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libw/libwacom/libwacom-common_0.22-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/w/webkit2gtk/libwebkit2gtk-4.0-37_2.18.6-1~deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp6_0.5.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebpdemux2_0.5.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebpmux2_0.5.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxcb/libxcb-xfixes0_1.12-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxfont/libxfont2_2.0.1-3+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/n/net-tools/net-tools_1.60+git20161116.90da8a0-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pygobject-2/python-gobject-2_2.28.6-13_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python-numpy/python-numpy_1.12.1-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/pillow/python-pil.imagetk_4.0.0-4_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/r/ruby-defaults/ruby_2.3.3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/r/ruby-json/ruby-json_2.0.1+dfsg-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/x/xorg-server/xserver-common_1.19.2-1+deb9u5_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/z/zenity/zenity-common_3.22.0-1_all.deb'
+stdout: Calculating packages to get...
+stdout:   processing updates for 'u|stretch|main|amd64'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-udebs_stretch_main_amd64_uPackages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-updates_stretch-updates_main_amd64_uPackages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-updates_stretch-updates_main_amd64_uPackages'
+stdout:   processing updates for 'stretch|main|amd64'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default_stretch_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base_stretch_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-security_stretch%2Fupdates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-security_stretch%2Fupdates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-updates_stretch-updates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-updates_stretch-updates_main_amd64_Packages'
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/a/aspell-en"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/e/efibootmgr"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gawk"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/glib-networking"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gnome-icon-theme"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/a/aspell"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/liba/libasyncns"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/a/avahi"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libg/libgee-0.8"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libg/libglade2"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/h/hunspell"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libi/libimobiledevice"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/i/isl"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/j/jansson"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/j/jbigkit"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/m/mpclib3"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/m/mpdecimal"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/m/mpfr4"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/pcsc-lite"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libp/libplist"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libr/librsvg"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libs/libsndfile"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/t/tdb"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libv/libvorbis"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/w/webkit2gtk"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libw/libwebp"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/n/net-tools"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/pygobject-2"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/python-numpy"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/r/ruby-defaults"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/r/ruby-json"
+stdout: Getting packages...
+stdout: Shutting down aptmethods...
+stdout: Installing (and possibly deleting) packages...
+stdout: Exporting indices...
+stdout: Les fichiers /home/jlequen/git/Station-blanche/iso/tmp/mirror/conf/package-list et /home/jlequen/git/Station-blanche/iso/tmp/mirror/conf/package-list.old sont différents
+stdout: getting missing dependencies... attempt 5
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/aspell/aspell_0.60.7~20110707-3+b2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/d/dictionaries-common/dictionaries-common_1.27.2_all.deb'
+stderr: aptmethod got 'http://security.debian.org/pool/updates/main/g/gst-plugins-base1.0/libgstreamer-plugins-base1.0-0_1.10.4-1+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/f/fonts-dejavu/fonts-dejavu-core_2.37-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/f/fonts-liberation/fonts-liberation_1.07.4-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/glib-networking/glib-networking-common_2.50.0-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/glib-networking/glib-networking-services_2.50.0-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/k/klibc/klibc-utils_2.0.4-9_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/libasan3_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/alsa-lib/libasound2-data_1.1.3-5_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/libatomic1_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/a/avahi/libavahi-common-data_0.6.32-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lapack/libblas3_3.7.0-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libb/libbluray/libbluray1_0.9.3-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/libcilkrts5_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/e/efivar/libefiboot1_30-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/e/efivar/libefivar1_30-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/f/flac/libflac8_1.3.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcr/libgck-1-0_3.20.0-5.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcr/libgcr-base-3-1_3.20.0-5.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/libgomp1_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/graphite2/libgraphite2-3_1.3.10-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gst-plugins-bad1.0/libgstreamer-plugins-bad1.0-0_1.10.4-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/h/harfbuzz/libharfbuzz-icu0_1.4.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/h/hyphen/libhyphen0_2.8.8-5_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/libitm1_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/w/webkit2gtk/libjavascriptcoregtk-4.0-18_2.18.6-1~deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lapack/liblapack3_3.7.0-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/liblsan0_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/libmpx2_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libo/libogg/libogg0_1.3.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libp/libproxy/libproxy1v5_0.4.14-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/libquadmath0_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libr/librsvg/librsvg2-2_2.40.16-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/r/ruby2.3/libruby2.3_2.3.3-1+deb9u6_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libs/libsecret/libsecret-1-0_0.18.5-3.1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libs/libsigsegv/libsigsegv2_2.10-5_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/libtsan0_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/libubsan0_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/u/udisks2/libudisks2-0_2.1.8-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libu/libusbmuxd/libusbmuxd4_1.0.10-3+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libv/libvorbis/libvorbis0a_1.3.5-4+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libv/libvorbis/libvorbisenc2_1.3.5-4+deb9u2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/python-stdlib-extensions/python-tk_2.7.13-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/r/ruby2.3/ruby2.3_2.3.3-1+deb9u6_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/t/ttf-bitstream-vera/ttf-bitstream-vera_1.10-8_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/u/udisks2/udisks2_2.1.8-1_amd64.deb'
+stdout: Calculating packages to get...
+stdout:   processing updates for 'u|stretch|main|amd64'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-udebs_stretch_main_amd64_uPackages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-updates_stretch-updates_main_amd64_uPackages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-updates_stretch-updates_main_amd64_uPackages'
+stdout:   processing updates for 'stretch|main|amd64'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default_stretch_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base_stretch_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-security_stretch%2Fupdates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-security_stretch%2Fupdates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-updates_stretch-updates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-updates_stretch-updates_main_amd64_Packages'
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/d/dictionaries-common"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/f/fonts-liberation"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/k/klibc"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/l/lapack"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libb/libbluray"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/e/efivar"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/f/flac"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gcr"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/graphite2"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gst-plugins-bad1.0"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/g/gst-plugins-base1.0"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/h/hyphen"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libo"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libo/libogg"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libp/libproxy"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/r/ruby2.3"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libs/libsecret"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libs/libsigsegv"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/u/udisks2"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libu/libusbmuxd"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/p/python-stdlib-extensions"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/t/ttf-bitstream-vera"
+stdout: Getting packages...
+stdout: Shutting down aptmethods...
+stdout: Installing (and possibly deleting) packages...
+stdout: Exporting indices...
+stdout: Les fichiers /home/jlequen/git/Station-blanche/iso/tmp/mirror/conf/package-list et /home/jlequen/git/Station-blanche/iso/tmp/mirror/conf/package-list.old sont différents
+stdout: getting missing dependencies... attempt 6
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/b/blt/blt_2.5.3+dfsg-3_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/e/emacsen-common/emacsen-common_2.0.8_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/liba/libatasmart/libatasmart4_0.19-4+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/l/lapack/libblas-common_3.7.0-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcr/libgcr-3-common_3.20.0-5.1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/g/gcc-6/libgfortran3_6.3.0-18+deb9u1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/k/klibc/libklibc_2.0.4-9_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/o/orc/liborc-0.4-0_0.4.26-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libs/libsecret/libsecret-common_0.18.5-3.1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/t/tcl8.6/libtcl8.6_8.6.6+dfsg-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/t/tk8.6/libtk8.6_8.6.6-1+b1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/liby/libyaml/libyaml-0-2_0.1.7-2_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/parted/parted_3.2-17_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/r/rake/rake_10.5.0-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/r/ruby-did-you-mean/ruby-did-you-mean_1.0.0-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/r/ruby-minitest/ruby-minitest_5.9.0-1_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/r/ruby-net-telnet/ruby-net-telnet_0.1.1-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/r/ruby-test-unit/ruby-test-unit_3.1.7-2_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/r/rubygems-integration/rubygems-integration_1.11_all.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/b/blt/tk8.6-blt2.5_2.5.3+dfsg-3_amd64.deb'
+stdout: Calculating packages to get...
+stdout:   processing updates for 'u|stretch|main|amd64'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-udebs_stretch_main_amd64_uPackages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-updates_stretch-updates_main_amd64_uPackages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-updates_stretch-updates_main_amd64_uPackages'
+stdout:   processing updates for 'stretch|main|amd64'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default_stretch_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base_stretch_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-security_stretch%2Fupdates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-security_stretch%2Fupdates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-updates_stretch-updates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-updates_stretch-updates_main_amd64_Packages'
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/b/blt"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/e/emacsen-common"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/liba/libatasmart"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/o/orc"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/t/tcl8.6"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/t/tk8.6"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/liby"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/liby/libyaml"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/r/rake"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/r/ruby-did-you-mean"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/r/ruby-minitest"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/r/ruby-net-telnet"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/r/ruby-test-unit"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/r/rubygems-integration"
+stdout: Getting packages...
+stdout: Shutting down aptmethods...
+stdout: Installing (and possibly deleting) packages...
+stdout: Exporting indices...
+stdout: Les fichiers /home/jlequen/git/Station-blanche/iso/tmp/mirror/conf/package-list et /home/jlequen/git/Station-blanche/iso/tmp/mirror/conf/package-list.old sont différents
+stdout: getting missing dependencies... attempt 7
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/p/parted/libparted2_3.2-17_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/libx/libxss/libxss1_1.2.2-1_amd64.deb'
+stderr: aptmethod got 'http://deb.debian.org/debian/pool/main/r/ruby-power-assert/ruby-power-assert_0.3.0-1_all.deb'
+stdout: Calculating packages to get...
+stdout:   processing updates for 'u|stretch|main|amd64'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-udebs_stretch_main_amd64_uPackages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-updates_stretch-updates_main_amd64_uPackages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-updates_stretch-updates_main_amd64_uPackages'
+stdout:   processing updates for 'stretch|main|amd64'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default_stretch_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base_stretch_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-security_stretch%2Fupdates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-security_stretch%2Fupdates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-base-updates_stretch-updates_main_amd64_Packages'
+stdout:   reading '/home/jlequen/git/Station-blanche/iso/tmp/mirror/lists/default-updates_stretch-updates_main_amd64_Packages'
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/libx/libxss"
+stdout: Created directory "/home/jlequen/git/Station-blanche/iso/tmp/mirror/pool/main/r/ruby-power-assert"
+stdout: Getting packages...
+stdout: Shutting down aptmethods...
+stdout: Installing (and possibly deleting) packages...
+stdout: Exporting indices...
+stdout: no new dependencies, finished in 8 attempts.
+retval: 0

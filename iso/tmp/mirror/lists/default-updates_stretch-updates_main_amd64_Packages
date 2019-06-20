@@ -1,0 +1,4182 @@
+Package: clamav
+Version: 0.100.3+dfsg-0+deb9u1
+Installed-Size: 708
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: clamav-freshclam (>= 0.100.3+dfsg) | clamav-data, libc6 (>= 2.15), libclamav7 (>= 0.100.3), libcurl3 (>= 7.16.2), libjson-c3 (>= 0.10), libssl1.1 (>= 1.1.0), zlib1g (>= 1:1.2.3.3)
+Recommends: clamav-base
+Suggests: clamav-docs
+Description: anti-virus utility for Unix - command-line interface
+Multi-Arch: foreign
+Homepage: https://www.clamav.net/
+Description-md5: fb7be82d5591a0f3facf827f0a60c5d6
+Tag: implemented-in::c, interface::commandline, role::program,
+ scope::utility, security::antivirus, use::scanning, works-with::file,
+ works-with::mail
+Section: utils
+Priority: optional
+Filename: pool/main/c/clamav/clamav_0.100.3+dfsg-0+deb9u1_amd64.deb
+Size: 165090
+MD5sum: ff078d5884432d35c207db604e98a027
+SHA256: 5f4613a418f2f97d60179931117ff0ad6b9323b1b95bce190fdd6d58fff1f2f9
+
+Package: clamav-base
+Source: clamav
+Version: 0.100.3+dfsg-0+deb9u1
+Installed-Size: 156
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: adduser, logrotate, ucf, debconf (>= 0.5) | debconf-2.0
+Recommends: clamav
+Description: anti-virus utility for Unix - base package
+Homepage: https://www.clamav.net/
+Description-md5: 701912f0a2cc626b57570094858a5b1d
+Tag: interface::commandline, role::app-data, security::antivirus,
+ use::scanning, works-with::file, works-with::mail
+Section: utils
+Priority: optional
+Filename: pool/main/c/clamav/clamav-base_0.100.3+dfsg-0+deb9u1_all.deb
+Size: 107298
+MD5sum: 6e1af340f1ac47cea7a59acfb7c7eb4e
+SHA256: 4e16e8a1fe65e69b5d8da246ec0588ff826a07d037ae2b2d97eb456a092bcfa7
+
+Package: clamav-daemon
+Source: clamav
+Version: 0.100.3+dfsg-0+deb9u1
+Installed-Size: 878
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: clamav-base (<< 0.98.1+dfsg-6)
+Depends: adduser, clamav-base (= 0.100.3+dfsg-0+deb9u1), clamav-freshclam (>= 0.100.3+dfsg) | clamav-data, dpkg (>= 1.16.1), lsb-base (>= 3.2-13), procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, init-system-helpers (>= 1.18~), libc6 (>= 2.23), libclamav7 (>= 0.100.3), libncurses5 (>= 6), libssl1.1 (>= 1.1.0), libsystemd0, libtinfo5 (>= 6), zlib1g (>= 1:1.2.0.2)
+Recommends: clamdscan
+Suggests: apparmor, clamav-docs, daemon
+Breaks: clamav-base (<< 0.98.1+dfsg-6)
+Description: anti-virus utility for Unix - scanner daemon
+Homepage: https://www.clamav.net/
+Description-md5: dc258511e9e1f62ef33172c190a0fad6
+Tag: implemented-in::c, interface::commandline, interface::daemon,
+ mail::filters, network::server, role::program, security::antivirus,
+ use::scanning, works-with::file, works-with::mail
+Section: utils
+Priority: optional
+Filename: pool/main/c/clamav/clamav-daemon_0.100.3+dfsg-0+deb9u1_amd64.deb
+Size: 253398
+MD5sum: 1d4222cc6b3d3a9a17538ff34bf685fb
+SHA256: 3629f151edbc5b3d040c710386bed5afabeb9ba9ad38627040e42dfb0a0c9c1b
+
+Package: clamav-docs
+Source: clamav
+Version: 0.100.3+dfsg-0+deb9u1
+Installed-Size: 990
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: all
+Description: anti-virus utility for Unix - documentation
+Multi-Arch: foreign
+Homepage: https://www.clamav.net/
+Description-md5: af78818bbdf8851b6358c15693a31419
+Tag: made-of::html, made-of::pdf, mail::filters, role::documentation,
+ security::antivirus, works-with::file, works-with::mail
+Section: doc
+Priority: optional
+Filename: pool/main/c/clamav/clamav-docs_0.100.3+dfsg-0+deb9u1_all.deb
+Size: 743164
+MD5sum: 1d617a628a2d31e44afdf54add5d6317
+SHA256: 305bc1123f41e138ddeea32e1b41fca5908f3468576379323c64332ec64c9409
+
+Package: clamav-freshclam
+Source: clamav
+Version: 0.100.3+dfsg-0+deb9u1
+Installed-Size: 506
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: amd64
+Provides: clamav-data
+Depends: clamav-base (>= 0.100.3+dfsg-0+deb9u1), dpkg (>= 1.16.1), logrotate, lsb-base (>= 3.2-13), procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, init-system-helpers (>= 1.18~), libc6 (>= 2.15), libclamav7 (>= 0.100.3), libssl1.1 (>= 1.1.0), zlib1g (>= 1:1.2.3.3)
+Suggests: apparmor, clamav-docs
+Conflicts: clamav-data, libclamav2, libclamav3
+Description: anti-virus utility for Unix - virus database update utility
+Homepage: https://www.clamav.net/
+Description-md5: 82c68e4f7c984e3d6bdc720ae842fca8
+Tag: implemented-in::c, interface::commandline, interface::daemon,
+ role::program, scope::utility, security::antivirus, use::downloading,
+ works-with::file, works-with::mail
+Section: utils
+Priority: optional
+Filename: pool/main/c/clamav/clamav-freshclam_0.100.3+dfsg-0+deb9u1_amd64.deb
+Size: 207864
+MD5sum: 0e766dc4b06144614ac15c4c459699d5
+SHA256: 9d2a09b90c7c8f9b10380e0168bbdd71f01748daedd3cd1a37ec1fbe22b3c236
+
+Package: clamav-milter
+Source: clamav
+Version: 0.100.3+dfsg-0+deb9u1
+Installed-Size: 591
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: adduser, clamav-base (>= 0.100.3+dfsg-0+deb9u1), clamav-freshclam (>= 0.100.3+dfsg) | clamav-data, dpkg (>= 1.16.1), logrotate, lsb-base (>= 3.2-13), procps (>= 1:3.3.2), ucf, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.15), libmilter1.0.1, libssl1.1 (>= 1.1.0)
+Recommends: clamav-daemon
+Suggests: clamav-docs, daemon
+Description: anti-virus utility for Unix - sendmail integration
+Homepage: https://www.clamav.net/
+Description-md5: e47a1194215b5fbde13fb9217c44d83f
+Tag: implemented-in::c, interface::daemon, mail::filters, network::server,
+ role::program, security::antivirus, use::scanning, works-with::mail
+Section: utils
+Priority: extra
+Filename: pool/main/c/clamav/clamav-milter_0.100.3+dfsg-0+deb9u1_amd64.deb
+Size: 246752
+MD5sum: 1795c63df166510ba861ffe7c43b9b42
+SHA256: ddaa22ad3cce6d0c47e4a6d912229d3ff67b00294d93962217502f5a664b79b1
+
+Package: clamav-testfiles
+Source: clamav
+Version: 0.100.3+dfsg-0+deb9u1
+Installed-Size: 6540
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: all
+Description: anti-virus utility for Unix - test files
+Multi-Arch: foreign
+Homepage: https://www.clamav.net/
+Description-md5: 29437a0b8c82cc8179b64405688f062e
+Tag: devel::testing-qa, interface::commandline, role::app-data,
+ security::antivirus, use::checking
+Section: utils
+Priority: optional
+Filename: pool/main/c/clamav/clamav-testfiles_0.100.3+dfsg-0+deb9u1_all.deb
+Size: 2883416
+MD5sum: 53714dafbbe0ea2b26d75aa6e1d88c33
+SHA256: 43d82c2e93a58b9fdc3fafff2078ac1ec8e8e924e0d4d70b0308895ae5c2d6fc
+
+Package: clamdscan
+Source: clamav
+Version: 0.100.3+dfsg-0+deb9u1
+Installed-Size: 307
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: amd64
+Replaces: clamd (<< 0.98.5~beta1+dfsg-3)
+Depends: clamav-base (= 0.100.3+dfsg-0+deb9u1), libc6 (>= 2.15), libssl1.1 (>= 1.1.0)
+Suggests: clamav-daemon, clamav-docs
+Breaks: clamd (<< 0.98.5~beta1+dfsg-3)
+Description: anti-virus utility for Unix - scanner client
+Homepage: https://www.clamav.net/
+Description-md5: ad077e4c74b9870b6e7bb55aef11c547
+Section: utils
+Priority: optional
+Filename: pool/main/c/clamav/clamdscan_0.100.3+dfsg-0+deb9u1_amd64.deb
+Size: 125800
+MD5sum: 848f1985bb4d48bd67059b606218e6f8
+SHA256: 567ff19d610ab448b643c9eda853837d3048cc4c033f1b5ba94ddf1b61cae591
+
+Package: libclamav-dev
+Source: clamav
+Version: 0.100.3+dfsg-0+deb9u1
+Installed-Size: 131
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libbz2-dev, libc6-dev | libc-dev, libclamav7 (= 0.100.3+dfsg-0+deb9u1), libidn11-dev, libssl-dev, libtommath-dev, zlib1g-dev
+Description: anti-virus utility for Unix - development files
+Homepage: https://www.clamav.net/
+Description-md5: 3dc197b6ebfb15522a4b7913ea796763
+Tag: devel::lang:c, devel::library, implemented-in::c, role::devel-lib,
+ security::antivirus, use::scanning
+Section: libdevel
+Priority: optional
+Filename: pool/main/c/clamav/libclamav-dev_0.100.3+dfsg-0+deb9u1_amd64.deb
+Size: 65246
+MD5sum: be7c7fb2a0525ba50cc4d2432b913e39
+SHA256: 2aa5a984f70eb09a428930c0bec8ab6c1646e9d841c9f83dd7a9f3845121bbbb
+
+Package: libclamav7
+Source: clamav
+Version: 0.100.3+dfsg-0+deb9u1
+Installed-Size: 2047
+Maintainer: ClamAV Team <pkg-clamav-devel@lists.alioth.debian.org>
+Architecture: amd64
+Depends: libbz2-1.0, libc6 (>= 2.15), libgcc1 (>= 1:3.0), libjson-c3 (>= 0.10), libllvm3.8 (>= 1:3.8.1-19~), libltdl7 (>= 2.4.6), libmspack0 (>= 0.4), libpcre3, libssl1.1 (>= 1.1.0), libstdc++6 (>= 5.2), libtfm1 (>= 0.13), libxml2 (>= 2.7.4), zlib1g (>= 1:1.2.3.4)
+Suggests: libclamunrar7
+Description: anti-virus utility for Unix - library
+Multi-Arch: same
+Homepage: https://www.clamav.net/
+Description-md5: bf2e797d0e7e410776d9200761e01bd6
+Tag: role::shared-lib
+Section: libs
+Priority: optional
+Filename: pool/main/c/clamav/libclamav7_0.100.3+dfsg-0+deb9u1_amd64.deb
+Size: 800492
+MD5sum: 4dcfb47d1be9620df7b45c6aad9537a6
+SHA256: 3eca3422aaeca82c4fc6f403e8d0f0414cbd79d92720248299fefc21dbe83d86
+
+Package: dnsviz
+Version: 0.6.4-1+deb9u1
+Installed-Size: 1661
+Maintainer: Debian DNS Maintainers <pkg-dns-devel@lists.alioth.debian.org>
+Architecture: all
+Depends: python-dnspython, python-m2crypto, python-pygraphviz, python2.7, python:any (<< 2.8), python:any (>= 2.7.5-5~), dns-root-data, libjs-jquery, libjs-jquery-ui, libjs-jquery-ui-theme-redmond, libjs-raphael
+Description: Tools for analyzing and visualizing DNS and DNSSEC behavior
+Homepage: https://github.com/dnsviz/dnsviz
+Description-md5: 4f2e5db401d3a48757f46cd4365530b7
+Section: net
+Priority: optional
+Filename: pool/main/d/dnsviz/dnsviz_0.6.4-1+deb9u1_all.deb
+Size: 730912
+MD5sum: 1f0552ad299d529afb518cda50aca1c9
+SHA256: d8d4029b859dc1b419b0dd484866f66e8109d3d39fc64682634283dac4d47691
+
+Package: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 160287
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: amd64
+Provides: gnome-www-browser, www-browser
+Depends: libasound2 (>= 1.0.16), libatk1.0-0 (>= 1.12.4), libc6 (>= 2.18), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.10.0), libdbus-1-3 (>= 1.9.14), libdbus-glib-1-2 (>= 0.78), libffi6 (>= 3.0.4), libfontconfig1 (>= 2.11), libfreetype6 (>= 2.2.1), libgcc1 (>= 1:4.2), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.31.8), libgtk-3-0 (>= 3.0.0), libjsoncpp1 (>= 1.7.4), libpango-1.0-0 (>= 1.14.0), libstartup-notification0 (>= 0.8), libstdc++6 (>= 6), libvpx4 (>= 1.6.0), libx11-6, libx11-xcb1, libxcb-shm0, libxcb1, libxcomposite1 (>= 1:0.3-1), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxrender1, libxt6, zlib1g (>= 1:1.2.3.4), fontconfig, procps, debianutils (>= 1.16)
+Recommends: libavcodec58 | libavcodec-extra58 | libavcodec57 | libavcodec-extra57 | libavcodec56 | libavcodec-extra56 | libavcodec55 | libavcodec-extra55 | libavcodec54 | libavcodec-extra54 | libavcodec53 | libavcodec-extra53
+Suggests: fonts-stix | otf-stix, fonts-lmodern, libgssapi-krb5-2 | libkrb53, libcanberra0, libgtk2.0-0, pulseaudio
+Conflicts: iceweasel (<< 45)
+Breaks: xul-ext-torbutton
+Description: Mozilla Firefox web browser - Extended Support Release (ESR)
+Description-md5: 88ee196fd829d9218a763b4d498a6f6a
+Tag: interface::x11, role::program, uitoolkit::gtk, web::browser
+Section: web
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr_60.6.3esr-1~deb9u1_amd64.deb
+Size: 42434846
+MD5sum: 5467c3271b6dd97697fcf5b05e61a8ba
+SHA256: 130f213033cf4d22e4d9319c23ec8fbb315800e6e19e0c921c584fcfa6c3749c
+
+Package: firefox-esr-l10n-ach
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 662
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ach (<< 45)
+Provides: iceweasel-l10n-ach
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-ach (<< 45)
+Description: Acoli language package for Firefox ESR
+Description-md5: d5188b984c4f0df3501f954a193b9bcb
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ach_60.6.3esr-1~deb9u1_all.deb
+Size: 528654
+MD5sum: 05d582526eda954eed1f8998c9fa5503
+SHA256: 9c07a673f4b701a7f3c6267f168b4d7548e94af1e6bbead9760ecce7268ec735
+
+Package: firefox-esr-l10n-af
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 653
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-af (<< 45)
+Provides: iceweasel-l10n-af
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-af
+Breaks: iceweasel-l10n-af (<< 45)
+Description: Afrikaans language package for Firefox ESR
+Description-md5: 5b77c93a9812c0c9c016530c0d0e3034
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-af_60.6.3esr-1~deb9u1_all.deb
+Size: 521478
+MD5sum: 23eaaddc2d784c9aca1a7dde29b627db
+SHA256: 65bf8b3d6e79b5267fda08701390a33b19d03dd1d42083293faeab9494acfa66
+
+Package: firefox-esr-l10n-all
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-all (<< 45)
+Provides: iceweasel-l10n-all
+Depends: firefox-esr-l10n-ach, firefox-esr-l10n-af, firefox-esr-l10n-an, firefox-esr-l10n-ar, firefox-esr-l10n-as, firefox-esr-l10n-ast, firefox-esr-l10n-az, firefox-esr-l10n-be, firefox-esr-l10n-bg, firefox-esr-l10n-bn-bd, firefox-esr-l10n-bn-in, firefox-esr-l10n-br, firefox-esr-l10n-bs, firefox-esr-l10n-ca, firefox-esr-l10n-cak, firefox-esr-l10n-cs, firefox-esr-l10n-cy, firefox-esr-l10n-da, firefox-esr-l10n-de, firefox-esr-l10n-dsb, firefox-esr-l10n-el, firefox-esr-l10n-en-gb, firefox-esr-l10n-en-za, firefox-esr-l10n-eo, firefox-esr-l10n-es-ar, firefox-esr-l10n-es-cl, firefox-esr-l10n-es-es, firefox-esr-l10n-es-mx, firefox-esr-l10n-et, firefox-esr-l10n-eu, firefox-esr-l10n-fa, firefox-esr-l10n-ff, firefox-esr-l10n-fi, firefox-esr-l10n-fr, firefox-esr-l10n-fy-nl, firefox-esr-l10n-ga-ie, firefox-esr-l10n-gd, firefox-esr-l10n-gl, firefox-esr-l10n-gn, firefox-esr-l10n-gu-in, firefox-esr-l10n-he, firefox-esr-l10n-hi-in, firefox-esr-l10n-hr, firefox-esr-l10n-hsb, firefox-esr-l10n-hu, firefox-esr-l10n-hy-am, firefox-esr-l10n-ia, firefox-esr-l10n-id, firefox-esr-l10n-is, firefox-esr-l10n-it, firefox-esr-l10n-ja, firefox-esr-l10n-ka, firefox-esr-l10n-kab, firefox-esr-l10n-kk, firefox-esr-l10n-km, firefox-esr-l10n-kn, firefox-esr-l10n-ko, firefox-esr-l10n-lij, firefox-esr-l10n-lt, firefox-esr-l10n-lv, firefox-esr-l10n-mai, firefox-esr-l10n-mk, firefox-esr-l10n-ml, firefox-esr-l10n-mr, firefox-esr-l10n-ms, firefox-esr-l10n-my, firefox-esr-l10n-nb-no, firefox-esr-l10n-ne-np, firefox-esr-l10n-nl, firefox-esr-l10n-nn-no, firefox-esr-l10n-oc, firefox-esr-l10n-or, firefox-esr-l10n-pa-in, firefox-esr-l10n-pl, firefox-esr-l10n-pt-br, firefox-esr-l10n-pt-pt, firefox-esr-l10n-rm, firefox-esr-l10n-ro, firefox-esr-l10n-ru, firefox-esr-l10n-si, firefox-esr-l10n-sk, firefox-esr-l10n-sl, firefox-esr-l10n-son, firefox-esr-l10n-sq, firefox-esr-l10n-sr, firefox-esr-l10n-sv-se, firefox-esr-l10n-ta, firefox-esr-l10n-te, firefox-esr-l10n-th, firefox-esr-l10n-tr, firefox-esr-l10n-uk, firefox-esr-l10n-ur, firefox-esr-l10n-uz, firefox-esr-l10n-vi, firefox-esr-l10n-xh, firefox-esr-l10n-zh-cn, firefox-esr-l10n-zh-tw
+Breaks: iceweasel-l10n-all (<< 45)
+Description: All language packages for Firefox ESR (meta)
+Description-md5: 0510a1fd50726dce346379d22d5ac62e
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-all_60.6.3esr-1~deb9u1_all.deb
+Size: 111958
+MD5sum: 78e44eadfa4b973a66df87dbb7a7b172
+SHA256: a3a5c210c96266a6a4733769cf8e94a801eb57c535bb95fdf69bca445d316fc2
+
+Package: firefox-esr-l10n-an
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 685
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-an (<< 45)
+Provides: iceweasel-l10n-an
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-an
+Breaks: iceweasel-l10n-an (<< 45)
+Description: Aragonese language package for Firefox ESR
+Description-md5: 9924a97ec612d6fcd54f0610a7a3e043
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-an_60.6.3esr-1~deb9u1_all.deb
+Size: 555050
+MD5sum: 91ad6582e4047430dfb1261d11431ce4
+SHA256: 3716370ab126da2a96fb1385bd79f212ab5df3d3c67d8e13d54fa46c62800708
+
+Package: firefox-esr-l10n-ar
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 712
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ar (<< 45)
+Provides: iceweasel-l10n-ar
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-ar
+Breaks: iceweasel-l10n-ar (<< 45)
+Description: Arabic language package for Firefox ESR
+Description-md5: 187769fc81d734cf856ac016e6f40170
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ar_60.6.3esr-1~deb9u1_all.deb
+Size: 581600
+MD5sum: b4a0c08483d9ef0dd8d8af97dde34d39
+SHA256: 725c0b06990a1d36074d31f1cc93da5b8a35b8a194bf988d9e536c9524ae0893
+
+Package: firefox-esr-l10n-as
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 695
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-as (<< 45)
+Provides: iceweasel-l10n-as
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-as (<< 45)
+Description: Assamese language package for Firefox ESR
+Description-md5: 7674ef31cf34e2fb635f6c4fee98a4c6
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-as_60.6.3esr-1~deb9u1_all.deb
+Size: 566590
+MD5sum: ba36cc802cb3df25d64459d5e4e15a89
+SHA256: e1fc5110d87c52f5c44e290e934a25abb8da49e77239a0586dcaacc3c0c8668b
+
+Package: firefox-esr-l10n-ast
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 673
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ast (<< 45)
+Provides: iceweasel-l10n-ast
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-ast (<< 45)
+Description: Asturian language package for Firefox ESR
+Description-md5: 480a52dafb8192cb706b3bf179b9862a
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ast_60.6.3esr-1~deb9u1_all.deb
+Size: 541796
+MD5sum: eca65e981317967b3065c1722ce8d8a9
+SHA256: 5e5c9fb750f87bce89004bd0300237c28e9efa2e30ede7c3b9bf6a8e7fd40a88
+
+Package: firefox-esr-l10n-az
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 689
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-az (<< 45)
+Provides: iceweasel-l10n-az
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-az (<< 45)
+Description: Azerbaijani language package for Firefox ESR
+Description-md5: 8606a59b109c8f1b54cab83ec2ca635a
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-az_60.6.3esr-1~deb9u1_all.deb
+Size: 558972
+MD5sum: c88bbe7228fa1ac9417c00bb9feb9ec2
+SHA256: dcb6f498c0b62538df015709e5f3f90bc23eaff8d6617179b73b2b9f8b49e7b1
+
+Package: firefox-esr-l10n-be
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 744
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-be (<< 45)
+Provides: iceweasel-l10n-be
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-be
+Breaks: iceweasel-l10n-be (<< 45)
+Description: Belarusian language package for Firefox ESR
+Description-md5: 387fae80c2f0403a899472b965c142b2
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-be_60.6.3esr-1~deb9u1_all.deb
+Size: 615694
+MD5sum: 69c243fb0f4340857ff1029f3659db57
+SHA256: eed1911c3fcf966e357b50ebfe5e3e5a67c4607fa764676cb2e3b0c3ef43297f
+
+Package: firefox-esr-l10n-bg
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 737
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-bg (<< 45)
+Provides: iceweasel-l10n-bg
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-bg | myspell-bg
+Breaks: iceweasel-l10n-bg (<< 45)
+Description: Bulgarian language package for Firefox ESR
+Description-md5: e9dc3372b630d540f7dbb29e05efaa94
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-bg_60.6.3esr-1~deb9u1_all.deb
+Size: 608630
+MD5sum: 1537ffefeff897e11396d764ad1e20aa
+SHA256: 5fd88923b5c63a0bd66cf709c7d72d47d5ef1347d46caa069b366c3469dbe51d
+
+Package: firefox-esr-l10n-bn-bd
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 752
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-bn-bd (<< 45)
+Provides: iceweasel-l10n-bn-bd
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-bn
+Breaks: iceweasel-l10n-bn-bd (<< 45)
+Description: Bengali (Bangladesh) language package for Firefox ESR
+Description-md5: 1c66f291083fed9190de6cadc2b9eee9
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-bn-bd_60.6.3esr-1~deb9u1_all.deb
+Size: 621154
+MD5sum: 0bb20a826a218600c43aeb4d92c2649e
+SHA256: 0abc3fa60bc75c5e3217e0720ff8a78ba2b6d37e27ece55a292788245a4b0025
+
+Package: firefox-esr-l10n-bn-in
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 734
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-bn-in (<< 45)
+Provides: iceweasel-l10n-bn-in
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-bn
+Breaks: iceweasel-l10n-bn-in (<< 45)
+Description: Bengali (India) language package for Firefox ESR
+Description-md5: 5744d663bb741cb27f83c24f715f29f9
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-bn-in_60.6.3esr-1~deb9u1_all.deb
+Size: 601900
+MD5sum: 3f71bab911c25d47bb70b1491d4352aa
+SHA256: 6a1831b3acc351468b7d33ba0610f998bac2cf90fa4efc68ec4238e6562c9507
+
+Package: firefox-esr-l10n-br
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 677
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-br (<< 45)
+Provides: iceweasel-l10n-br
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-br
+Breaks: iceweasel-l10n-br (<< 45)
+Description: Breton language package for Firefox ESR
+Description-md5: bb7780db4d6867db8bb1444714267939
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-br_60.6.3esr-1~deb9u1_all.deb
+Size: 545236
+MD5sum: 63396f916b2ad72217edcbb4e0d46c44
+SHA256: 1e2fde5c0b8b631447768b01fdc17d8f6ba1221d08cb173dbaac2f35910bc057
+
+Package: firefox-esr-l10n-bs
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 680
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-bs (<< 45)
+Provides: iceweasel-l10n-bs
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-bs
+Breaks: iceweasel-l10n-bs (<< 45)
+Description: Bosnian language package for Firefox ESR
+Description-md5: 5fea1a4ed52425b2682a4a722208ce6a
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-bs_60.6.3esr-1~deb9u1_all.deb
+Size: 548978
+MD5sum: 88c56b8183ffc15f422d668ec2c02d4c
+SHA256: d460aa0292dfc4033b80aa72fecefb929db0b06b1b23b8c7f91a4249e472a1d3
+
+Package: firefox-esr-l10n-ca
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 690
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ca (<< 45)
+Provides: iceweasel-l10n-ca
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-ca
+Breaks: iceweasel-l10n-ca (<< 45)
+Description: Catalan language package for Firefox ESR
+Description-md5: 39fc7a1d4b9f5fb5d75d2c85f3fe18f8
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ca_60.6.3esr-1~deb9u1_all.deb
+Size: 559108
+MD5sum: 69b7234a833c16471473b18949d14c4a
+SHA256: 702d0d52997081dde083ef18e88443c9746657640de603e81d45d422c3a84e32
+
+Package: firefox-esr-l10n-cak
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 701
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-cak (<< 45)
+Provides: iceweasel-l10n-cak
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-cak (<< 45)
+Description: Kaqchikel language package for Firefox ESR
+Description-md5: b7d60abe64a35eb3f946d5cec1befbfe
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-cak_60.6.3esr-1~deb9u1_all.deb
+Size: 568820
+MD5sum: 285a88bf6c431a967ae0daceccb97959
+SHA256: a9001631b049ee106f98a3bdb848cd3267d677ea31906cd93866df0373dcfffe
+
+Package: firefox-esr-l10n-cs
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 696
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-cs (<< 45)
+Provides: iceweasel-l10n-cs
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-cs
+Breaks: iceweasel-l10n-cs (<< 45)
+Description: Czech language package for Firefox ESR
+Description-md5: 0c1f1b9260776612632c42839d46ae61
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-cs_60.6.3esr-1~deb9u1_all.deb
+Size: 565620
+MD5sum: f053b85bcb7ed609b7d4466c625e567f
+SHA256: fabddac1947b2a1cb87ad981e7b4e1342cfc5223b4e84204d8bab4416062a763
+
+Package: firefox-esr-l10n-cy
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 681
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-cy (<< 45)
+Provides: iceweasel-l10n-cy
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-cy (<< 45)
+Description: Welsh language package for Firefox ESR
+Description-md5: a0b97541cfb2909dde4a6826e704de5c
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-cy_60.6.3esr-1~deb9u1_all.deb
+Size: 549694
+MD5sum: e4f432a44ccc210322f4c734aa68f5cc
+SHA256: 45ca633dbdd511c1719f5b785b16fa19a29e316cd140419e7db0dd7990d74db4
+
+Package: firefox-esr-l10n-da
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 676
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-da (<< 45)
+Provides: iceweasel-l10n-da
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-da | myspell-da
+Breaks: iceweasel-l10n-da (<< 45)
+Description: Danish language package for Firefox ESR
+Description-md5: b9a514cd98a26589131b97e42b7c29a6
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-da_60.6.3esr-1~deb9u1_all.deb
+Size: 545080
+MD5sum: f146103a5352124a8249d997debf6cde
+SHA256: 584697fcf019bcd85255b9545f7cfb9d4e76950cf620e19924c5b7b0ab8edc16
+
+Package: firefox-esr-l10n-de
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 691
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-de (<< 45)
+Provides: iceweasel-l10n-de
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-de-de | hunspell-de-at | hunspell-de-ch
+Breaks: iceweasel-l10n-de (<< 45)
+Description: German language package for Firefox ESR
+Description-md5: 00c26bf015520152a19c68eb31a240c5
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-de_60.6.3esr-1~deb9u1_all.deb
+Size: 559864
+MD5sum: 9ce074e2e750c7591e644e1f8d1acf18
+SHA256: ca2222a1a60ee4c78aa3d22dbdd24c52757e9dbadf9ddee525b767eb5590d56c
+
+Package: firefox-esr-l10n-dsb
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 703
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-dsb (<< 45)
+Provides: iceweasel-l10n-dsb
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-dsb (<< 45)
+Description: Lower Sorbian language package for Firefox ESR
+Description-md5: 762244752cd248a402ca1a08dc2f5fbc
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-dsb_60.6.3esr-1~deb9u1_all.deb
+Size: 571090
+MD5sum: e46d6b5734cfd323bc397dba27a6521d
+SHA256: 000c49aab0335fa093db24479357e982b011d5dbffca5877c7f1018df43b9f83
+
+Package: firefox-esr-l10n-el
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 757
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-el (<< 45)
+Provides: iceweasel-l10n-el
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-el | myspell-el-gr
+Breaks: iceweasel-l10n-el (<< 45)
+Description: Modern Greek language package for Firefox ESR
+Description-md5: f29c652c5733c8f7b9f1f5fcf5272678
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-el_60.6.3esr-1~deb9u1_all.deb
+Size: 628266
+MD5sum: f146dbd828b846ac03d60ab3a02b9fc4
+SHA256: 166ca0ce817804a17166646587f760d861273a974467144db23a5ed4f89914ad
+
+Package: firefox-esr-l10n-en-gb
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 657
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-en-gb (<< 45)
+Provides: iceweasel-l10n-en-gb
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-en-gb | hunspell-en-us
+Breaks: iceweasel-l10n-en-gb (<< 45)
+Description: English (United Kingdom) language package for Firefox ESR
+Description-md5: fae69f711dcd022c1331ec34c8a16f4e
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-en-gb_60.6.3esr-1~deb9u1_all.deb
+Size: 520278
+MD5sum: ed2ee36061129c8c8bde36ef785d852e
+SHA256: 214d2d8a09289c7d5a28fcd42f0078ec3eedb43f087fae82ce13c711b04031b2
+
+Package: firefox-esr-l10n-en-za
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 641
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-en-za (<< 45)
+Provides: iceweasel-l10n-en-za
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-en-gb | hunspell-en-us
+Breaks: iceweasel-l10n-en-za (<< 45)
+Description: English (South Africa) language package for Firefox ESR
+Description-md5: b5c104c8ef5647257658f30a23413328
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-en-za_60.6.3esr-1~deb9u1_all.deb
+Size: 505602
+MD5sum: 36196c25a9801ba23e260c1aeac12ab6
+SHA256: bac890887a25bf51d27d6f06c520c4b62ab3273dbc302866d7373eca4e3a4dd0
+
+Package: firefox-esr-l10n-eo
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 676
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-eo (<< 45)
+Provides: iceweasel-l10n-eo
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: myspell-eo
+Breaks: iceweasel-l10n-eo (<< 45)
+Description: Esperanto language package for Firefox ESR
+Description-md5: 945baf829a8107d2a724afa283d26117
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-eo_60.6.3esr-1~deb9u1_all.deb
+Size: 544944
+MD5sum: 7c0e51e5190975a55516558903556452
+SHA256: 2b54f59fbc62a0dca63cc5d533248a991b2cafc4593b0c3e329cea6188fc065c
+
+Package: firefox-esr-l10n-es-ar
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 689
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-es-ar (<< 45)
+Provides: iceweasel-l10n-es-ar
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-es | myspell-es
+Breaks: iceweasel-l10n-es-ar (<< 45)
+Description: Spanish (Argentina) language package for Firefox ESR
+Description-md5: 6326584d7e47d99429a947e9ae2c0fdf
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-es-ar_60.6.3esr-1~deb9u1_all.deb
+Size: 555694
+MD5sum: dc4b1b958787146b853ebad2ef74bc92
+SHA256: 6de8059a9f5baccff42ac32f441c26710987686d21b2fb6218e2bfb61e8eaddf
+
+Package: firefox-esr-l10n-es-cl
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 692
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-es-cl (<< 45)
+Provides: iceweasel-l10n-es-cl
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-es | myspell-es
+Breaks: iceweasel-l10n-es-cl (<< 45)
+Description: Spanish (Chile) language package for Firefox ESR
+Description-md5: 7ec0e40e29f940158ac73f60d382dd9f
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-es-cl_60.6.3esr-1~deb9u1_all.deb
+Size: 558098
+MD5sum: 3456aa044573603d3a777478a8cc4f4d
+SHA256: 3566408bfd1e13189087510824688fc0f11560bff38ac99a4fdb07339d6c0967
+
+Package: firefox-esr-l10n-es-es
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 626
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-es-es (<< 45)
+Provides: iceweasel-l10n-es-es
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-es | myspell-es
+Breaks: iceweasel-l10n-es-es (<< 45)
+Description: Spanish (Spain) language package for Firefox ESR
+Description-md5: 223eafc61a519e57a33800519688b493
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-es-es_60.6.3esr-1~deb9u1_all.deb
+Size: 489788
+MD5sum: 1af3d32d6eedbcd9df5ab7283cfaa73e
+SHA256: 71c40e9ec4f4592b1c20eda5d82536c54861dbf83a0724f165d87fa79b93ecb8
+
+Package: firefox-esr-l10n-es-mx
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 693
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-es-mx (<< 45)
+Provides: iceweasel-l10n-es-mx
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-es | myspell-es
+Breaks: iceweasel-l10n-es-mx (<< 45)
+Description: Spanish (Mexico) language package for Firefox ESR
+Description-md5: aec36965ba71f3207f7024669d2a71aa
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-es-mx_60.6.3esr-1~deb9u1_all.deb
+Size: 559408
+MD5sum: b3c16d3b67a52c5615f9cf2b6fc045be
+SHA256: 5426e1dcdd73270efb43c96f4e7b081349b032dfcdf47208904d043b7250d245
+
+Package: firefox-esr-l10n-et
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 670
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-et (<< 45)
+Provides: iceweasel-l10n-et
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: myspell-et
+Breaks: iceweasel-l10n-et (<< 45)
+Description: Estonian language package for Firefox ESR
+Description-md5: acae80d2ec31f72159f0cab7b8cd1af3
+Tag: culture::estonian, role::app-data
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-et_60.6.3esr-1~deb9u1_all.deb
+Size: 538290
+MD5sum: 4e847f5ba3048232bc4bb0e5c7b98a89
+SHA256: 98417be2e7156f32844e9e23befc9da3c9fd3209e93ea47e60b9397d5f5bb75b
+
+Package: firefox-esr-l10n-eu
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 677
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-eu (<< 45)
+Provides: iceweasel-l10n-eu
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-eu
+Breaks: iceweasel-l10n-eu (<< 45)
+Description: Basque language package for Firefox ESR
+Description-md5: 7b91ccfc8995908ef00e895e9220949e
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-eu_60.6.3esr-1~deb9u1_all.deb
+Size: 545444
+MD5sum: e8fab42b7e3193c53905d5ed0ca02514
+SHA256: 62035ef01d3367d166469515e9b3351488a388a0b22815bfcad9bd9d6c377607
+
+Package: firefox-esr-l10n-fa
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 730
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-fa (<< 45)
+Provides: iceweasel-l10n-fa
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: myspell-fa
+Breaks: iceweasel-l10n-fa (<< 45)
+Description: Persian language package for Firefox ESR
+Description-md5: b6f751f17ccf16519d100f1e8f0117fb
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-fa_60.6.3esr-1~deb9u1_all.deb
+Size: 600834
+MD5sum: bcfb9e9e68e29bdccdec90f9384670f5
+SHA256: 4c219fcbf27668123eb874ec7f6ad69ba40623dffd238b90e180945df496c864
+
+Package: firefox-esr-l10n-ff
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 677
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ff (<< 45)
+Provides: iceweasel-l10n-ff
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-ff (<< 45)
+Description: Fulah language package for Firefox ESR
+Description-md5: dc691e9c1208dc2c4c090505e89add2d
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ff_60.6.3esr-1~deb9u1_all.deb
+Size: 546158
+MD5sum: 0c7f97d506abe017483cf6475d64a693
+SHA256: 47a0dd34f39ebcc92d9d59980951bc8579f77fbae99fb82cd9f620a20686201a
+
+Package: firefox-esr-l10n-fi
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 671
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-fi (<< 45)
+Provides: iceweasel-l10n-fi
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: xul-ext-mozvoikko
+Breaks: iceweasel-l10n-fi (<< 45)
+Description: Finnish language package for Firefox ESR
+Description-md5: e2ab3eebf772ebeed27528fef8943bc2
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-fi_60.6.3esr-1~deb9u1_all.deb
+Size: 539526
+MD5sum: cd58ee2c0733c2de27e0b79f448dbb77
+SHA256: cfcec799257b550957ce7cabc19ed61ffc568aa331dee1a3158d058ba0e991cb
+
+Package: firefox-esr-l10n-fr
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 700
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-fr (<< 45)
+Provides: iceweasel-l10n-fr
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-fr | myspell-fr | myspell-fr-gut
+Breaks: iceweasel-l10n-fr (<< 45)
+Description: French language package for Firefox ESR
+Description-md5: 2853e6beeb5377d82897890c50794bb2
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-fr_60.6.3esr-1~deb9u1_all.deb
+Size: 568020
+MD5sum: 45c960458938d39860bb20cd6eaceb83
+SHA256: d364b666fb8438ead6745dd130ed87a9030f0c71a2d0e2b899ee638163236c04
+
+Package: firefox-esr-l10n-fy-nl
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 689
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-fy-nl (<< 45)
+Provides: iceweasel-l10n-fy-nl
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-fy-nl (<< 45)
+Description: Western Frisian (Netherlands) language package for Firefox ESR
+Description-md5: bc561c21dd7715b4cc81394b2b2959d4
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-fy-nl_60.6.3esr-1~deb9u1_all.deb
+Size: 554520
+MD5sum: 1c271a0440f230c6ae28f93b6e94374c
+SHA256: 2881930a2a127ccdf46263bd4e616205351ee2f4cb9407b899701fc95417dc69
+
+Package: firefox-esr-l10n-ga-ie
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 692
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ga-ie (<< 45)
+Provides: iceweasel-l10n-ga-ie
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: myspell-ga
+Breaks: iceweasel-l10n-ga-ie (<< 45)
+Description: Irish (Ireland) language package for Firefox ESR
+Description-md5: df80077e094c5c407d48346980fdda38
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ga-ie_60.6.3esr-1~deb9u1_all.deb
+Size: 558310
+MD5sum: b1ab02732fcf806a453d8989256a74ee
+SHA256: eb92b4c3d3d55923b0b01637a4cdf1fe18c7f7cdb592193969fad0ac4c7f2ccc
+
+Package: firefox-esr-l10n-gd
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 685
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-gd (<< 45)
+Provides: iceweasel-l10n-gd
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-gd | myspell-gd
+Breaks: iceweasel-l10n-gd (<< 45)
+Description: Scottish Gaelic language package for Firefox ESR
+Description-md5: b29b5eb94111e47714327298f150d08b
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-gd_60.6.3esr-1~deb9u1_all.deb
+Size: 554334
+MD5sum: d80832caf44aca66c19c82776c85babe
+SHA256: 9b38dd3c849b126f27b69d71e5163470222b3e7b01034842226f893ad7de852a
+
+Package: firefox-esr-l10n-gl
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 663
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-gl (<< 45)
+Provides: iceweasel-l10n-gl
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-gl-es | hunspell-gl
+Breaks: iceweasel-l10n-gl (<< 45)
+Description: Galician language package for Firefox ESR
+Description-md5: 3953015101a54301613ee48a7baa1126
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-gl_60.6.3esr-1~deb9u1_all.deb
+Size: 530904
+MD5sum: c4a7a3733ff7ecbe9c174f3b093f6ef2
+SHA256: 0cf7755a9279dc6076acb52c5138d90019b19bcdc79dc28b42f8b438fd61f881
+
+Package: firefox-esr-l10n-gn
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 698
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-gn (<< 45)
+Provides: iceweasel-l10n-gn
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-gn (<< 45)
+Description: Guarani language package for Firefox ESR
+Description-md5: 219b0f78c77d54e90b45773da16da43a
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-gn_60.6.3esr-1~deb9u1_all.deb
+Size: 566360
+MD5sum: 85f17e9cff38c9ce3ed000b0dbba9a6c
+SHA256: c9d646793838d6887d582e85d4f4381769e185ae83fcecf03babd83a2533c349
+
+Package: firefox-esr-l10n-gu-in
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 752
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-gu-in (<< 45)
+Provides: iceweasel-l10n-gu-in
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-gu
+Breaks: iceweasel-l10n-gu-in (<< 45)
+Description: Gujarati (India) language package for Firefox ESR
+Description-md5: 85fa76ca56a724a05142d2b8b6f4503a
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-gu-in_60.6.3esr-1~deb9u1_all.deb
+Size: 621002
+MD5sum: 19ee0c32e155cec28e3e1e8a04ccd46a
+SHA256: 79bcd34b1eeb6ca3cb893c16e6061504d4ad69e659323bf1a0a4cf24ee087bf0
+
+Package: firefox-esr-l10n-he
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 700
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-he (<< 45)
+Provides: iceweasel-l10n-he
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-he | myspell-he
+Breaks: iceweasel-l10n-he (<< 45)
+Description: Hebrew language package for Firefox ESR
+Description-md5: 0d6de331cc5d85a68cf2df33cda542b1
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-he_60.6.3esr-1~deb9u1_all.deb
+Size: 570160
+MD5sum: b7c477adf33aa2aa5bcb30eae5fcdf88
+SHA256: d131b8a7be5aec43241ec352a7ae9b7dde7bb0cdb385cb209238f1ac375e2370
+
+Package: firefox-esr-l10n-hi-in
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 753
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-hi-in (<< 45)
+Provides: iceweasel-l10n-hi-in
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-hi
+Breaks: iceweasel-l10n-hi-in (<< 45)
+Description: Hindi (India) language package for Firefox ESR
+Description-md5: 07c46cb13c9b2cfea74560ac1fd4cab9
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-hi-in_60.6.3esr-1~deb9u1_all.deb
+Size: 621940
+MD5sum: 3d8df6379e81b46f54517614bb2de851
+SHA256: faf72987a5adb653eade36ff7d3925fb9371dc034f9c69aec0e0c529305f1eb5
+
+Package: firefox-esr-l10n-hr
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 681
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-hr (<< 45)
+Provides: iceweasel-l10n-hr
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-hr
+Breaks: iceweasel-l10n-hr (<< 45)
+Description: Croatian language package for Firefox ESR
+Description-md5: ee29b6625469a2c68272f051073e1b5d
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-hr_60.6.3esr-1~deb9u1_all.deb
+Size: 549904
+MD5sum: b45af204a827762f9e428be21beff346
+SHA256: 4bc64c77b716c7ed26ab74b0ec64dd398cb43fd340ea55b0976b5694888a013a
+
+Package: firefox-esr-l10n-hsb
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 701
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-hsb (<< 45)
+Provides: iceweasel-l10n-hsb
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-hsb (<< 45)
+Description: Upper Sorbian language package for Firefox ESR
+Description-md5: 49e72d2033713197718ea2d7fc0f43dd
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-hsb_60.6.3esr-1~deb9u1_all.deb
+Size: 568298
+MD5sum: fafe50c3fcfbeac5e93f6e0de380513c
+SHA256: eb860d27eb5e711c888ea2e448ffd66809dc2fef7da81a66e6bd0b42894a7663
+
+Package: firefox-esr-l10n-hu
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 703
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-hu (<< 45)
+Provides: iceweasel-l10n-hu
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-hu | myspell-hu
+Breaks: iceweasel-l10n-hu (<< 45)
+Description: Hungarian language package for Firefox ESR
+Description-md5: 77917341475a87753af784dc7f1a3483
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-hu_60.6.3esr-1~deb9u1_all.deb
+Size: 571880
+MD5sum: d010d96144e309183bb47872121cda8a
+SHA256: f4b0dd650bd3a6fff25096f8840ed032c67cad7a991977f83ee1567920f5ba25
+
+Package: firefox-esr-l10n-hy-am
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 733
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-hy-am (<< 45)
+Provides: iceweasel-l10n-hy-am
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: myspell-hy
+Breaks: iceweasel-l10n-hy-am (<< 45)
+Description: Armenian (Armenia) language package for Firefox ESR
+Description-md5: 8337932972f9eaa518ed74a7cb42d4c3
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-hy-am_60.6.3esr-1~deb9u1_all.deb
+Size: 600636
+MD5sum: 55581cecfd4b355e02ab6d9ed9a9440b
+SHA256: aa0109989873eda7ae1dab444b6d6235575fc548dcfa3848720ec9ec9a95d6a1
+
+Package: firefox-esr-l10n-ia
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 676
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ia (<< 45)
+Provides: iceweasel-l10n-ia
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-ia (<< 45)
+Description: Interlingua language package for Firefox ESR
+Description-md5: 949474e6ab1862194ded64f6c1aedb67
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ia_60.6.3esr-1~deb9u1_all.deb
+Size: 544376
+MD5sum: 824db6d1d20172b4bfe1a36652a755e4
+SHA256: 4ba811ee8acdb35ddbcb6398e4ddf45aaac343fcd82b6382f0c438f3e0dc20d2
+
+Package: firefox-esr-l10n-id
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 668
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-id (<< 45)
+Provides: iceweasel-l10n-id
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-id
+Breaks: iceweasel-l10n-id (<< 45)
+Description: Indonesian language package for Firefox ESR
+Description-md5: b83dbfb0b8657df54694267db0c197e1
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-id_60.6.3esr-1~deb9u1_all.deb
+Size: 535976
+MD5sum: ec9e2703717b160c5896ef1af7b2ef8e
+SHA256: 0ee43d021745cad59adfede1ea6caae92dea4da0fca1d59f482136af49bad454
+
+Package: firefox-esr-l10n-is
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 678
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-is (<< 45)
+Provides: iceweasel-l10n-is
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-is
+Breaks: iceweasel-l10n-is (<< 45)
+Description: Icelandic language package for Firefox ESR
+Description-md5: 6f17be2d462a0b0f3fcf8cc9b2099f13
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-is_60.6.3esr-1~deb9u1_all.deb
+Size: 547228
+MD5sum: e1e49d56c04153eefd2b59e5b7fdac06
+SHA256: aede52f8f6306086d1e2493e2fb2732fbded87189ae41f397b87e597a40df0c7
+
+Package: firefox-esr-l10n-it
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 567
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-it (<< 45)
+Provides: iceweasel-l10n-it
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-it
+Breaks: iceweasel-l10n-it (<< 45)
+Description: Italian language package for Firefox ESR
+Description-md5: 1eb259ab89190e23c9a2d6c6bbcaa673
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-it_60.6.3esr-1~deb9u1_all.deb
+Size: 431424
+MD5sum: f83e6ca388bb5cca5aa5623bc7a0bd0b
+SHA256: 7d758e5e4d5e3473dea5c62730e8e51fd052f38e7c18a0eee93c4f5d171b068a
+
+Package: firefox-esr-l10n-ja
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 735
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ja (<< 45)
+Provides: iceweasel-l10n-ja
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-ja (<< 45)
+Description: Japanese language package for Firefox ESR
+Description-md5: dfe98a7a06a28d3c03fb211e550013f3
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ja_60.6.3esr-1~deb9u1_all.deb
+Size: 605982
+MD5sum: 14b3f9168dd6eb21770c26573df5d505
+SHA256: c095bd7856ebd1d1761b8965dec349ad77cd2d99c6bb4ac0215e5eb9503677f2
+
+Package: firefox-esr-l10n-ka
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 719
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ka (<< 45)
+Provides: iceweasel-l10n-ka
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-ka (<< 45)
+Description: Georgian language package for Firefox ESR
+Description-md5: 12c4723b6cbdd691b09e976cf2b91e83
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ka_60.6.3esr-1~deb9u1_all.deb
+Size: 588724
+MD5sum: c60560609e843d89d8dc508ad79e56bb
+SHA256: 448519ad28631973cbea0954bc9dc47d5ff1cc9fc0a6bf8923d69cb6c31d7209
+
+Package: firefox-esr-l10n-kab
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 685
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-kab (<< 45)
+Provides: iceweasel-l10n-kab
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-kab (<< 45)
+Description: Kabyle language package for Firefox ESR
+Description-md5: d419dae93d1914b3fbb042e044917ec0
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-kab_60.6.3esr-1~deb9u1_all.deb
+Size: 553832
+MD5sum: 0263f35b9ca5535ed9d3b9f9377d5747
+SHA256: d95f3bbb414cb37eb70963220bb30d58d3879cabb8fae9d3dd88d21ff9ff0dbe
+
+Package: firefox-esr-l10n-kk
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 746
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-kk (<< 45)
+Provides: iceweasel-l10n-kk
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-kk
+Breaks: iceweasel-l10n-kk (<< 45)
+Description: Kazakh language package for Firefox ESR
+Description-md5: f525dce69931dff3a292fa8f08eaf77f
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-kk_60.6.3esr-1~deb9u1_all.deb
+Size: 617672
+MD5sum: ea14cc6cb4ae0c045436a13ec0627788
+SHA256: a3cffa02e40595205d39dccf861918257faa964b63b509b7698aaad3379e7f34
+
+Package: firefox-esr-l10n-km
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 745
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-km (<< 45)
+Provides: iceweasel-l10n-km
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-km (<< 45)
+Description: Central Khmer language package for Firefox ESR
+Description-md5: 78dff3772840e7626fa8bb3ac8019dd9
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-km_60.6.3esr-1~deb9u1_all.deb
+Size: 617178
+MD5sum: 3447986fcf063206437cb9508853f4a2
+SHA256: 258f695a818c08e0e46bf9344d4e3dc84e41e3b28c28f34d352de6d3dc5b6fb4
+
+Package: firefox-esr-l10n-kn
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 748
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-kn (<< 45)
+Provides: iceweasel-l10n-kn
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-kn (<< 45)
+Description: Kannada language package for Firefox ESR
+Description-md5: dd6f9f89e71aa55eee3f58ce5e18bf26
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-kn_60.6.3esr-1~deb9u1_all.deb
+Size: 619860
+MD5sum: cab9a223f3d92ff4c98f775626c996e0
+SHA256: fb23b81a4693cb3d8056639104822620062fa0227f009e8bf065b16f375573a1
+
+Package: firefox-esr-l10n-ko
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 712
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ko (<< 45)
+Provides: iceweasel-l10n-ko
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-ko
+Breaks: iceweasel-l10n-ko (<< 45)
+Description: Korean language package for Firefox ESR
+Description-md5: 74d15a656cc38e02bbca0f8879cbd4ac
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ko_60.6.3esr-1~deb9u1_all.deb
+Size: 581588
+MD5sum: a44d7a47e7ba06d7e99c116d914f3cf5
+SHA256: d60c7fe061e01531fc2e64a97be16ab5c57455bdbf2a315c597d9e7ca2e68b49
+
+Package: firefox-esr-l10n-lij
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 678
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-lij (<< 45)
+Provides: iceweasel-l10n-lij
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-lij (<< 45)
+Description: Ligurian language package for Firefox ESR
+Description-md5: 1f4d901ea4a38b03bb14c47f27a45c91
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-lij_60.6.3esr-1~deb9u1_all.deb
+Size: 545728
+MD5sum: e6f8388c32075fc76e29ec8702cabbf7
+SHA256: 5e0aac6dd05f09e8fcb59b6a4675a460998d6400969d63270a3ef69b40fbb2b9
+
+Package: firefox-esr-l10n-lt
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 701
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-lt (<< 45)
+Provides: iceweasel-l10n-lt
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-lt
+Breaks: iceweasel-l10n-lt (<< 45)
+Description: Lithuanian language package for Firefox ESR
+Description-md5: d3b5577aa40f3c5b3b5e7a966f2ce374
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-lt_60.6.3esr-1~deb9u1_all.deb
+Size: 569724
+MD5sum: 0ea666a7c6fa54443024ab5e55db3a84
+SHA256: c8eba14683f0f084f2f43b56a0f221f901238a88bb103cb2ba5a4b3f4264ae87
+
+Package: firefox-esr-l10n-lv
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 691
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-lv (<< 45)
+Provides: iceweasel-l10n-lv
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-lv | myspell-lv
+Breaks: iceweasel-l10n-lv (<< 45)
+Description: Latvian language package for Firefox ESR
+Description-md5: fe4207dff81207ebdae8b76c36b88dba
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-lv_60.6.3esr-1~deb9u1_all.deb
+Size: 560300
+MD5sum: 1466d1bc7d1b4bd7aa7cfef886e0d043
+SHA256: 62a752a1736719db3e7a0b20d8bdb9100fb3d99e2e0b7930cc5d39360b54ce29
+
+Package: firefox-esr-l10n-mai
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 713
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-mai (<< 45)
+Provides: iceweasel-l10n-mai
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-mai (<< 45)
+Description: Maithili language package for Firefox ESR
+Description-md5: 62fc4105bbcaaf1fe65a893a6ce90a6a
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-mai_60.6.3esr-1~deb9u1_all.deb
+Size: 582572
+MD5sum: 2f318d9877a75f8cedf69e6c6837f87d
+SHA256: e6da92108665643a72981aed930e017fad41761a0249d7cd5024f68fe7e3fee9
+
+Package: firefox-esr-l10n-mk
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 679
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-mk (<< 45)
+Provides: iceweasel-l10n-mk
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-mk (<< 45)
+Description: Macedonian language package for Firefox ESR
+Description-md5: 7819b44418c3cdeec4326d529a046aeb
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-mk_60.6.3esr-1~deb9u1_all.deb
+Size: 548862
+MD5sum: 76a353f0b46d055e99c72487fddcdc41
+SHA256: e91b545c894dd8098d85a10e2e720291ee422f4f2ec36883a3ed553fabf8dc91
+
+Package: firefox-esr-l10n-ml
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 761
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ml (<< 45)
+Provides: iceweasel-l10n-ml
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-ml
+Breaks: iceweasel-l10n-ml (<< 45)
+Description: Malayalam language package for Firefox ESR
+Description-md5: fc49f6c7598cfbff5c7ede61743a56bc
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ml_60.6.3esr-1~deb9u1_all.deb
+Size: 632268
+MD5sum: 4b954920b25007350849571c0b0b7d4c
+SHA256: 6b4232fd8140f1e87862ead89dd21c43ad366977ad8aa5c9aa7dfdf07c50bb28
+
+Package: firefox-esr-l10n-mr
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 741
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-mr (<< 45)
+Provides: iceweasel-l10n-mr
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-mr (<< 45)
+Description: Marathi language package for Firefox ESR
+Description-md5: bd58ad4aa8c67f243d47af63433cc1e8
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-mr_60.6.3esr-1~deb9u1_all.deb
+Size: 613096
+MD5sum: 023dd767f004bf81d7deeddae082c5cd
+SHA256: c5f7db5d12d5b974fa989101383d6dc49332206cb034510d905ef2e79c022b4d
+
+Package: firefox-esr-l10n-ms
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 674
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ms (<< 45)
+Provides: iceweasel-l10n-ms
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-ms (<< 45)
+Description: Malay language package for Firefox ESR
+Description-md5: b706d54f54c4199e00861f23021ffff1
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ms_60.6.3esr-1~deb9u1_all.deb
+Size: 543242
+MD5sum: 0fee3c49042601c78f478970ce163edb
+SHA256: 1fa20873cac9d236c30982884259e247979a822dae16ba1174cfb3b9287f6ca1
+
+Package: firefox-esr-l10n-my
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 733
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-my (<< 45)
+Provides: iceweasel-l10n-my
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-my (<< 45)
+Description: Burmese language package for Firefox ESR
+Description-md5: 136624cfdf4cb08d87c6d22dda254cdb
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-my_60.6.3esr-1~deb9u1_all.deb
+Size: 604692
+MD5sum: 6f1f712f290ecbcb6904c7bc400e2512
+SHA256: 01f719e9140d92dcb2c375bac8d1fe626a48d73da4ef591384a8454bd944bf4a
+
+Package: firefox-esr-l10n-nb-no
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 675
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-nb-no (<< 45)
+Provides: iceweasel-l10n-nb-no
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: myspell-nb
+Breaks: iceweasel-l10n-nb-no (<< 45)
+Description: Norwegian Bokmål (Norway) language package for Firefox ESR
+Description-md5: 875fa701d40505084defa5afc8600aeb
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-nb-no_60.6.3esr-1~deb9u1_all.deb
+Size: 539236
+MD5sum: 52ec607a8074acb0760d67329cf833fb
+SHA256: dc1791e8648cbca0605310a7adbbf4ac7aa3b42ea176ab8833b7cea16605dfaa
+
+Package: firefox-esr-l10n-ne-np
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 719
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ne-np (<< 45)
+Provides: iceweasel-l10n-ne-np
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-ne
+Breaks: iceweasel-l10n-ne-np (<< 45)
+Description: Nepali (Nepal) language package for Firefox ESR
+Description-md5: 5d41290591fddab9640fbd07d024bedf
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ne-np_60.6.3esr-1~deb9u1_all.deb
+Size: 586098
+MD5sum: 8753326ca57fc019f40fdd716ae5a351
+SHA256: 8600c82c3a9258a02a0820f8a319332476c9f950e2503558313da5b81721260f
+
+Package: firefox-esr-l10n-nl
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 682
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-nl (<< 45)
+Provides: iceweasel-l10n-nl
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-nl
+Breaks: iceweasel-l10n-nl (<< 45)
+Description: Dutch language package for Firefox ESR
+Description-md5: 7919d498f210c57c05c83c5b9361f40b
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-nl_60.6.3esr-1~deb9u1_all.deb
+Size: 550632
+MD5sum: 184ec6413ca883bf7eea8ba08768e8e0
+SHA256: d69cf8f4ba7fb50c9bfef76b5046135f5b1ce1c4f4ccae4c659808dae4a58654
+
+Package: firefox-esr-l10n-nn-no
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 676
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-nn-no (<< 45)
+Provides: iceweasel-l10n-nn-no
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: myspell-nn
+Breaks: iceweasel-l10n-nn-no (<< 45)
+Description: Norwegian Nynorsk (Norway) language package for Firefox ESR
+Description-md5: dcb4d63727ae81d5830918342e7d4897
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-nn-no_60.6.3esr-1~deb9u1_all.deb
+Size: 541798
+MD5sum: 4eeb963a1e97dcf3281b35790b324d68
+SHA256: a3d1ebbafd6efeb014a377bbaf8676ef50163f01b80353dc2a6364e7d01c86c5
+
+Package: firefox-esr-l10n-oc
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 691
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-oc (<< 45)
+Provides: iceweasel-l10n-oc
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-oc
+Breaks: iceweasel-l10n-oc (<< 45)
+Description: Occitan language package for Firefox ESR
+Description-md5: 326a045a0881b6d979db31cc4970ab55
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-oc_60.6.3esr-1~deb9u1_all.deb
+Size: 560966
+MD5sum: 95e65040fb657992a32becd32c3627b1
+SHA256: 281bc1ad8fb6cde51ca32528a80221b942cd7381bc2fbf61729ef55df12f42e6
+
+Package: firefox-esr-l10n-or
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 705
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-or (<< 45)
+Provides: iceweasel-l10n-or
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-or (<< 45)
+Description: Oriya language package for Firefox ESR
+Description-md5: 538db7d58683bdafe51501b1f4165779
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-or_60.6.3esr-1~deb9u1_all.deb
+Size: 575922
+MD5sum: 790973b078612650098bb5f6f9ef71e1
+SHA256: d2ff2c59cb4ed1a9eef97ac1bd667f965089173afbc525b19ee092dd9ed5d0e2
+
+Package: firefox-esr-l10n-pa-in
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 721
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-pa-in (<< 45)
+Provides: iceweasel-l10n-pa-in
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-pa-in (<< 45)
+Description: Panjabi (India) language package for Firefox ESR
+Description-md5: 12953e3aaefbccc50948f71e44f17449
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-pa-in_60.6.3esr-1~deb9u1_all.deb
+Size: 588656
+MD5sum: 3f8d57544b82a20d8f0b165ce3cdef0c
+SHA256: b29a0b7eef0dc4f345ea22ae112414fa3940c35f550cdea94809639c050ae4c8
+
+Package: firefox-esr-l10n-pl
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 587
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-pl (<< 45)
+Provides: iceweasel-l10n-pl
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-pl | myspell-pl
+Breaks: iceweasel-l10n-pl (<< 45)
+Description: Polish language package for Firefox ESR
+Description-md5: e9801fca3e7fc04c053ce8beeea8ccaf
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-pl_60.6.3esr-1~deb9u1_all.deb
+Size: 451230
+MD5sum: 37f7d4a8e7436f53188c6638bcc8030f
+SHA256: d1e72d15b3ab5c993e5d6ac513235dca348a5db02202cd7f5d2cb1b2bd7d46b5
+
+Package: firefox-esr-l10n-pt-br
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 679
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-pt-br (<< 45)
+Provides: iceweasel-l10n-pt-br
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-pt-br | myspell-pt-br
+Breaks: iceweasel-l10n-pt-br (<< 45)
+Description: Portuguese (Brazil) language package for Firefox ESR
+Description-md5: be095d527e7a4922caaf485c0ce32717
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-pt-br_60.6.3esr-1~deb9u1_all.deb
+Size: 545040
+MD5sum: d114ce18c32d4a0873bd2beed1ed9cbc
+SHA256: cdd10f5da02689d44e7ddd8ec31ddd8849ba52a844e6270062294f6061c81468
+
+Package: firefox-esr-l10n-pt-pt
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 684
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-pt-pt (<< 45)
+Provides: iceweasel-l10n-pt-pt
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-pt-pt | myspell-pt-pt
+Breaks: iceweasel-l10n-pt-pt (<< 45)
+Description: Portuguese (Portugal) language package for Firefox ESR
+Description-md5: c112a7cad4caddf8b10bd77b0a24ef41
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-pt-pt_60.6.3esr-1~deb9u1_all.deb
+Size: 549996
+MD5sum: 39bb4c6d4834da1688d47d3ddd1ca95b
+SHA256: 503c4bbb423ae29d763ecf41ad3e54bcb5deb1e88af3487da48b684fdd3aa5a0
+
+Package: firefox-esr-l10n-rm
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 671
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-rm (<< 45)
+Provides: iceweasel-l10n-rm
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-rm (<< 45)
+Description: Romansh language package for Firefox ESR
+Description-md5: fdc1d706c10747112d1e114dd78800a8
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-rm_60.6.3esr-1~deb9u1_all.deb
+Size: 539280
+MD5sum: 4877f1f86d97ace39da3ffd164c3eabd
+SHA256: 5043de0b32cc732425afb0b6d3e0d97383d6f8d912b7d10fb06eb1b36fc49ea5
+
+Package: firefox-esr-l10n-ro
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 679
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ro (<< 45)
+Provides: iceweasel-l10n-ro
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-ro
+Breaks: iceweasel-l10n-ro (<< 45)
+Description: Romanian language package for Firefox ESR
+Description-md5: d8d1267b5730777d1784543c5d019b79
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ro_60.6.3esr-1~deb9u1_all.deb
+Size: 548440
+MD5sum: 5c8b65de4099d80939675d43aa00a8da
+SHA256: 72d321d659dd6aaa1a005d50ede7cd20367362fa5a3268357fc21f9b698d337e
+
+Package: firefox-esr-l10n-ru
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 754
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ru (<< 45)
+Provides: iceweasel-l10n-ru
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-ru | myspell-ru
+Breaks: iceweasel-l10n-ru (<< 45)
+Description: Russian language package for Firefox ESR
+Description-md5: 81a5e2d34bc0b6f77b89b2e0876ef26e
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ru_60.6.3esr-1~deb9u1_all.deb
+Size: 625824
+MD5sum: e73c96f05f350e9d166b38de66c22a47
+SHA256: 04fc9f6ce702408f2f1a68917128e952db25d8339e4c6879fdd2750a841d7ba8
+
+Package: firefox-esr-l10n-si
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 709
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-si (<< 45)
+Provides: iceweasel-l10n-si
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-si
+Breaks: iceweasel-l10n-si (<< 45)
+Description: Sinhala language package for Firefox ESR
+Description-md5: 00c75e50d870fbb579e09213362e0d62
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-si_60.6.3esr-1~deb9u1_all.deb
+Size: 579604
+MD5sum: a7863b07f75f6efc24b5c994dea2b41a
+SHA256: 24e97cf6d291b5299508c932115555c9427766520f7bc5e7c264971038cf56ba
+
+Package: firefox-esr-l10n-sk
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 706
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-sk (<< 45)
+Provides: iceweasel-l10n-sk
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-sk | myspell-sk
+Breaks: iceweasel-l10n-sk (<< 45)
+Description: Slovak language package for Firefox ESR
+Description-md5: 9982e72b07fbc88a7640a5deda3d8d08
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-sk_60.6.3esr-1~deb9u1_all.deb
+Size: 574638
+MD5sum: 79e65e65531a0c6de7a32ca33f40855f
+SHA256: e86116af026257ff99894c5e71553c9450a3e0f8214b408264f9a9bc8b20d64b
+
+Package: firefox-esr-l10n-sl
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 684
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-sl (<< 45)
+Provides: iceweasel-l10n-sl
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-sl
+Breaks: iceweasel-l10n-sl (<< 45)
+Description: Slovenian language package for Firefox ESR
+Description-md5: 906885270ee826dbc6e0cde94503d5c2
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-sl_60.6.3esr-1~deb9u1_all.deb
+Size: 552728
+MD5sum: 931e4a7f1f7e12a2708b74ab490e1cf7
+SHA256: da6136862c0458902068940387eb3f3664b7d2897836afc7371fa3cedf015dff
+
+Package: firefox-esr-l10n-son
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 663
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-son (<< 45)
+Provides: iceweasel-l10n-son
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-son (<< 45)
+Description: Songhai languages language package for Firefox ESR
+Description-md5: 79e87469939a044cda49cd3dcc26d9d9
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-son_60.6.3esr-1~deb9u1_all.deb
+Size: 530472
+MD5sum: 23f73cb87e5a5d368ee41241ee1f4d84
+SHA256: 26d3ce20f2684ae95ce7c422a13f0f70eab51957e37363ec988ab51d7079d19c
+
+Package: firefox-esr-l10n-sq
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 686
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-sq (<< 45)
+Provides: iceweasel-l10n-sq
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: myspell-sq
+Breaks: iceweasel-l10n-sq (<< 45)
+Description: Albanian language package for Firefox ESR
+Description-md5: 7bcc4af584625cae2f12b4be7e68faaf
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-sq_60.6.3esr-1~deb9u1_all.deb
+Size: 555638
+MD5sum: ee830f0ff9fa8413f8b066aa67a0b57c
+SHA256: 98246b2f716892bea608326740d100f1488591df8cb58b443aa9d09f193a0ffc
+
+Package: firefox-esr-l10n-sr
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 713
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-sr (<< 45)
+Provides: iceweasel-l10n-sr
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-sr
+Breaks: iceweasel-l10n-sr (<< 45)
+Description: Serbian language package for Firefox ESR
+Description-md5: 36411d0bdd4bee135aaa0cb17a07dad1
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-sr_60.6.3esr-1~deb9u1_all.deb
+Size: 582300
+MD5sum: 76bb99153ac7d76c323cde7ba5151227
+SHA256: 0c839d3e16e402e98ba1bda72a1266b85688995f2eacaa67b3c934a6541538fc
+
+Package: firefox-esr-l10n-sv-se
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 683
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-sv-se (<< 45)
+Provides: iceweasel-l10n-sv-se
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-sv-se
+Breaks: iceweasel-l10n-sv-se (<< 45)
+Description: Swedish (Sweden) language package for Firefox ESR
+Description-md5: 6de19c2795efba229042da380e69d931
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-sv-se_60.6.3esr-1~deb9u1_all.deb
+Size: 548862
+MD5sum: 5da560ff6857bad0fb023ef73472b338
+SHA256: 423a95ea2a45152d77f85b79018eb432c3e7c372774545c8c1e44a11e4da51b7
+
+Package: firefox-esr-l10n-ta
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 740
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ta (<< 45)
+Provides: iceweasel-l10n-ta
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-ta (<< 45)
+Description: Tamil language package for Firefox ESR
+Description-md5: 1012f6f493f51739a6dada33a2a550f1
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ta_60.6.3esr-1~deb9u1_all.deb
+Size: 612408
+MD5sum: ef3153ae06e39129b7a3c2a21856ed53
+SHA256: 3117853d034ddca0794bf75953401872ddccf4b7734d6844016aff63f5e2f839
+
+Package: firefox-esr-l10n-te
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 753
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-te (<< 45)
+Provides: iceweasel-l10n-te
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-te
+Breaks: iceweasel-l10n-te (<< 45)
+Description: Telugu language package for Firefox ESR
+Description-md5: b7b4860bb367b766b2a1ab848ec2df4c
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-te_60.6.3esr-1~deb9u1_all.deb
+Size: 625150
+MD5sum: 015bad8c1a671ef73b85b076c21955ba
+SHA256: 770ba80f1e0576a8e06ce4833c47536964bec218b0a907dcc86fc633e6c02e91
+
+Package: firefox-esr-l10n-th
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 726
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-th (<< 45)
+Provides: iceweasel-l10n-th
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-th
+Breaks: iceweasel-l10n-th (<< 45)
+Description: Thai language package for Firefox ESR
+Description-md5: b9a1229e4164d95762f510aa47b06d63
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-th_60.6.3esr-1~deb9u1_all.deb
+Size: 596182
+MD5sum: c205a33a998360d3e69c2b2fd52c9582
+SHA256: a98d9093f54ba0396a508a98f7e49caf1d9864d9868c0615ed462bb9f9723364
+
+Package: firefox-esr-l10n-tr
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 691
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-tr (<< 45)
+Provides: iceweasel-l10n-tr
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-tr (<< 45)
+Description: Turkish language package for Firefox ESR
+Description-md5: 78069753c5073c8e880c91bb3322b0c0
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-tr_60.6.3esr-1~deb9u1_all.deb
+Size: 560060
+MD5sum: 8b80b242a9217a2bd350645e4a24c758
+SHA256: bafde52bf419fbed2eba48e2ec1afc2692b8d061e85a09ba282824ac0e51c611
+
+Package: firefox-esr-l10n-uk
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 744
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-uk (<< 45)
+Provides: iceweasel-l10n-uk
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-uk | myspell-uk
+Breaks: iceweasel-l10n-uk (<< 45)
+Description: Ukrainian language package for Firefox ESR
+Description-md5: f6b5ebceef2b190b19cf3a0742498225
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-uk_60.6.3esr-1~deb9u1_all.deb
+Size: 615622
+MD5sum: 8dff7b00190e26ae08148e9f8ceab3c5
+SHA256: 1fe98c233bf6270fb8dbd9109f1e31a43c2b7b7f8c58b2b542fc47f5fa9394c0
+
+Package: firefox-esr-l10n-ur
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 727
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-ur (<< 45)
+Provides: iceweasel-l10n-ur
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-ur (<< 45)
+Description: Urdu language package for Firefox ESR
+Description-md5: 9cab06f06f59cdb4e35e4bdabcfae1fe
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-ur_60.6.3esr-1~deb9u1_all.deb
+Size: 597696
+MD5sum: 325098c1e20b43c36098fbe3a59c9528
+SHA256: be5fe6bffbd48840ff44ce90421218308007a619d281975f731e16d386b802ed
+
+Package: firefox-esr-l10n-uz
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 679
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-uz (<< 45)
+Provides: iceweasel-l10n-uz
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-uz
+Breaks: iceweasel-l10n-uz (<< 45)
+Description: Uzbek language package for Firefox ESR
+Description-md5: 3906a472d2035b9ebcb169f6f5088a95
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-uz_60.6.3esr-1~deb9u1_all.deb
+Size: 548246
+MD5sum: 95edd20218f7aaa7256b94a693ce236b
+SHA256: 6fc239ba74885b599ad22b75b2224d85bf4f06d5e0d9262fc473d3464de489a6
+
+Package: firefox-esr-l10n-vi
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 693
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-vi (<< 45)
+Provides: iceweasel-l10n-vi
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Recommends: hunspell-vi
+Breaks: iceweasel-l10n-vi (<< 45)
+Description: Vietnamese language package for Firefox ESR
+Description-md5: 890c381792b5053d91ccb56a986f8b70
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-vi_60.6.3esr-1~deb9u1_all.deb
+Size: 563338
+MD5sum: df4ab6a8acec2866fa079b17cd3128c3
+SHA256: 64a45956ef9822c36955d817c19bc0796c7e823d240bb785683815760cc38a3a
+
+Package: firefox-esr-l10n-xh
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 677
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-xh (<< 45)
+Provides: iceweasel-l10n-xh
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-xh (<< 45)
+Description: Xhosa language package for Firefox ESR
+Description-md5: 8efaadb254622ba4ace972ffdbe4e176
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-xh_60.6.3esr-1~deb9u1_all.deb
+Size: 547142
+MD5sum: 20b5677ffeb249d146bb1a767cee9f29
+SHA256: 626177e6ea9133150aec9a537865661f8c59adf4de17193120b8da314b0ccbfb
+
+Package: firefox-esr-l10n-zh-cn
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 708
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-zh-cn (<< 45)
+Provides: iceweasel-l10n-zh-cn
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-zh-cn (<< 45)
+Description: Chinese (China) language package for Firefox ESR
+Description-md5: 60c15e38f40b1bf1da8fd99b96a8796e
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-zh-cn_60.6.3esr-1~deb9u1_all.deb
+Size: 574034
+MD5sum: f4b9c3920dce66cd5230d8c6aaf9fd50
+SHA256: cefa8b8c378fbcd96d92729389141b9134bde25fc86daa1aaeb1bff113b6c881
+
+Package: firefox-esr-l10n-zh-tw
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 706
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Replaces: iceweasel-l10n-zh-tw (<< 45)
+Provides: iceweasel-l10n-zh-tw
+Depends: firefox-esr (>= 60.6.3esr-1~deb9u1), firefox-esr (<< 60.6.3esr-1~deb9u1.1~)
+Breaks: iceweasel-l10n-zh-tw (<< 45)
+Description: Chinese (Taiwan) language package for Firefox ESR
+Description-md5: 5c9838adc8bf4fb11f3ffb4bef1c40c5
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/firefox-esr-l10n-zh-tw_60.6.3esr-1~deb9u1_all.deb
+Size: 572766
+MD5sum: 36678b5414e278869a976fb1c8d42925
+SHA256: fe9edfd91dc74165daefbd2417d8e6d919e574c1752b177ea4cbea017b42c85e
+
+Package: iceweasel
+Source: firefox-esr
+Version: 60.6.3esr-1~deb9u1
+Installed-Size: 225
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr
+Description: Web browser based on Firefox - Transitional package
+Description-md5: ddd0bc4f6b2c336cc1c50357095555bf
+Tag: interface::graphical, interface::x11, role::program, suite::mozilla,
+ uitoolkit::gtk, web::browser, works-with-format::mp3,
+ works-with::audio, x11::application
+Section: web
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel_60.6.3esr-1~deb9u1_all.deb
+Size: 113258
+MD5sum: 18b925a5a1327c66b5a3a9ee4a974902
+SHA256: ceeb4955d003cfbaa53e8a1904161762ea352e0d680ba74a5eb9190cf7df9700
+
+Package: iceweasel-l10n-ach
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ach
+Description: Acoli language package for Iceweasel - Transitional package
+Description-md5: 5de4e26d598258f83fc07fa457d7a3a0
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ach_60.6.3esr-1~deb9u1_all.deb
+Size: 111862
+MD5sum: 7be43ac90850ed860b5d40fd11245033
+SHA256: 176933991917c6a8eee2f3565d6976a9629780f09d73e24b70300f7c9a8bbfc3
+
+Package: iceweasel-l10n-af
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-af
+Description: Afrikaans language package for Iceweasel - Transitional package
+Description-md5: d7db4c9207178f8ff964650376916d35
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-af_60.6.3esr-1~deb9u1_all.deb
+Size: 111854
+MD5sum: abaf925d913617b687e6501365d825fe
+SHA256: eb4d23b3e9509dc6f197807f82c372c9cb429cdddf7cfc6b370c879c79d9c307
+
+Package: iceweasel-l10n-all
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-all
+Description: All language packages for Iceweasel - Transitional package
+Description-md5: cff5a590544adcdebda89494291bf9d6
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-all_60.6.3esr-1~deb9u1_all.deb
+Size: 111534
+MD5sum: 39e388879c6a94a6fff8a3838b9b6f3c
+SHA256: 47778c7472f66ef6028662fa03d058b20bb8f25520258bf8a963b4245412c163
+
+Package: iceweasel-l10n-an
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-an
+Description: Aragonese language package for Iceweasel - Transitional package
+Description-md5: e9973e8ca3c24f237f89b4a784bad97d
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-an_60.6.3esr-1~deb9u1_all.deb
+Size: 111844
+MD5sum: e730634b565e2b7060a45ad713104123
+SHA256: 354cf920ab9a12fac51a0ed9bd279bf33ac59894d89a4d1381c4b0c07b371164
+
+Package: iceweasel-l10n-ar
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ar
+Description: Arabic language package for Iceweasel - Transitional package
+Description-md5: 7025093ac72fbb22ff1a5b02ce2ed173
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ar_60.6.3esr-1~deb9u1_all.deb
+Size: 111840
+MD5sum: 6a5929212749eda7709ed5b39084c003
+SHA256: 7fa4b6fede36fb125c6b304415a91d57b6cc2a2b700cdd48d27f8415d5e300f3
+
+Package: iceweasel-l10n-as
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 212
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-as
+Description: Assamese language package for Iceweasel - Transitional package
+Description-md5: c1ad7263809c684e9fab632b93ae399f
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-as_60.6.3esr-1~deb9u1_all.deb
+Size: 111962
+MD5sum: d71e0a6878cf5b089105b4febcbc9adf
+SHA256: 81bf5e1e00fbf695db7197cc9c7aa9ebfea8378c61252308f1852d79b37b5ad8
+
+Package: iceweasel-l10n-ast
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ast
+Description: Asturian language package for Iceweasel - Transitional package
+Description-md5: 25bd07c58f5edc8a9ce8f73a4cc9dfeb
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ast_60.6.3esr-1~deb9u1_all.deb
+Size: 111850
+MD5sum: f6e36fa9e6bcfe501e21af4c002c1bad
+SHA256: 820dc052939103aabfb71f3c3219a8df9510482f84e9690f39ed8612abdee338
+
+Package: iceweasel-l10n-az
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-az
+Description: Azerbaijani language package for Iceweasel - Transitional package
+Description-md5: 03d6aa34451153d514c576d9498c2119
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-az_60.6.3esr-1~deb9u1_all.deb
+Size: 111884
+MD5sum: 555f9b568f52241d33095f4fdcba33fe
+SHA256: 702c55a524713f8f0bb2f1ab4c4bb7180540da6f8ef492783f0b4caf6b644c2f
+
+Package: iceweasel-l10n-be
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-be
+Description: Belarusian language package for Iceweasel - Transitional package
+Description-md5: e5a8e6cfe329566303ae69739595d114
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-be_60.6.3esr-1~deb9u1_all.deb
+Size: 111876
+MD5sum: a226940a994e80ec81fb21d517ff7f8a
+SHA256: ba4011cd13e6561a529d92612d248abd9aa40b1433a08a5e7199bce7d8698d49
+
+Package: iceweasel-l10n-bg
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-bg
+Description: Bulgarian language package for Iceweasel - Transitional package
+Description-md5: 24fca2c2094fcd3657634f263a77082c
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-bg_60.6.3esr-1~deb9u1_all.deb
+Size: 111884
+MD5sum: 59a7cf93cde442c19a9413ed5b5c43d0
+SHA256: 0b2a4fa37f827ade9b8e5fdddd0c5b02b89419eb2ad7be6f676113ea9a602c74
+
+Package: iceweasel-l10n-bn-bd
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-bn-bd
+Description: Bengali (Bangladesh) language package for Iceweasel - Transitional package
+Description-md5: 09f313b303db42cf9f5492ae6a60c5f2
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-bn-bd_60.6.3esr-1~deb9u1_all.deb
+Size: 111550
+MD5sum: f81fc3dd32be3d6b9e22b7b67d26a1cc
+SHA256: 2351b904d41e317c51786384e4453029de278ff4a968326c623a9b9e790a9ef4
+
+Package: iceweasel-l10n-bn-in
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-bn-in
+Description: Bengali (India) language package for Iceweasel - Transitional package
+Description-md5: d6ea2352ba72953bccc439e203879a9d
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-bn-in_60.6.3esr-1~deb9u1_all.deb
+Size: 111556
+MD5sum: fca2abf634dbdd58719e9d9f2fe6da73
+SHA256: 4ce93a74a743879015660712a490f3c790c9d90e60c5f063399a6aab9c205835
+
+Package: iceweasel-l10n-br
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-br
+Description: Breton language package for Iceweasel - Transitional package
+Description-md5: 986bedb18e98bc14e9a21866a4c37bce
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-br_60.6.3esr-1~deb9u1_all.deb
+Size: 111854
+MD5sum: f1627036f69e9b11973a47161d655fc7
+SHA256: dead9bcb14b97c0261b83e971cfe7420f431c98b038364f2d484715d7eed1e33
+
+Package: iceweasel-l10n-bs
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-bs
+Description: Bosnian language package for Iceweasel - Transitional package
+Description-md5: 8b00a6a95b338a0d5b2f24880a8c2351
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-bs_60.6.3esr-1~deb9u1_all.deb
+Size: 111872
+MD5sum: c82ee2eedf1f7c5bb2f608447af77174
+SHA256: 1e54f5d2f51218027224027074e2d1a0046e641f58180e5fc60c49d33e867fdb
+
+Package: iceweasel-l10n-ca
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ca
+Description: Catalan language package for Iceweasel - Transitional package
+Description-md5: 65d78422796d89dd665eb96570b86f68
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ca_60.6.3esr-1~deb9u1_all.deb
+Size: 111852
+MD5sum: 6d2ea2511f885ae483bd1927898b1398
+SHA256: dbc010126d1a35338ac4d6e689b59ae2eb26611ed3384160d543ba38e1ae02a1
+
+Package: iceweasel-l10n-cak
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-cak
+Description: Kaqchikel language package for Iceweasel - Transitional package
+Description-md5: 7f559a20a5d0fafbb798b14c5c2ffe32
+Section: oldlibs
+Priority: extra
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-cak_60.6.3esr-1~deb9u1_all.deb
+Size: 111554
+MD5sum: e9a66fd5380377d26cfb086a6ac35466
+SHA256: 75514b8c12b131a6fc33f6c4d6945c5d9d87f2a022e79ffaff39992c4aac1e66
+
+Package: iceweasel-l10n-cs
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-cs
+Description: Czech language package for Iceweasel - Transitional package
+Description-md5: 5e04dcaca1b85a90dc21a9c2a47098d8
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-cs_60.6.3esr-1~deb9u1_all.deb
+Size: 111860
+MD5sum: 2c29b83be647e98674eb01e23bc73edb
+SHA256: 24b27bca6bcbc2d984673339fbef80c55cde7ac25db178db3040193ced2631a7
+
+Package: iceweasel-l10n-cy
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-cy
+Description: Welsh language package for Iceweasel - Transitional package
+Description-md5: 817be795a3f3848d3b8190001f0571c1
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-cy_60.6.3esr-1~deb9u1_all.deb
+Size: 111898
+MD5sum: 906dec34989c444dd05afc71e06ba793
+SHA256: f42662878a78d6f15124b23c87b464ddf56e7bcd982cc70f9bf21f8c7a19f37d
+
+Package: iceweasel-l10n-da
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-da
+Description: Danish language package for Iceweasel - Transitional package
+Description-md5: 9ee3c8afa33ed219e73e8aa3f05d7ab1
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-da_60.6.3esr-1~deb9u1_all.deb
+Size: 111850
+MD5sum: 33c9008e35c0eaf8a8aad360940f9369
+SHA256: 081d913e357cde520a412cd26f7524c9ed8f2a95f5f583b4f86de700f2883acb
+
+Package: iceweasel-l10n-de
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-de
+Description: German language package for Iceweasel - Transitional package
+Description-md5: 7c343d2abdfdfa957e796a4133dd80f9
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-de_60.6.3esr-1~deb9u1_all.deb
+Size: 111874
+MD5sum: e98e51298edbc74d97838a94d1800f24
+SHA256: 9ac8c3d977a1d9b6eef19424ed22eb9cc23a39e03c8121392026ec3f74513772
+
+Package: iceweasel-l10n-dsb
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-dsb
+Description: Lower Sorbian language package for Iceweasel - Transitional package
+Description-md5: 25f4b0783b5d8f45b427a08b4ceb7d24
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-dsb_60.6.3esr-1~deb9u1_all.deb
+Size: 111874
+MD5sum: 8897f42066990da8804a90e45ea45071
+SHA256: 4928f87a3687d48fcf2fde9f3988244982a234343f92338fb473278e7edd32a1
+
+Package: iceweasel-l10n-el
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-el
+Description: Modern Greek language package for Iceweasel - Transitional package
+Description-md5: 6b9e6f34412aac3e9bc83bf9cf690ce5
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-el_60.6.3esr-1~deb9u1_all.deb
+Size: 111848
+MD5sum: 5e263393510111de5b468fb57f962313
+SHA256: 100850ba77735c90df2b07eda3de52448d4d9029a6ac628235c4044421f2c532
+
+Package: iceweasel-l10n-en-gb
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-en-gb
+Description: English (United Kingdom) language package for Iceweasel - Transitional package
+Description-md5: 768557bbb1e18ad953a2bf7ff7fea9a2
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-en-gb_60.6.3esr-1~deb9u1_all.deb
+Size: 111558
+MD5sum: cc0397e01a4436aac86827e016c692b2
+SHA256: b57ec39b09edba5e5c551b1ef8d6c36afa48ff2c50bb9aa40eab9ff2addc8b6b
+
+Package: iceweasel-l10n-en-za
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-en-za
+Description: English (South Africa) language package for Iceweasel - Transitional package
+Description-md5: 465ec3b7bc85e1d3aab9c36359cf0730
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-en-za_60.6.3esr-1~deb9u1_all.deb
+Size: 111552
+MD5sum: 67f0fb066f2ee7994b54b75b349c096a
+SHA256: 55e2446e90286664ac38aa615d01b0468923e1d1e2b4117483a714c53ba17966
+
+Package: iceweasel-l10n-eo
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-eo
+Description: Esperanto language package for Iceweasel - Transitional package
+Description-md5: 4c90fa0de6eaa91e0cf01f07c6594d2f
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-eo_60.6.3esr-1~deb9u1_all.deb
+Size: 111900
+MD5sum: 1e6154ceb2cfc369bf68e3a0e6ae9f27
+SHA256: 885ab4bbc1ae6207195ea8638383d32a99cf6b38180ad9406f82c6c556dd96d9
+
+Package: iceweasel-l10n-es-ar
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-es-ar
+Description: Spanish (Argentina) language package for Iceweasel - Transitional package
+Description-md5: 3e3c5cd89e5e4221f17bd2369827e78d
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-es-ar_60.6.3esr-1~deb9u1_all.deb
+Size: 111552
+MD5sum: b7db286c53feaadbcbc3a5e16a5b3f51
+SHA256: ac28c766ebb3a042b01eff15fe90b5fa9b42cf4e9259abab9246820dd4b52fce
+
+Package: iceweasel-l10n-es-cl
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-es-cl
+Description: Spanish (Chile) language package for Iceweasel - Transitional package
+Description-md5: 79d03bd81ddcb40c6dbf2ea5bd31c09a
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-es-cl_60.6.3esr-1~deb9u1_all.deb
+Size: 111552
+MD5sum: 2f3161505f487e65cd7098ce23469e3b
+SHA256: 4ecdac6cee1c70e9143de358c170781a2b36cbdeb2bd3297b1f6bd35e07d1b51
+
+Package: iceweasel-l10n-es-es
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-es-es
+Description: Spanish (Spain) language package for Iceweasel - Transitional package
+Description-md5: 375afa98d32c593ba63ded4a55cb969c
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-es-es_60.6.3esr-1~deb9u1_all.deb
+Size: 111554
+MD5sum: d5f0393b99199734663d26b3f005705b
+SHA256: ad0112795f4daa5b016dbd499517d837bd6f5b3f61b7b7f1c0199d187092ccf0
+
+Package: iceweasel-l10n-es-mx
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-es-mx
+Description: Spanish (Mexico) language package for Iceweasel - Transitional package
+Description-md5: ad6005ac41e2fe196c026fc5e92ec382
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-es-mx_60.6.3esr-1~deb9u1_all.deb
+Size: 111560
+MD5sum: b1b731b055884c0f749b45555b5cc218
+SHA256: 9056ca465fbd8afca167a3bc0bedfdfc540c2f3b4a4f7925ad93b7ab800a7c4f
+
+Package: iceweasel-l10n-et
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-et
+Description: Estonian language package for Iceweasel - Transitional package
+Description-md5: 3ab5cfa6c39aaabf6d950aa278479b25
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-et_60.6.3esr-1~deb9u1_all.deb
+Size: 111840
+MD5sum: 73d06667b5c28ae3354e21ffefa25495
+SHA256: 43141a691832bcf89662a2844e46c8c346a1ca483995bcb3143c1186cdcf0d1b
+
+Package: iceweasel-l10n-eu
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-eu
+Description: Basque language package for Iceweasel - Transitional package
+Description-md5: 122be83a1a2faa32ecc4e69a5916742f
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-eu_60.6.3esr-1~deb9u1_all.deb
+Size: 111904
+MD5sum: 89c45d33e6a057409121d68fa7496c2f
+SHA256: 240994f37d3b551f459a64e6be5aae2c700e4b6f0e44e86983d55284d464d2aa
+
+Package: iceweasel-l10n-fa
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-fa
+Description: Persian language package for Iceweasel - Transitional package
+Description-md5: da3a8f65d749bd93836a1dd3250ad6a4
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-fa_60.6.3esr-1~deb9u1_all.deb
+Size: 111858
+MD5sum: ca2b6709684cfa24074ccc321833a44b
+SHA256: 798ea9ad92f3b312726d4816388a192bda8ffcf2b6a303a61414a339669aa1f2
+
+Package: iceweasel-l10n-ff
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ff
+Description: Fulah language package for Iceweasel - Transitional package
+Description-md5: 72b5d64859750d70b6b7eec2f0f0e415
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ff_60.6.3esr-1~deb9u1_all.deb
+Size: 111884
+MD5sum: 7641c31170be7657f46a7fcab47541d3
+SHA256: 82e7bf9ecc303a344ecfa4e43234e03b9509762a041abe784a2b6a852196e849
+
+Package: iceweasel-l10n-fi
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-fi
+Description: Finnish language package for Iceweasel - Transitional package
+Description-md5: f736d616438256e3ae0068df605d8968
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-fi_60.6.3esr-1~deb9u1_all.deb
+Size: 111866
+MD5sum: 4a99a5133def03db3cf3ac0d0b6e302b
+SHA256: ce1271ec044b5ec3c7eeaa16f9f9ee37306649d9d56155142d71771e62c26e89
+
+Package: iceweasel-l10n-fr
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-fr
+Description: French language package for Iceweasel - Transitional package
+Description-md5: ba6ddaa09b1b4a1007d4b65afda9ea37
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-fr_60.6.3esr-1~deb9u1_all.deb
+Size: 111864
+MD5sum: 355ee5b203748e66b50baf1676914470
+SHA256: e80db122e8fa242a64106826b2cb735100300e6c9eb9ce55ca90955a35b03afc
+
+Package: iceweasel-l10n-fy-nl
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-fy-nl
+Description: Western Frisian (Netherlands) language package for Iceweasel - Transitional package
+Description-md5: 29815a309b0c32fc1f1d5c0b89edf3cd
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-fy-nl_60.6.3esr-1~deb9u1_all.deb
+Size: 111564
+MD5sum: d94e3624ff824b3fd550ddc8cae92254
+SHA256: 37401f717b718b79b26810686f6403422e6c2ef2efcbc9dcec1d834fe0582c3b
+
+Package: iceweasel-l10n-ga-ie
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ga-ie
+Description: Irish (Ireland) language package for Iceweasel - Transitional package
+Description-md5: f54cf54bef15364f91d0698027870dc5
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ga-ie_60.6.3esr-1~deb9u1_all.deb
+Size: 111554
+MD5sum: 6461188bb872797393fc7819742a2519
+SHA256: 041aac8e591a768e97c496545f5a376a40c2c12df582ed7f1acfbb8d8fe97ca9
+
+Package: iceweasel-l10n-gd
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-gd
+Description: Scottish Gaelic language package for Iceweasel - Transitional package
+Description-md5: 429aca48512a031270759a18a1a6480d
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-gd_60.6.3esr-1~deb9u1_all.deb
+Size: 111900
+MD5sum: f73c18358e69adb0ec20b43afacf0876
+SHA256: 3a3643c57dba12f44edd783a1122f09c10f7b8f2029d5ba82bacf2a9e196c9a8
+
+Package: iceweasel-l10n-gl
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-gl
+Description: Galician language package for Iceweasel - Transitional package
+Description-md5: e81cfd3586f8d00c9cc5b407eb3c9edf
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-gl_60.6.3esr-1~deb9u1_all.deb
+Size: 111864
+MD5sum: ea8a2df5facbaf9749b5fae859caefa2
+SHA256: 8bd4da7301c32998c5b76225638fef4e9a008d598d12de377432a2bb798ce7c6
+
+Package: iceweasel-l10n-gn
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-gn
+Description: Guarani language package for Iceweasel - Transitional package
+Description-md5: c5f1560baf00a6b9a5f8f08538496744
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-gn_60.6.3esr-1~deb9u1_all.deb
+Size: 111558
+MD5sum: d1187ed13cf879a3cd3168ecec0999de
+SHA256: b4643f91530306a76ae6b0d9dece6608c1dbfcf36d8f8fb3624d97cdf559e98b
+
+Package: iceweasel-l10n-gu-in
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-gu-in
+Description: Gujarati (India) language package for Iceweasel - Transitional package
+Description-md5: 0befb0a8aa2c71c16eaea2302499cee3
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-gu-in_60.6.3esr-1~deb9u1_all.deb
+Size: 111560
+MD5sum: 08478575d2680e8ed03894ce6e5ac337
+SHA256: 58815ad197a45ba2959a63b8b8150e0c8d4b1979d52774e6e7436f811c99d2d7
+
+Package: iceweasel-l10n-he
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 204
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-he
+Description: Hebrew language package for Iceweasel - Transitional package
+Description-md5: ee564eafda4e9ce6ddfd9aae0eba8435
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-he_60.6.3esr-1~deb9u1_all.deb
+Size: 111784
+MD5sum: 2fbf8d33beb3e8e7f146edbd35917559
+SHA256: f7ff14d41d0547910ae0a19d49a2d92e133e6dcbec5fddb2ed78b14b1e67709a
+
+Package: iceweasel-l10n-hi-in
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-hi-in
+Description: Hindi (India) language package for Iceweasel - Transitional package
+Description-md5: 2b11581510a85306278f1813c8047922
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-hi-in_60.6.3esr-1~deb9u1_all.deb
+Size: 111550
+MD5sum: 3ca71ccc48d5a8402ec1948b7bf20434
+SHA256: 46f2eb309d0dc7ad097261a412a742e0973ef6ca3f931abccbc015fae2e3cbd5
+
+Package: iceweasel-l10n-hr
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-hr
+Description: Croatian language package for Iceweasel - Transitional package
+Description-md5: d0f815659c4c839a5830de7faa53da2d
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-hr_60.6.3esr-1~deb9u1_all.deb
+Size: 111870
+MD5sum: ab18b4d6771767f288e0f3603fd37709
+SHA256: c92003347e535763d53da6113c52198ee70feb21aaae39e648ce9491841ae8fa
+
+Package: iceweasel-l10n-hsb
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-hsb
+Description: Upper Sorbian language package for Iceweasel - Transitional package
+Description-md5: 34dd535fc34eb21286c95322ccdc4357
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-hsb_60.6.3esr-1~deb9u1_all.deb
+Size: 111874
+MD5sum: e1cdd8efbb4fa378dd959ac8fa006b86
+SHA256: bc26ba84ff80742350ea675123cd4af77484ad93e65e481ff19937d16d769501
+
+Package: iceweasel-l10n-hu
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-hu
+Description: Hungarian language package for Iceweasel - Transitional package
+Description-md5: 898ec7b4b7fc3b5b3e548abcd8f96693
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-hu_60.6.3esr-1~deb9u1_all.deb
+Size: 111842
+MD5sum: f77410627e7569116a00190500750af5
+SHA256: 68117fe1a342835104853e8779a861e8d6c6c0c6315bb6e3f7c236a9cf339ab8
+
+Package: iceweasel-l10n-hy-am
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-hy-am
+Description: Armenian (Armenia) language package for Iceweasel - Transitional package
+Description-md5: 518b2e53cc31b23ead9752732fe58a52
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-hy-am_60.6.3esr-1~deb9u1_all.deb
+Size: 111552
+MD5sum: bf300967787537af3cb595c16de263c8
+SHA256: 6fe506f1af56e12d683701d5a9fc1664b74d5659580d3a1bcc7104547dae991f
+
+Package: iceweasel-l10n-ia
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ia
+Description: Interlingua language package for Iceweasel - Transitional package
+Description-md5: f159faf78428d517f8b6b028ee23b9c0
+Section: oldlibs
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ia_60.6.3esr-1~deb9u1_all.deb
+Size: 111552
+MD5sum: 5ae65ceda82d64fd9f4fdcea5aae7eca
+SHA256: 457ec70311d5d7f83c99fd90d4e65a0416fca7df6ad797a70057dcf63189f068
+
+Package: iceweasel-l10n-id
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 204
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-id
+Description: Indonesian language package for Iceweasel - Transitional package
+Description-md5: 1151b5b4fe8a51eb8af915550c35dbea
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-id_60.6.3esr-1~deb9u1_all.deb
+Size: 111796
+MD5sum: ab96ab00419d051af7ab2067558ee14b
+SHA256: 32ecf032e641d276b53e17104c34690a8926d986546b8742dca5d22074609153
+
+Package: iceweasel-l10n-is
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-is
+Description: Icelandic language package for Iceweasel - Transitional package
+Description-md5: f38943de06d0d373fee3e2c685755eb3
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-is_60.6.3esr-1~deb9u1_all.deb
+Size: 111872
+MD5sum: 641890c4c93296063bb1dc334dfb9c18
+SHA256: 9744b36b52ae4934b3207aadd480771a99595684a65321802d68549c254d039e
+
+Package: iceweasel-l10n-it
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-it
+Description: Italian language package for Iceweasel - Transitional package
+Description-md5: 5f5907535db7461a1a4ce65267c2942c
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-it_60.6.3esr-1~deb9u1_all.deb
+Size: 111862
+MD5sum: f7499239b6fa63a584cdc2c571a867ca
+SHA256: d7fcb3dbae26b4ab543c1dd48f4d1b5273743c81c5b0f0912e7bc0890be14323
+
+Package: iceweasel-l10n-ja
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ja
+Description: Japanese language package for Iceweasel - Transitional package
+Description-md5: be1a730b718faa794aadce4093e3e0e9
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ja_60.6.3esr-1~deb9u1_all.deb
+Size: 111912
+MD5sum: 98cebf042c11cb2bc225155718979d15
+SHA256: a1b3cff0fe2dc7f1134a53ec6fba08e9e3b31eb5c1aa18c1cb3edd79e9901e41
+
+Package: iceweasel-l10n-ka
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ka
+Description: Georgian language package for Iceweasel - Transitional package
+Description-md5: 7256997f48030fad2bf429203f9def5f
+Section: oldlibs
+Priority: extra
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ka_60.6.3esr-1~deb9u1_all.deb
+Size: 111558
+MD5sum: a77ad8bbf9ef6a2147757fb712fee7aa
+SHA256: 998ede19bd90ea6e65f5909dbaa6ec0aa836190f817048ecb6e43b2f70d29a93
+
+Package: iceweasel-l10n-kab
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-kab
+Description: Kabyle language package for Iceweasel - Transitional package
+Description-md5: 38c8208ca5cd0fd05621cf29e81272ba
+Section: oldlibs
+Priority: extra
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-kab_60.6.3esr-1~deb9u1_all.deb
+Size: 111546
+MD5sum: 4dcf127b1f53485b938316a8383a9af0
+SHA256: 9bc2aa5e9a1d4bca41e7ff31eee6e4e1c55d31f6ae681b367288b05934e6887a
+
+Package: iceweasel-l10n-kk
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-kk
+Description: Kazakh language package for Iceweasel - Transitional package
+Description-md5: 2559d7c3d598d065381d75d9682a527c
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-kk_60.6.3esr-1~deb9u1_all.deb
+Size: 111862
+MD5sum: c1f6a7256f0c4fc9b041ac60ec97ed73
+SHA256: a7a67f41043ee5fedcb34c37cc7fe23f8d0c13d0c5447c0f20eee6e496424b4a
+
+Package: iceweasel-l10n-km
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-km
+Description: Central Khmer language package for Iceweasel - Transitional package
+Description-md5: 94ad9a20183091ea8aa8735539a622d8
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-km_60.6.3esr-1~deb9u1_all.deb
+Size: 111888
+MD5sum: 87e035b4c3efb9f6a4ecd3d31f6eb0cc
+SHA256: bbedccbd73fabb77a4e32cbd16b3d312bbf2d04b58f438c376303cb5e730b137
+
+Package: iceweasel-l10n-kn
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-kn
+Description: Kannada language package for Iceweasel - Transitional package
+Description-md5: 79f132a6b690954e72c6e33d7613b7a3
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-kn_60.6.3esr-1~deb9u1_all.deb
+Size: 111852
+MD5sum: 9ff80da42246cf5a6bce12d95473996f
+SHA256: 8016db3f88114391335aff709889d6ceb1a7fe10bc131166eb3eb57cb752eb91
+
+Package: iceweasel-l10n-ko
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ko
+Description: Korean language package for Iceweasel - Transitional package
+Description-md5: 7da73357a4aaba9571963ba566f4a980
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ko_60.6.3esr-1~deb9u1_all.deb
+Size: 111850
+MD5sum: 82d99fd80bc7ae049160efc5c4944cdb
+SHA256: cb53adbb48d1d9711b732b10df8435243a1ac0598fddf2ce3c249a61ab61784d
+
+Package: iceweasel-l10n-lij
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-lij
+Description: Ligurian language package for Iceweasel - Transitional package
+Description-md5: f3444c2a0c3530b0231caf6c60fd977c
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-lij_60.6.3esr-1~deb9u1_all.deb
+Size: 111864
+MD5sum: 583c4e820cf668d3166bc45271f8a7ef
+SHA256: 598d5437590889474d836c1996eab4fa8de35a7f046850cf0cf7b77bf7c6283c
+
+Package: iceweasel-l10n-lt
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-lt
+Description: Lithuanian language package for Iceweasel - Transitional package
+Description-md5: 454159f1ae703e094f619b3fde0cb18d
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-lt_60.6.3esr-1~deb9u1_all.deb
+Size: 111864
+MD5sum: 929e8c103ff59ad2b4c0e0f021362238
+SHA256: 9fbe0c04fe09ba026e30e3d7471de3df5128f218b71ba9c1e233627c4f4bfa5c
+
+Package: iceweasel-l10n-lv
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-lv
+Description: Latvian language package for Iceweasel - Transitional package
+Description-md5: ef864d67521d4f5832244ee77e3157a9
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-lv_60.6.3esr-1~deb9u1_all.deb
+Size: 111862
+MD5sum: 8f5189db53891aa23de753fba6e9345f
+SHA256: 8518f517cafc6dc5bf04fcccd1a035e5c9aaa961c3610020c622895bc04733e6
+
+Package: iceweasel-l10n-mai
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-mai
+Description: Maithili language package for Iceweasel - Transitional package
+Description-md5: 9a342fe72079bbabae7bdeda21ba8447
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-mai_60.6.3esr-1~deb9u1_all.deb
+Size: 111842
+MD5sum: 40a6f55b29880cf4944e255f4254a110
+SHA256: 0f7595e66a7b5be39d1f908967a4f069e17a1fdb3039844c7aa4d02e6ae52aad
+
+Package: iceweasel-l10n-mk
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-mk
+Description: Macedonian language package for Iceweasel - Transitional package
+Description-md5: d9bf5aaa9809abd2ccfc06943b958a43
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-mk_60.6.3esr-1~deb9u1_all.deb
+Size: 111896
+MD5sum: a4020f1c346b6153664252904bdc0cfc
+SHA256: 3554e172cf0b95b95f4ad919216a774ba110a06f8e8bf49a26e19e9fc3e73411
+
+Package: iceweasel-l10n-ml
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ml
+Description: Malayalam language package for Iceweasel - Transitional package
+Description-md5: 518f935a45cdf7e78da34ecacb266749
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ml_60.6.3esr-1~deb9u1_all.deb
+Size: 111860
+MD5sum: 0b5d617dac2c7cb90f6c8ec11d4ed5d2
+SHA256: 72a28763207d080d40f186779e196c5ead6ad9a96159dffeef77a058c6980ff5
+
+Package: iceweasel-l10n-mr
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-mr
+Description: Marathi language package for Iceweasel - Transitional package
+Description-md5: 14702973776939a968c2557ec205dbf7
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-mr_60.6.3esr-1~deb9u1_all.deb
+Size: 111878
+MD5sum: b3863be00a9e93c89a59bb372fa51616
+SHA256: cf90151ab287d8c0035290be576a9e440b573f32bd95056324fc0c77d8bcfeb7
+
+Package: iceweasel-l10n-ms
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ms
+Description: Malay language package for Iceweasel - Transitional package
+Description-md5: f35a16c421a7468f5f58011c9bf78294
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ms_60.6.3esr-1~deb9u1_all.deb
+Size: 111874
+MD5sum: 006b53d80fca97fbf29f23cb1674769d
+SHA256: 6c012a1782e4156f3acd7969ad60417f947b8a0f3496a00da7953dd3d750d8fa
+
+Package: iceweasel-l10n-my
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-my
+Description: Burmese language package for Iceweasel - Transitional package
+Description-md5: d5dc4e17d1905681fc80c59382d2c3f6
+Section: oldlibs
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-my_60.6.3esr-1~deb9u1_all.deb
+Size: 111554
+MD5sum: ca4416052a33258b34d636c638509127
+SHA256: 061b92bbf0041108b692a74af17b272a73bfae160290b14c4dc2b0a7ae4340bb
+
+Package: iceweasel-l10n-nb-no
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-nb-no
+Description: Norwegian Bokmål (Norway) language package for Iceweasel - Transitional package
+Description-md5: a8b8b408b193c815aad09de034b0d9a8
+Tag: culture::bokmaal, culture::norwegian
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-nb-no_60.6.3esr-1~deb9u1_all.deb
+Size: 111562
+MD5sum: 49277f64169adac667375a9d8d1ad51d
+SHA256: 2f47c3d372b881560745fc1c5a90e25a849c94f4c336e8d32c5ae8c042e8cf97
+
+Package: iceweasel-l10n-ne-np
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ne-np
+Description: Nepali (Nepal) language package for Iceweasel - Transitional package
+Description-md5: 692377c13ab82473580677e992dc82b9
+Section: oldlibs
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ne-np_60.6.3esr-1~deb9u1_all.deb
+Size: 111560
+MD5sum: 16b4d77c0ed959a346ff2717aa6db850
+SHA256: ea9455ed3a7741603d61ed2f3c3543d77f095bb173d6985ac7abfff0ff328a11
+
+Package: iceweasel-l10n-nl
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-nl
+Description: Dutch language package for Iceweasel - Transitional package
+Description-md5: 7bb69c0d8460b3c528f9d804ee822526
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-nl_60.6.3esr-1~deb9u1_all.deb
+Size: 111852
+MD5sum: 1a95adbc51de6cb417d85b7103aceb2f
+SHA256: bc93d74964e1502e8ff12fc058e183b2591a42972b891d3cd842edda298dca54
+
+Package: iceweasel-l10n-nn-no
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-nn-no
+Description: Norwegian Nynorsk (Norway) language package for Iceweasel - Transitional package
+Description-md5: adaabdaa6831b1e71eb3fbc0cf11d3db
+Tag: culture::norwegian, culture::nynorsk
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-nn-no_60.6.3esr-1~deb9u1_all.deb
+Size: 111558
+MD5sum: a7a1b436c2c56074f09331b52e5669f2
+SHA256: f2aadade7736c5d0dce632469815248bbb34c61eba93cae9fe9d312fd4019fa5
+
+Package: iceweasel-l10n-oc
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-oc
+Description: Occitan language package for Iceweasel - Transitional package
+Description-md5: 659385a8791e323f1637788651db87db
+Section: oldlibs
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-oc_60.6.3esr-1~deb9u1_all.deb
+Size: 111562
+MD5sum: f7b24d6936d4f265603d4c363b39005e
+SHA256: 889da8fd29768f0354b51afda537ca168fbde3e8219258fd3ff4b685d249a600
+
+Package: iceweasel-l10n-or
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-or
+Description: Oriya language package for Iceweasel - Transitional package
+Description-md5: 13c8623e2256090d2afa495b15f4ee4e
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-or_60.6.3esr-1~deb9u1_all.deb
+Size: 111850
+MD5sum: 4d327c93d23f5ef5bc56137fbe50c983
+SHA256: 166eb399f339ec16b472ee0abf64c1d1140a33c2f8af86c4ad0bdc05e093f3ab
+
+Package: iceweasel-l10n-pa-in
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-pa-in
+Description: Panjabi (India) language package for Iceweasel - Transitional package
+Description-md5: 8d54703bbba4cdd6314b63966d991704
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-pa-in_60.6.3esr-1~deb9u1_all.deb
+Size: 111552
+MD5sum: 29567081ca145f2c759f47c009888b34
+SHA256: 036f13679c23a083a6f78597489ea60b12ec75542d1f14d45f5b3b83bee8aef6
+
+Package: iceweasel-l10n-pl
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-pl
+Description: Polish language package for Iceweasel - Transitional package
+Description-md5: 7ef1fe8a6c45108303ae81854b04c5dc
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-pl_60.6.3esr-1~deb9u1_all.deb
+Size: 111870
+MD5sum: b4eceb55dc1992bdeee708a6a3f7765f
+SHA256: dfff47095b2cd692714a0ff6272ff74c86c126eebde17c66231555947a954682
+
+Package: iceweasel-l10n-pt-br
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-pt-br
+Description: Portuguese (Brazil) language package for Iceweasel - Transitional package
+Description-md5: 629e0d9b91e68000af3487dab72501a2
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-pt-br_60.6.3esr-1~deb9u1_all.deb
+Size: 111556
+MD5sum: aab4fc8c5bdc72800b1841eaa25883c3
+SHA256: ecb0acd4074648f0033cbddb854d8a83aab77d06a07cb8aa61222e777f3b4f90
+
+Package: iceweasel-l10n-pt-pt
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-pt-pt
+Description: Portuguese (Portugal) language package for Iceweasel - Transitional package
+Description-md5: 61a6ecaaab1177e71eaf74028b1691cf
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-pt-pt_60.6.3esr-1~deb9u1_all.deb
+Size: 111556
+MD5sum: 01a5aca50000e1bd24f3909464d4afcb
+SHA256: 0e290251be79184bdb4c5e2e1b3c14931512490da43a7368f1542c7b96158b7b
+
+Package: iceweasel-l10n-rm
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-rm
+Description: Romansh language package for Iceweasel - Transitional package
+Description-md5: 145f77469794a94706cae2e5acacb870
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-rm_60.6.3esr-1~deb9u1_all.deb
+Size: 111866
+MD5sum: 4a963d5f5c3be03824427053fb592500
+SHA256: e27d019c4e0e22d6cff317bbc9307ec4a22f6af54f411e0bc1793329fe4e573c
+
+Package: iceweasel-l10n-ro
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ro
+Description: Romanian language package for Iceweasel - Transitional package
+Description-md5: 67b35dcb5d27d663021ca9254f3da4f1
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ro_60.6.3esr-1~deb9u1_all.deb
+Size: 111864
+MD5sum: 9436a80970c8b145e48b9eb76522d50f
+SHA256: 48b3a3cfda7c44a49ed88af0d5ce9f1068758033fff98bada132258a19ba8554
+
+Package: iceweasel-l10n-ru
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ru
+Description: Russian language package for Iceweasel - Transitional package
+Description-md5: 222e7e0f735955c447f2e310e0faf486
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ru_60.6.3esr-1~deb9u1_all.deb
+Size: 111880
+MD5sum: 319d48030654151d02078b8e11532ba1
+SHA256: 1634acfe1f29f56916725ba3aeaaf53ad775f1ff0bee41091a0b57e306836c83
+
+Package: iceweasel-l10n-si
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-si
+Description: Sinhala language package for Iceweasel - Transitional package
+Description-md5: 9f9dad6b34d89d994c0f2d67371156c2
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-si_60.6.3esr-1~deb9u1_all.deb
+Size: 111892
+MD5sum: 91a6f37afc7bd3b548a2fa563aedb592
+SHA256: ac0be2c4e4bdb65866a556b7a5ed675fae7957276052822c25c1253452a8bdc0
+
+Package: iceweasel-l10n-sk
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-sk
+Description: Slovak language package for Iceweasel - Transitional package
+Description-md5: 4a810fe312cb1267e5e03202cf4a3535
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-sk_60.6.3esr-1~deb9u1_all.deb
+Size: 111878
+MD5sum: 13828f99945137d8bb22d464edfc2f36
+SHA256: 338992d377ec73397982eea802aa69966d92bc8727fc3c4dd953b181e53df6fc
+
+Package: iceweasel-l10n-sl
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-sl
+Description: Slovenian language package for Iceweasel - Transitional package
+Description-md5: 2c8575a4e7d10b684ad6a16109dc1f2c
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-sl_60.6.3esr-1~deb9u1_all.deb
+Size: 111866
+MD5sum: d5ea9350b92e2bad48b610855eecac31
+SHA256: a6909501dc4b41532dec7cd79550171d1f472ea76db23196c3fbc16c4fc73b36
+
+Package: iceweasel-l10n-son
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-son
+Description: Songhai languages language package for Iceweasel - Transitional package
+Description-md5: db3d7bfafe87a15c7843061605a7aec4
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-son_60.6.3esr-1~deb9u1_all.deb
+Size: 111866
+MD5sum: 261aabeff71edd655ff6d14755d7c826
+SHA256: 86a7fa0346ebe68ebf9e37a73f88fd22de97a63bbab10eff90c40bcda3a31926
+
+Package: iceweasel-l10n-sq
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-sq
+Description: Albanian language package for Iceweasel - Transitional package
+Description-md5: 878ca23057c81d3724b368248062efeb
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-sq_60.6.3esr-1~deb9u1_all.deb
+Size: 111862
+MD5sum: 6ec7eaf0e78f8d9dd1a39e3bd60e5625
+SHA256: beb703cd5640ae02d2cbfa22ce191868e689f43d1783fd04f223577c90c89df6
+
+Package: iceweasel-l10n-sr
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-sr
+Description: Serbian language package for Iceweasel - Transitional package
+Description-md5: ced4b5d9fd5a15356d8f12944974ef2a
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-sr_60.6.3esr-1~deb9u1_all.deb
+Size: 111866
+MD5sum: f428630c00fec22b159ed691a33092fb
+SHA256: f822792d901ef5f661d723ac400c4c363d861c2817293997264a8137ee14bf64
+
+Package: iceweasel-l10n-sv-se
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-sv-se
+Description: Swedish (Sweden) language package for Iceweasel - Transitional package
+Description-md5: 21f8d8ca045dbcf1f0750d677f9f9471
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-sv-se_60.6.3esr-1~deb9u1_all.deb
+Size: 111544
+MD5sum: 15812a495e909af9a19899fb27b2b0c1
+SHA256: c508d2dba78e77b78859e429ea4134b90207007fbdec570060d602025ddd5c3e
+
+Package: iceweasel-l10n-ta
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ta
+Description: Tamil language package for Iceweasel - Transitional package
+Description-md5: c9c310de468182de6ff8e9d96846aad2
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ta_60.6.3esr-1~deb9u1_all.deb
+Size: 111856
+MD5sum: 3a14c2327ae734b24fd9879b4a748364
+SHA256: 74f7cc49a1b94f333fada1d3f10df7cf4d6a216282bd002ac8a3cbc74415cd9c
+
+Package: iceweasel-l10n-te
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-te
+Description: Telugu language package for Iceweasel - Transitional package
+Description-md5: 53bd2fe7bdf18abcb708ef484246438f
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-te_60.6.3esr-1~deb9u1_all.deb
+Size: 111868
+MD5sum: fb37eaece363d12175ad37a5c22ad050
+SHA256: 7637abd79e6f43be912ab2ed437146b0309f51c5c06250fa67b18c955edf3cd3
+
+Package: iceweasel-l10n-th
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-th
+Description: Thai language package for Iceweasel - Transitional package
+Description-md5: 457b1f4601c537df48cce5b7a129b70e
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-th_60.6.3esr-1~deb9u1_all.deb
+Size: 111890
+MD5sum: 4b6a067ffe2eca7a1443dca9270328ca
+SHA256: ba24116bc7d017e538db14d5a959481f96dd7d9fafc9889f257774acfc8a7fd6
+
+Package: iceweasel-l10n-tr
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-tr
+Description: Turkish language package for Iceweasel - Transitional package
+Description-md5: 41d79acb053482a1da1936fcea55bf63
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-tr_60.6.3esr-1~deb9u1_all.deb
+Size: 111834
+MD5sum: 77492c767742b36ece787918d4eca501
+SHA256: 4bb013efa316884e0366e781ac3dc4f2d9ebc845676edfd4b93b637925206de1
+
+Package: iceweasel-l10n-uk
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-uk
+Description: Ukrainian language package for Iceweasel - Transitional package
+Description-md5: 286a21c46b0e00c0319b2050f6f1ad51
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-uk_60.6.3esr-1~deb9u1_all.deb
+Size: 111852
+MD5sum: e7f8bb59a95b0e68213c70b5b500ea1c
+SHA256: 216f79c913ed5661b75fa7988ae66c110ddb09db2ca6c9b7482bdfc99ea806f5
+
+Package: iceweasel-l10n-ur
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-ur
+Description: Urdu language package for Iceweasel - Transitional package
+Description-md5: 0b3c16da77de0f5505f0fc77bf7985b7
+Section: oldlibs
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-ur_60.6.3esr-1~deb9u1_all.deb
+Size: 111540
+MD5sum: d4f179492a0487ac2fb6ff2d6d555098
+SHA256: 77f4c71f36e2fc7d698ba50ec6b89a41e171fe70833b22b39d693768ae054520
+
+Package: iceweasel-l10n-uz
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-uz
+Description: Uzbek language package for Iceweasel - Transitional package
+Description-md5: 34a892d481c3be8498b4e05ca9fa1be8
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-uz_60.6.3esr-1~deb9u1_all.deb
+Size: 111870
+MD5sum: 905d4d61da6ad91b02eacc0e69e7d18a
+SHA256: 0e58e84e7dcaacec8e30613a4714ea62bc18aa5e4721b28d2bb0af16514b102f
+
+Package: iceweasel-l10n-vi
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 208
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-vi
+Description: Vietnamese language package for Iceweasel - Transitional package
+Description-md5: 71ddf30958f195e73d9c3740a7410f5f
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-vi_60.6.3esr-1~deb9u1_all.deb
+Size: 111892
+MD5sum: e722b2e22f7db870804ba792a8e958cf
+SHA256: 6620a1b3e403a30693584ac20d23044bc8527345ca68f993a3181f4a9c78f6bc
+
+Package: iceweasel-l10n-xh
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 204
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-xh
+Description: Xhosa language package for Iceweasel - Transitional package
+Description-md5: 9755efbdc7f69f99b2f1595448f3c73f
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-xh_60.6.3esr-1~deb9u1_all.deb
+Size: 111784
+MD5sum: f1f9efd29ff0e78ae5cdeedd6689e213
+SHA256: fe37ee6e80fb8de330f9f5ae8db5531f852e01b512752561ab220e64eca8918d
+
+Package: iceweasel-l10n-zh-cn
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-zh-cn
+Description: Chinese (China) language package for Iceweasel - Transitional package
+Description-md5: ac2f7143dab418b3b8c67643d1fbc11f
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-zh-cn_60.6.3esr-1~deb9u1_all.deb
+Size: 111558
+MD5sum: d83ad30ce5e6922d550d72e53527c934
+SHA256: d493412830f0e9796543cc548d9f6b1cbd7c24c114a0af27df1666fb7803d016
+
+Package: iceweasel-l10n-zh-tw
+Source: firefox-esr (60.6.3esr-1~deb9u1)
+Version: 1:60.6.3esr-1~deb9u1
+Installed-Size: 200
+Maintainer: Maintainers of Mozilla-related packages <team+pkg-mozilla@tracker.debian.org>
+Architecture: all
+Depends: firefox-esr-l10n-zh-tw
+Description: Chinese (Taiwan) language package for Iceweasel - Transitional package
+Description-md5: 25f544b90985853ef4d79e798cfe8142
+Section: localization
+Priority: optional
+Filename: pool/main/f/firefox-esr/iceweasel-l10n-zh-tw_60.6.3esr-1~deb9u1_all.deb
+Size: 111552
+MD5sum: 0439ec04058f2f824bb4399059f8d0af
+SHA256: 08c04d0c4c8992b368794b588067bfa649fb1adc3d93034199438319d5112547
+
+Package: libdatetime-timezone-perl
+Version: 1:2.09-1+2019a
+Installed-Size: 6909
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Depends: perl, libclass-singleton-perl, libmodule-runtime-perl, libnamespace-autoclean-perl, libparams-validationcompiler-perl, libspecio-perl, libtry-tiny-perl, perl (>= 5.19.5) | libscalar-list-utils-perl (>= 1:1.33)
+Recommends: libdatetime-perl
+Description: framework exposing the Olson time zone database to Perl
+Homepage: http://datetime.perl.org/
+Description-md5: 49fff32146b7c0ac14d7bcca1f92bfe6
+Tag: devel::lang:perl, devel::library, implemented-in::perl, use::timekeeping
+Section: perl
+Priority: optional
+Filename: pool/main/libd/libdatetime-timezone-perl/libdatetime-timezone-perl_2.09-1+2019a_all.deb
+Size: 273484
+MD5sum: 02972d4f58057e1b3f643bf0bbfdb764
+SHA256: 915af103263e1ac5fab12e3f7b87b775822878e6b616c30f28e45a00c05dc6c2
+
+Package: python-parsedatetime
+Source: parsedatetime
+Version: 2.1-3+deb9u1
+Installed-Size: 177
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Architecture: all
+Depends: python:any (<< 2.8), python:any (>= 2.7.5-5~), base-files (>= 4.0.4)
+Recommends: python-pyicu
+Description: Python module to parse human-readable date/time expressions
+Homepage: https://pypi.python.org/pypi/parsedatetime/
+Description-md5: e7dd28a0667034a74044e3bcd3bbbee4
+Section: python
+Priority: optional
+Filename: pool/main/p/parsedatetime/python-parsedatetime_2.1-3+deb9u1_all.deb
+Size: 38378
+MD5sum: e5d83638941e2c6c1319fc4e59ce3008
+SHA256: 8d5526f76e32da788e29ec6537a6555250d9c8a0a1207aad40861a1b6f2727e1
+
+Package: python3-parsedatetime
+Source: parsedatetime
+Version: 2.1-3+deb9u1
+Installed-Size: 171
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Architecture: all
+Depends: python3:any (>= 3.3.2-2~), base-files (>= 4.0.4)
+Recommends: python3-pyicu
+Description: Python 3 module to parse human-readable date/time expressions
+Homepage: https://pypi.python.org/pypi/parsedatetime/
+Description-md5: 4d161e1cc640230937c0082f1e34ba67
+Section: python
+Priority: optional
+Filename: pool/main/p/parsedatetime/python3-parsedatetime_2.1-3+deb9u1_all.deb
+Size: 37720
+MD5sum: 902add07ad38a3befe3cc7c25146920b
+SHA256: ad968dbacaa6f8ceacabf37af88de46d2aa45a1c64bf2796186e1ef0255d2aa1
+
+Package: python-acme
+Version: 0.28.0-1~deb9u1
+Installed-Size: 263
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Architecture: all
+Depends: ca-certificates, python-openssl (>= 0.15), python-cryptography (>= 0.8), python-josepy, python-mock, python-requests, python-requests-toolbelt, python-rfc3339, python-setuptools (>= 11.3~), python-six (>= 1.9.0), python-tz, python:any (<< 2.8), python:any (>= 2.7.5-5~)
+Suggests: python-acme-doc
+Breaks: certbot (<< 0.20.0-1)
+Description: ACME protocol library for Python 2
+Homepage: https://letsencrypt.org/
+Description-md5: e9984343fb79b5b38891196fe71a1b00
+Section: python
+Priority: optional
+Filename: pool/main/p/python-acme/python-acme_0.28.0-1~deb9u1_all.deb
+Size: 48658
+MD5sum: 55a75b0267988fd63f55258bc46d4ad6
+SHA256: 68ee7bc3296b63175ccc093a35ec04f30a49840c569cf7fc382d21c8adca3c04
+
+Package: python-acme-doc
+Source: python-acme
+Version: 0.28.0-1~deb9u1
+Installed-Size: 811
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Architecture: all
+Depends: libjs-sphinxdoc (>= 1.0), sphinx-rtd-theme-common
+Description: ACME protocol library for Python 2 - Documentation
+Homepage: https://letsencrypt.org/
+Description-md5: c0e216e279369caa34b4a2cb6e59f51e
+Section: doc
+Priority: optional
+Filename: pool/main/p/python-acme/python-acme-doc_0.28.0-1~deb9u1_all.deb
+Size: 71808
+MD5sum: 0f887f69c7fb3473cbc5f7bd567c54b4
+SHA256: bdce124c4f7696a02b0c208c096098af42e816d59832de3368610cd89a59f4cd
+
+Package: python3-acme
+Source: python-acme
+Version: 0.28.0-1~deb9u1
+Installed-Size: 263
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Architecture: all
+Depends: ca-certificates, python3-openssl (>= 0.15), python3-cryptography (>= 0.8), python3-josepy, python3-mock, python3-pkg-resources, python3-requests (>= 2.4.1), python3-requests-toolbelt (>= 0.3.0), python3-rfc3339, python3-six (>= 1.9.0), python3-tz, python3:any (>= 3.3.2-2~)
+Suggests: python-acme-doc
+Description: ACME protocol library for Python 3
+Homepage: https://letsencrypt.org/
+Description-md5: 1f6a20683296d3471681d8269f592f79
+Section: python
+Priority: optional
+Filename: pool/main/p/python-acme/python3-acme_0.28.0-1~deb9u1_all.deb
+Size: 48726
+MD5sum: 6532b1aa6f359298baf75d8e6abbcec9
+SHA256: 8c41cd5826e49acae3876dfe21a698d76f91bd9c3e910068b91b003d62232a49
+
+Package: certbot
+Source: python-certbot
+Version: 0.28.0-1~deb9u2
+Installed-Size: 65
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Architecture: all
+Replaces: letsencrypt
+Provides: letsencrypt
+Depends: python3-certbot (= 0.28.0-1~deb9u2), init-system-helpers (>= 1.18~), python3:any
+Suggests: python3-certbot-apache, python3-certbot-nginx, python-certbot-doc
+Breaks: letsencrypt (<= 0.6.0)
+Description: automatically configure HTTPS using Let's Encrypt
+Homepage: https://certbot.eff.org/
+Description-md5: deb7e404ce1b150b59379c3f9a73ac1a
+Section: web
+Priority: extra
+Filename: pool/main/p/python-certbot/certbot_0.28.0-1~deb9u2_all.deb
+Size: 37722
+MD5sum: e6afff0163750d1d0e754c4611e160c4
+SHA256: 3d6dc9728cd05cbe3566826f7f41bf4dbeaf25292db2e0c0b32dd7bbbc8b881f
+
+Package: letsencrypt
+Source: python-certbot
+Version: 0.28.0-1~deb9u2
+Installed-Size: 30
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Architecture: all
+Depends: certbot
+Description: transitional dummy package
+Homepage: https://certbot.eff.org/
+Description-md5: b77c3edb2fdeaba6edecc4488cb24985
+Tag: role::shared-lib
+Section: oldlibs
+Priority: extra
+Filename: pool/main/p/python-certbot/letsencrypt_0.28.0-1~deb9u2_all.deb
+Size: 22188
+MD5sum: 0cdcddaccab1767517049aad8dea861b
+SHA256: ea2e361e22e02780f537a2ccc0fb967a49ab422adeefa2851a8e675a7b60cc4c
+
+Package: python-certbot-doc
+Source: python-certbot
+Version: 0.28.0-1~deb9u2
+Installed-Size: 4120
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Architecture: all
+Depends: libjs-sphinxdoc (>= 1.0), sphinx-rtd-theme-common
+Description: client documentation for certbot
+Homepage: https://certbot.eff.org/
+Description-md5: c921886ee1b2b199ff3083306791f0a8
+Section: doc
+Priority: extra
+Filename: pool/main/p/python-certbot/python-certbot-doc_0.28.0-1~deb9u2_all.deb
+Size: 328190
+MD5sum: 8a87ba7b653c403f616d93a3905b6b64
+SHA256: c4bc420ebafd3672afd0446b4f3e2d679e841723b6e10b91e4c6cbbcd4e068ce
+
+Package: python3-certbot
+Source: python-certbot
+Version: 0.28.0-1~deb9u2
+Installed-Size: 1210
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Architecture: all
+Replaces: python-letsencrypt
+Depends: python3-acme (>= 0.26.0~), python3-requests (>= 2.4.3), python3-configargparse (>= 0.10.0), python3-configobj, python3-cryptography (>= 1.2), python3-josepy, python3-mock, python3-parsedatetime, python3-pkg-resources, python3-rfc3339, python3-tz, python3-zope.component, python3-zope.interface, python3:any (>= 3.3.2-2~)
+Recommends: certbot
+Suggests: python-certbot-doc
+Breaks: python-certbot-apache (<< 0.20.0), python-certbot-nginx (<< 0.20.0), python-letsencrypt (<= 0.6.0)
+Description: main library for certbot
+Homepage: https://certbot.eff.org/
+Description-md5: 85358386ec4314ac7c0c6d37555b95ff
+Section: python
+Priority: optional
+Filename: pool/main/p/python-certbot/python3-certbot_0.28.0-1~deb9u2_all.deb
+Size: 222442
+MD5sum: fd765934f3ed0584769acf92530bc363
+SHA256: 01eb902e1342eaa0b88763b6627d2073edfcceef7002a5252b5fe225962b9e5e
+
+Package: python-certbot-apache
+Version: 0.28.0-1~deb9u1
+Installed-Size: 14
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Architecture: all
+Depends: python3-certbot-apache
+Description: transitional dummy package
+Homepage: https://letsencrypt.org/
+Description-md5: 0cbe148fb4081480f272a28c3f810888
+Section: python
+Priority: extra
+Filename: pool/main/p/python-certbot-apache/python-certbot-apache_0.28.0-1~deb9u1_all.deb
+Size: 4022
+MD5sum: 259e630915587c7cb093d1a29d76dc81
+SHA256: ac3c4b9c2a09720621f11693dfcc99f94c8b14f8fbe80cf780e2d50f12e02905
+
+Package: python-certbot-apache-doc
+Source: python-certbot-apache
+Version: 0.28.0-1~deb9u1
+Installed-Size: 941
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Architecture: all
+Depends: libjs-sphinxdoc (>= 1.0), sphinx-rtd-theme-common
+Description: Apache plugin documentation for Certbot
+Homepage: https://letsencrypt.org/
+Description-md5: 6e462b02b9ab52b9c7012344365f0504
+Section: doc
+Priority: extra
+Filename: pool/main/p/python-certbot-apache/python-certbot-apache-doc_0.28.0-1~deb9u1_all.deb
+Size: 82484
+MD5sum: 305dee043a161f683f7cc12d9543b5e2
+SHA256: 48dcc65f6ab50812073cf4f29d663d90a2f46bdc076dfc575a0743c178e35da1
+
+Package: python3-certbot-apache
+Source: python-certbot-apache
+Version: 0.28.0-1~deb9u1
+Installed-Size: 395
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Architecture: all
+Replaces: python-certbot-apache (<< 0.20.0~), python-letsencrypt-apache
+Depends: apache2, certbot (>= 0.26.0~), python3-acme (>= 0.25.0~), python3-augeas, python3-certbot, python3-mock, python3-pkg-resources, python3-zope.component, python3-zope.interface, python3:any (>= 3.3.2-2~)
+Suggests: python-certbot-apache-doc
+Breaks: python-certbot-apache (<< 0.20.0~), python-letsencrypt-apache
+Description: Apache plugin for Certbot
+Homepage: https://letsencrypt.org/
+Description-md5: 30ce999e68e8586fa200da41d3a2a49f
+Section: python
+Priority: optional
+Filename: pool/main/p/python-certbot-apache/python3-certbot-apache_0.28.0-1~deb9u1_all.deb
+Size: 69620
+MD5sum: 0cf16f21d13681af73c8e4935592ceac
+SHA256: fde1067af82d2f5fd72f81fef4e1d7f66d1817904af2d025f16810274569e9d5
+
+Package: python-certbot-nginx
+Version: 0.28.0-1~deb9u1
+Installed-Size: 10
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Architecture: all
+Depends: python3-certbot-nginx
+Description: transitional dummy package
+Homepage: https://letsencrypt.org/
+Description-md5: fa49bab931274861c23fc8ebfeed6bf8
+Section: python
+Priority: extra
+Filename: pool/main/p/python-certbot-nginx/python-certbot-nginx_0.28.0-1~deb9u1_all.deb
+Size: 2872
+MD5sum: 1840f4c43a05f1ad335d7d46558dcfe3
+SHA256: 18d7dfa09d5f9ff9cd89833e4a7622dee298b81920153d0d71f2e45287d336c5
+
+Package: python-certbot-nginx-doc
+Source: python-certbot-nginx
+Version: 0.28.0-1~deb9u1
+Installed-Size: 447
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Architecture: all
+Depends: libjs-sphinxdoc (>= 1.0), sphinx-rtd-theme-common
+Description: Nginx plugin documentation for Certbot
+Homepage: https://letsencrypt.org/
+Description-md5: 44298552b70c0afe9ea738f00ec6c778
+Section: doc
+Priority: extra
+Filename: pool/main/p/python-certbot-nginx/python-certbot-nginx-doc_0.28.0-1~deb9u1_all.deb
+Size: 43898
+MD5sum: 6ba927b07b382942ef17333dca879c2f
+SHA256: 1508e0e7956001455598cc0d36c1f5d10c5c424398a6144d445a36f19f7a8ac6
+
+Package: python3-certbot-nginx
+Source: python-certbot-nginx
+Version: 0.28.0-1~deb9u1
+Installed-Size: 280
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Architecture: all
+Replaces: python-certbot-nginx (<< 0.20.0~)
+Depends: nginx, certbot (>= 0.25.0~), python3-acme (>= 0.26.0~), python3-certbot, python3-mock, python3-openssl (>= 0.13), python3-pkg-resources, python3-pyparsing (>= 1.5.5), python3-zope.interface, python3:any (>= 3.3.2-2~)
+Suggests: python-certbot-nginx-doc
+Breaks: python-certbot-nginx (<< 0.20.0~)
+Description: Nginx plugin for Certbot
+Homepage: https://letsencrypt.org/
+Description-md5: a4b0f37cf92adc225368ca044499723c
+Section: python
+Priority: optional
+Filename: pool/main/p/python-certbot-nginx/python3-certbot-nginx_0.28.0-1~deb9u1_all.deb
+Size: 50170
+MD5sum: 92cad6a714ea69ed2838528f288c114c
+SHA256: 2f819ad3132a08e6e0fa3b2997c6f3f56c96a18fba2143ed7cca5fcb27cc7589
+
+Package: python-josepy
+Version: 1.1.0-2~deb9u1
+Installed-Size: 143
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Architecture: all
+Depends: python-cryptography (>= 0.8), python-openssl, python-pkg-resources, python-six (>= 1.9.0), python:any (<< 2.8), python:any (>= 2.7.5-5~)
+Description: JOSE implementation for Python 2.x
+Homepage: https://certbot.eff.org/
+Description-md5: 03fcab569a545beb4b18c8eecfe2ec08
+Section: python
+Priority: optional
+Filename: pool/main/p/python-josepy/python-josepy_1.1.0-2~deb9u1_all.deb
+Size: 27686
+MD5sum: 8a15dfc4116905a5194228c4beec08e9
+SHA256: 5091e4db565ddce603531baa87b29da96d5bfa5704df262bb93d1ef1627cf12e
+
+Package: python-josepy-doc
+Source: python-josepy
+Version: 1.1.0-2~deb9u1
+Installed-Size: 593
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Architecture: all
+Depends: libjs-sphinxdoc (>= 1.0), sphinx-rtd-theme-common
+Description: JOSE implementation for Python - Documentation
+Homepage: https://certbot.eff.org/
+Description-md5: 4889791d1846e4c87b5b14b65ab2c157
+Section: doc
+Priority: optional
+Filename: pool/main/p/python-josepy/python-josepy-doc_1.1.0-2~deb9u1_all.deb
+Size: 51826
+MD5sum: 5a9d2783e61ce3aacf2353fd43691582
+SHA256: db52df426a69b2c7ab15638509a4a9e447044f66a20d856007ffe22df75ffbdd
+
+Package: python3-josepy
+Source: python-josepy
+Version: 1.1.0-2~deb9u1
+Installed-Size: 143
+Maintainer: Debian Let's Encrypt <team+letsencrypt@tracker.debian.org>
+Architecture: all
+Depends: python3-cryptography (>= 0.8), python3-openssl (>= 0.13), python3-pkg-resources, python3-six (>= 1.9.0), python3:any (>= 3.3.2-2~)
+Description: JOSE implementation for Python 3.x
+Homepage: https://certbot.eff.org/
+Description-md5: a6d8be6a1e2747e5b5cffc91a865ed9a
+Section: python
+Priority: optional
+Filename: pool/main/p/python-josepy/python3-josepy_1.1.0-2~deb9u1_all.deb
+Size: 27764
+MD5sum: c2c2f95eab65cde5240ca807c2c99169
+SHA256: 88dedd6a73b021728d9b31e45ad7404ccce87fcde94354161cda51c66621a3b5
+
+Package: tor
+Version: 0.2.9.16-1
+Installed-Size: 4083
+Maintainer: Peter Palfrader <weasel@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.17), libevent-2.0-5 (>= 2.0.10-stable), libseccomp2 (>= 0.0.0~20120605), libssl1.1 (>= 1.1.0), libsystemd0, zlib1g (>= 1:1.1.4), adduser, init-system-helpers (>= 1.18~), lsb-base
+Recommends: logrotate, tor-geoipdb, torsocks
+Suggests: mixmaster, torbrowser-launcher, socat, tor-arm, apparmor-utils, obfsproxy, obfs4proxy
+Conflicts: libssl0.9.8 (<< 0.9.8g-9)
+Description: anonymizing overlay network for TCP
+Homepage: https://www.torproject.org/
+Description-md5: 9106e8e4b3843ebd532ba2b89615a92e
+Tag: implemented-in::c, interface::daemon, network::client, network::routing,
+ network::server, role::program, security::cryptography,
+ security::privacy, use::proxying, use::routing
+Section: net
+Priority: optional
+Filename: pool/main/t/tor/tor_0.2.9.16-1_amd64.deb
+Size: 1480200
+MD5sum: c0ed417c5dc250aac4e3c7f8f4da589c
+SHA256: 639960c2a43f67e83e4cebb9cdf75c84873a24f44a6953fbfb0b30f0b6527d9e
+
+Package: tor-dbg
+Source: tor
+Version: 0.2.9.16-1
+Installed-Size: 3357
+Maintainer: Peter Palfrader <weasel@debian.org>
+Architecture: amd64
+Depends: tor (= 0.2.9.16-1)
+Suggests: gdb
+Description: debugging symbols for Tor
+Homepage: https://www.torproject.org/
+Build-Ids: 93c146970f87881dce394e498adf0fe8d3391050 deb9a634091bf7ff01d38d451acdfb44d0ad6d15 df9dc7422cf358c3dc94fe93bb0f7fbebd6b2243
+Description-md5: e8a546d3317d374b2fe6f8a245b9e653
+Tag: role::debug-symbols
+Section: debug
+Priority: extra
+Filename: pool/main/t/tor/tor-dbg_0.2.9.16-1_amd64.deb
+Size: 3026452
+MD5sum: 2c38d279945659bac908857f7c8661a4
+SHA256: f7200b7f83fc011e19dc6b223fe3e221f6af381b266d495e7a9b8f70630dfaf9
+
+Package: tor-geoipdb
+Source: tor
+Version: 0.2.9.16-1
+Installed-Size: 6769
+Maintainer: Peter Palfrader <weasel@debian.org>
+Architecture: all
+Replaces: tor (<< 0.2.4.8)
+Depends: tor (>= 0.2.9.16-1)
+Breaks: tor (<< 0.2.4.8)
+Description: GeoIP database for Tor
+Homepage: https://www.torproject.org/
+Description-md5: d0b50c9cd91157b8c85856fd55e26d14
+Tag: role::app-data, security::privacy
+Section: net
+Priority: extra
+Filename: pool/main/t/tor/tor-geoipdb_0.2.9.16-1_all.deb
+Size: 1203770
+MD5sum: ccd7746996eeaf59d0b93dc3d4776ffd
+SHA256: 6c08366a76979ba89721d19acd13b3e3f5a4c4d859a8341de31fea5ed5c606d2
+
+Package: tzdata
+Version: 2019a-0+deb9u1
+Installed-Size: 3028
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: all
+Replaces: libc0.1, libc0.3, libc6, libc6.1
+Provides: tzdata-stretch
+Depends: debconf (>= 0.5) | debconf-2.0
+Description: time zone and daylight-saving time data
+Multi-Arch: foreign
+Homepage: http://www.iana.org/time-zones
+Description-md5: a77a3cc9a67658dd7cfdc6547391b8f8
+Tag: role::app-data, use::timekeeping
+Section: localization
+Priority: required
+Filename: pool/main/t/tzdata/tzdata_2019a-0+deb9u1_all.deb
+Size: 273160
+MD5sum: 9d1aff40849d44f9f6da2172bc2eb914
+SHA256: f893711a6c44d1eeeb92358d51f148c00919ee0b61694e36cf6e8cf56af8974b
+

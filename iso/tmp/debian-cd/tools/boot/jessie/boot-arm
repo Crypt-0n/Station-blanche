@@ -1,0 +1,39 @@
+#!/bin/sh
+#
+# Do install stuff for arm*, including making bootable CDs
+# Works with debian-installer
+#
+# $1 is the CD number
+# $2 is the temporary CD build dir
+#
+# This is copied from the old arm script and it is currently disabled as there
+# don't seem to be any bootable armel/armhf machines.
+
+. $BASEDIR/tools/boot/$CODENAME/common.sh
+
+set -e
+
+N=$1
+CDDIR=$2
+if [ "$DI_WWW_HOME" = "default" ];then
+    # Tempting as it might be to merge these two definitions using $ARCH,
+    # do *not* do that - these defs are parsed out by other scripts that
+    # won't cope with that
+    if [ "$ARCH" = armel ]; then
+        DI_WWW_HOME="https://d-i.debian.org/daily-images/armel/daily"
+    elif [ "$ARCH" = armhf ]; then
+        DI_WWW_HOME="https://d-i.debian.org/daily-images/armhf/daily"
+    else
+        echo "$0: unknown arch $ARCH; abort"
+	exit 1
+    fi
+    try_di_image_cache
+fi
+
+cd $CDDIR/..
+
+add_mkisofs_opt $CDDIR/../$N.mkisofs_opts "-J -joliet-long"
+
+# Arm* is currently not bootable directly from CD in jessie, so bail out here
+echo "$ARCH booting disabled for $CODENAME, check with Sledge"
+exit 0

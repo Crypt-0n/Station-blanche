@@ -1,0 +1,104 @@
+===== Win32-Loader - 0.7.8+deb8u1 =====
+
+== What is Win32-Loader? ==
+
+win32-loader is a component of the Debian-Installer that runs on Windows and
+has the ability to load the actual installer either from the network or from
+CD-ROM media (as in the version included in the official CD images).
+
+This executable is the standalone flavour, which downloads the Debian
+Installer from official Debian mirrors.
+
+== How does it work? ==
+
+After the language choice, the executable prompts the user for some
+options and tries to get defaults from the Windows environment. It then
+downloads the Debian installer and kernel from official Debian mirrors. It
+puts them in a Windows directory and safely modifies the Windows bootloader to
+enable a choice between the legacy Windows installation and the Debian
+installer at boot time.
+
+On the next reboot, the user can choose to continue the installation of
+Debian. The installation will be run using the defaults gathered from the
+runtime analysis and user prompting.
+
+== Installation Guide ==
+
+As the Debian Installer is a minimal system, one might want to take a look at
+the Debian Installation Guide before launching win32-loader.exe:
+
+	http://www.debian.org/releases/stable/installmanual
+
+== Removal ==
+
+When win32-loader.exe is uninstalled, it removes the Debian-Installer image
+and kernel and restores the Windows bootloader settings.
+
+== NSIS ==
+
+win32-loader is heavily based on the "Nullsoft Scriptable Install System". In
+fact it could not have seen the light without the flexibility and all the
+features NSIS provides. This win32-loader.exe was built using the NSIS Debian
+package in its 2.46-10 version.
+
+== Embedded software ==
+
+win32-loader in its standalone flavour embeds various files and win32
+executables from the following Debian packages:
+
+grub-pc-bin               2.02~beta2-22             http://ftp.debian.org/debian/pool/main/g/grub2
+cpio-win32                2.11+dfsg-4.1             http://ftp.debian.org/debian/pool/main/c/cpio
+gzip-win32                1.6-4                     http://ftp.debian.org/debian/pool/main/g/gzip
+gpgv-win32                1.4.18-7                  http://ftp.debian.org/debian/pool/main/g/gnupg
+debian-archive-keyring    2014.3                    http://ftp.debian.org/debian/pool/main/d/debian-archive-keyring
+loadlin                   1.6f-3                    http://ftp.debian.org/debian/pool/main/l/loadlin
+ipxe                      1.0.0+git-20141004.86285d http://ftp.debian.org/debian/pool/main/i/ipxe
+
+== Authors and licensing ==
+
+This is win32-loader, written and maintained by Robert Millan <rmh@debian.org>
+and Didier Raboud <odyx@debian.org>, since Fri, 18 May 2007 18:34:48 +0200.
+
+The original source can always be found at:
+	http://ftp.debian.org/debian/pool/main/w/win32-loader/
+
+Copyright (C) 2007,2008,2009 Robert Millan
+Copyright (C) 2010,2011 Didier Raboud
+
+License:
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Additionally, plugins/sha1sum.c is
+
+Copyright (C) 1998, 1999, 2000, 2001 Free Software Foundation, Inc.
+Copyright (C) 2004 g10 Code GmbH
+
+NSIS plugin'ization: Copyright (C) 2011, Didier Raboud
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2, or (at your option)
+  any later version.
+ 
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+On Debian systems, the complete text of the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL-3'.

@@ -1,0 +1,48 @@
+#!/bin/sh
+#
+# Do common install stuff for armel/armhf, including making bootable CDs
+# Works with debian-installer
+#
+# $1 is the CD number
+# $2 is the temporary CD build dir
+#
+# This is copied from the old arm script and it is currently disabled as there
+# don't seem to be any CD-bootable armel/armhf machines.
+
+. $BASEDIR/tools/boot/$DI_CODENAME/common.sh
+
+N=$1
+CDDIR=$2
+INSTALLDIR="install"
+
+# Common options for all disks
+add_mkisofs_opt $CDDIR/../$N.mkisofs_opts "-J -joliet-long"
+add_mkisofs_opt $CDDIR/../$N.mkisofs_opts "-cache-inodes"
+add_mkisofs_opt $CDDIR/../$N.mkisofs_opts "-l"
+
+# Exit if this is not CD#1/DVD#1
+if [ $N != "1" ]; then
+    exit 0
+fi
+
+if [ "$DI_WWW_HOME" = "default" ]; then
+    # Tempting as it might be to merge these definitions using $ARCH,
+    # do *not* do that - these defs are parsed out by other scripts
+    # that won't cope with that
+    if [ "$ARCH" = armel ]; then
+        DI_WWW_HOME="https://d-i.debian.org/daily-images/armel/daily"
+    elif [ "$ARCH" = armhf ]; then
+        DI_WWW_HOME="https://d-i.debian.org/daily-images/armhf/daily"
+    else
+        echo "$0: unknown arch $ARCH; abort"
+	exit 1
+    fi
+    try_di_image_cache
+else
+    DI_WWW_HOME=$(echo $DI_WWW_HOME | sed "s,%ARCH%,$ARCH,")
+fi
+
+# This arch is currently not bootable directly from CD, and there's
+# not a lot we can do about that. But add the needed files in the
+# right place so that users can find them, at least
+copy_arch_images

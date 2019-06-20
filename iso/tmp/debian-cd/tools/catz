@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+for file in $@; do
+    if [ -f $file ]; then
+	case $file in
+	    *.gz)
+		zcat -f $file;;
+	    *.xz)
+		xzcat -f $file;;
+	esac
+    fi
+done

@@ -1,0 +1,9 @@
+Template: simple-cdd/profiles
+Type: multiselect
+Choices: station-blanche
+Default: 
+Description: Select profiles
+ profiles are a simple description of common system types.
+ select all that apply.
+ .
+ station-blanche: Station Blanche : scan antivirus de medias externes

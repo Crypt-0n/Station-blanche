@@ -1,0 +1,162 @@
+#!/bin/bash
+
+# Based on boot-x86
+#
+# Do install stuff for arm64, including making bootable CDs
+# Works with debian-installer
+#
+# $1 is the CD number
+# $2 is the temporary CD build dir
+
+. $BASEDIR/tools/boot/$DI_CODENAME/common.sh
+
+set -e
+#set -x
+
+# Workaround for #823881:
+export MTOOLS_SKIP_CHECK=1
+
+N=$1
+CDDIR=$2
+INSTALLDIR="install.a64"
+
+# Common options for all disks
+add_mkisofs_opt $CDDIR/../$N.mkisofs_opts "-J -joliet-long"
+add_mkisofs_opt $CDDIR/../$N.mkisofs_opts "-cache-inodes"
+add_mkisofs_opt $CDDIR/../$N.mkisofs_opts "-l"
+
+# Exit if this is not CD#1/DVD#1
+if [ $N != "1" ]; then
+    exit 0
+fi
+
+if [ "$DI_WWW_HOME" = "default" ]; then
+    DI_WWW_HOME="https://d-i.debian.org/daily-images/arm64/daily"
+    try_di_image_cache
+else
+    DI_WWW_HOME=$(echo $DI_WWW_HOME | sed "s,%ARCH%,$ARCH,")
+fi
+
+case "$MKISOFS" in
+    *xorriso*)
+        XORRISO_VER=$(xorriso_version)
+        ;;
+    *)
+        echo "ERROR: debian-cd depends on xorriso for making arm64 bootable CDs."
+        exit 1;
+        ;;
+esac
+
+cd $CDDIR/..
+
+BOOT_IMAGES="cdrom/initrd.gz cdrom/vmlinuz cdrom/debian-cd_info.tar.gz"
+
+# Download boot images.
+for image in $BOOT_IMAGES; do
+    if [ ! -e "$image" ]; then
+        dir=$(dirname $image)
+        mkdir -p $dir
+        if [ -n "$LOCAL"  -a -f "${LOCALDEBS:-$MIRROR}/dists/$DI_DIST/local/installer-$ARCH/current/images/$image" ]; then
+            cp "${LOCALDEBS:-$MIRROR}/dists/$DI_DIST/local/installer-$ARCH/current/images/$image" "$image"
+        elif [ ! "$DI_WWW_HOME" ];then
+            if [ ! "$DI_DIR" ];then
+                DI_DIR="$MIRROR/dists/$DI_DIST/main/installer-$ARCH/current/images"
+            fi
+            cp "$DI_DIR/$image" "$image"
+        else
+            $WGET "$DI_WWW_HOME/$image" -O "$image"
+        fi
+    fi
+done
+
+mkdir -p $CDDIR/$INSTALLDIR
+cp -lf cdrom/vmlinuz $CDDIR/$INSTALLDIR/
+cp -lf cdrom/initrd.gz $CDDIR/$INSTALLDIR/
+
+# Boot setup including config and help files comes from d-i.
+mkdir -pv $PWD/boot$N
+cat cdrom/debian-cd_info.tar.gz | (cd boot$N/; tar zx)
+
+if [ -d boot$N/grub ] ; then
+    echo "  Adding EFI boot code for $ARCH on CD$N"
+
+    # Move GRUB files to the right place.
+    mkdir -p $CDDIR/efi/boot
+    mcopy -i boot$N/grub/efi.img ::efi/boot/bootaa64.efi $CDDIR/efi/boot/bootaa64.efi
+    mkdir -p $CDDIR/boot/grub
+    mv boot$N/grub/* $CDDIR/boot/grub/
+    rmdir boot$N/grub
+
+    # Stuff the EFI boot files into a FAT filesystem, making it as
+    # small as possible.  24KiB headroom seems to be enough;
+    # (x+31)/32*32 rounds up to multiple of 32.
+    # This is the same as in efi-image, but we need to redo it here in
+    # the case of a multi-arch image
+
+    # Stuff the EFI boot files into a FAT filesystem, making it as
+    # small as possible.
+
+    sector_bytes=512 # -S
+    cluster_sectors=4 # -s
+    cluster_bytes=$((sector_bytes * cluster_sectors))
+
+    clusters=2 # 1 cluster for each sub-directory
+    for file in $CDDIR/efi/boot/boot*.efi; do
+        [ -f "$file" ] || continue
+        clusters=$(($clusters + (($(stat -c %s "$file") + $cluster_bytes - 1) / $cluster_bytes)))
+    done
+    reserved_sectors=1 # boot-sector -R
+    reserved_bytes=$(($reserved_sectors * $sector_bytes))
+    fat_copies=2 # -f
+    if [ "$clusters" -le $(((1 << 12) - 2)) ]; then
+        fat_entry_bytes=3/2 # -F
+    elif [ "$clusters" -le $(((1 << 16) - 2)) ]; then
+        fat_entry_bytes=2 # -F
+    else
+        fat_entry_bytes=4 # -F
+    fi
+    fat_bytes=$((($clusters * $fat_entry_bytes + $sector_bytes - 1) / $sector_bytes * $sector_bytes))
+    root_entries=512 # -r
+    root_entry_bytes=32
+    root_bytes=$(($root_entries * root_entry_bytes))
+    size=$(($reserved_bytes + $fat_copies * $fat_bytes + $root_bytes + $clusters * $cluster_bytes))
+
+    track_sectors=32
+    track_bytes=$((sector_bytes * $track_sectors))
+    tracks=$((($size + $track_bytes - 1) / $track_bytes))
+    block_bytes=1024
+    blocks=$(($tracks * $track_bytes / $block_bytes))
+
+    rm -f $CDDIR/boot/grub/efi.img
+    mkfs.msdos -v -C "$CDDIR/boot/grub/efi.img" $blocks >/dev/null
+    mmd -i "$CDDIR/boot/grub/efi.img" ::efi
+    mmd -i "$CDDIR/boot/grub/efi.img" ::efi/boot
+    mcopy -o -i "$CDDIR/boot/grub/efi.img" $CDDIR/efi/boot/boot*.efi \
+        "::efi/boot"
+
+    # Ugh - different code here depending on the version of xorriso we've got
+    if [ $XORRISO_VER -le 10202 ] ; then
+        echo "ERROR: debian-cd depends on xorriso > 1.2.2 for making arm64 bootable CDs."
+        exit 1;
+    elif [ $XORRISO_VER -gt 10202 ] ; then
+        echo "Using newer EFI support in xorriso $XORRISO_VER"
+
+	# Location of the EFI boot image, and don't emulate a floppy or HD
+        add_mkisofs_opt $CDDIR/../$N.mkisofs_opts "-e boot/grub/efi.img -no-emul-boot"
+
+	# Add an *extra* partition on the end for the EFI bits
+	add_mkisofs_opt $CDDIR/../$N.mkisofs_opts "-append_partition 2 0xef $CDDIR/boot/grub/efi.img"
+
+	# And force alignment
+	add_mkisofs_opt $CDDIR/../$N.mkisofs_opts "-partition_cyl_align all"
+    fi      
+
+    # Finally, belt and braces - fix up the %install% entries in grub
+    # in case they're still there
+    sed -i "s,\%install\%,$INSTALLDIR,g" $CDDIR/boot/grub/grub.cfg
+
+else
+    echo "  No EFI boot code for $ARCH on CD$N"
+fi
+
+# th,th, thats all

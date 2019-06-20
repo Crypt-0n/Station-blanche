@@ -1,0 +1,64 @@
+#!/bin/bash
+
+. ~/build.stretch/settings.sh
+. ~/build.stretch/common.sh
+
+INPUT=~/build.stretch/HEADER.html.in
+CPP="cpp -traditional -undef -P -C -nostdinc"
+
+if [ "$1"x = ""x ] ; then
+   echo "$0: Need to be told which directory to target!"
+   exit 1
+fi
+
+if [ "$2"x = "firmware"x ] ; then
+    FIRMWARE="-DFIRMWARE"
+    IN_FW=1
+fi
+
+cd $1
+for DIR in *; do
+    if [ -d $DIR ] && [ $DIR != trace ] ; then
+	ARCH=$DIR
+	if [ "$IN_FW"x = ""x ]; then
+	    if $(arch_has_firmware $ARCH) ; then
+		FIRMWARE="-DARCH_HAS_FIRMWARE"
+	    else
+		FIRMWARE=""
+	    fi
+	fi
+	case $ARCH in
+	    i386|amd64|arm64)
+		EXTRAS="-DISOHYBRID"
+		;;
+	    multi-arch)
+		EXTRAS="-DISOHYBRID -DONEonly"
+		ARCH="multi"
+		;;
+	    *)            
+		EXTRAS=""
+		;;
+	esac
+	case $ARCH in
+	    kfreebsd*)
+		KERNEL="kFreeBSD"
+		;;
+	    hurd*)
+		KERNEL="Hurd"
+		;;
+	    *)
+		KERNEL="Linux"
+		;;
+	esac
+	for DIR1 in $DIR/*-* ; do
+	    STYLE=$(echo $DIR1 | sed 's,^.*/,,g;s,-.*$,,g')
+	    TYPE=$(echo $DIR1 | sed 's,^.*-,,g')
+	    ls -l $DIR1 | grep -q update
+	    if [ $? -eq 0 ] ; then
+		UPDATES="-DUPDATES"
+	    fi
+	    #echo "Found directory $DIR (ARCH $ARCH, STYLE $STYLE, TYPE $TYPE)"
+	    $CPP -DARCH=${ARCH} -DARCH${ARCH} -DKERNEL=${KERNEL} -DSTYLE${STYLE} -DSTYLE=${STYLE} -DTYPE${TYPE} $UPDATES $EXTRAS $FIRMWARE $INPUT > $DIR1/HEADER.html
+	done
+    fi
+done

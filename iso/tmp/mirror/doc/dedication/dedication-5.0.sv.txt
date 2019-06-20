@@ -1,0 +1,22 @@
+Till minne av Thiemo Seufer
+---------------------------
+
+Debianprojeketet har förlorat en aktiv medlem. Thiemo Seufer omkom i en tragisk
+bilolycka den 26 december 2008.
+
+Thiemo bidrog till utvecklingen av Debian på många sätt. Han var ansvarig för
+många paket och var huvudansvarig för Debian-porteringen till
+MIPS-arkitekturen. Dessutom var Thiemo medlem av Debians utvecklingsgrupper för
+Linux-kärnan och Debians installerare. Hans bidrag sträckte sig dock utanför
+Debianprojeketet, han arbetade också med MIPS-porteringen av Linux-kärnan,
+MIPS-emulering i qemu och massor med mindre projekt som vi inte har plats att
+nämna här.
+
+Thiemos arbete, hängivenhet och breda tekniska kunskap och förmåga att dela
+detta med andra kommer att saknas. Hans bidrag kommer inte att glömmas. Den
+höga nivån på Thiemos arbete kommer att bli svår att ta över.
+
+För att hedra Thiemos bidrag till Debian tillägnas denna utgåva av Debian
+GNU/Linux 5.0 ”lenny” till honom.
+
+-- The Debian Developers

@@ -1,0 +1,43 @@
+#!/bin/sh
+
+export TOPDIR=$(dirname $0)
+
+. $TOPDIR/settings.sh
+. $TOPDIR/common.sh
+
+PUBDIRJIG=$1
+OUTDIR=$2
+ARCH=$3
+RESULTS=$4
+
+OUTFILE=$OUTDIR/$ARCH/HEADER.html
+INLOGS="/org/cdbuilder.debian.org/dst/deb-cd/log"
+OUTLOGS="build-logs/$DATE"
+
+grep -q WARNING $OUTFILE
+if [ $? -ne 0 ] ; then
+    echo >> $OUTFILE
+    echo "<p><strong>WARNING:</strong>" >>  $OUTFILE
+    echo "This build is not up to date; it is the most recent successful build.</p>" >> $OUTFILE
+    echo >> $OUTFILE
+    echo "<p>Later weekly builds failed with errors:</p>" >> $OUTFILE
+fi
+
+mkdir -p $OUTDIR/$ARCH/log/$DATE
+cp $PUBDIRJIG/$ARCH/*.log $OUTDIR/$ARCH/log/$DATE
+
+echo "<hr>" >> $OUTFILE
+echo "<ul>" >> $OUTFILE
+mkdir -p ${OUTDIR}/${ARCH}/${OUTLOGS}
+for RESULT in $RESULTS; do
+    TYPE=`echo $RESULT | awk -F / '{print $1}'`
+    ERROR=`echo $RESULT | awk -F / '{print $2}'`
+    DATE=`echo $RESULT | awk -F / '{print $3}'`
+    LOGFILE=`echo $RESULT | awk -F / '{print $4}'`
+    BUILDNAME=`echo $TYPE | sed 's/FAIL//g'`
+    DESC=`build_description ${BUILDNAME}`
+    echo "<li>$DESC build failed with error $ERROR at $DATE; <a href=\"log/$DATE/${BUILDNAME}.log\">logfile</a>" >> $OUTFILE
+
+done
+echo "</ul>" >> $OUTFILE
+
